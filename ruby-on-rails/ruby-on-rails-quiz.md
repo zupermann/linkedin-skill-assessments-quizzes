@@ -2,6 +2,7 @@
 
 #### Q1. When rendering a partial in a view, how would you pass local variables for rendering?
 
+- [ ] `<%= render partial: "nav", globals: {selected: "about"} %>`
 - [ ] `<%= render partial: "nav", selected: "about"}%>`
 - [ ] `<%= render partial: "nav", local_variables: {selected: "about"} %>`
 - [x] `<%= render partial: "nav", locals: {selected: "about"}`
@@ -92,7 +93,7 @@ end
 
 #### Q12. If a database table of users contains the following rows, and `id` is the primary key, which statement would return only an object whose `last_name` is "Cordero"?
 
-```
+```ruby
 -------------------------------
 
 | id | first_name | last_name |
@@ -152,10 +153,10 @@ end
 
 #### Q17. In Rails, how would you cache a partial template that is rendered?
 
-- [x] `render partial: ‘shared/menu’, cached: true`
-- [ ] `render_with_cache partial: ‘shared/menu’`
-- [ ] `render partial: ‘shared/menu’`
-- [ ] `render partial: ‘shared/menu’, cached_with_variables: {}`
+- [x] `render partial: 'shared/menu', cached: true`
+- [ ] `render_with_cache partial: 'shared/menu'`
+- [ ] `render partial: 'shared/menu'`
+- [ ] `render partial: 'shared/menu', cached_with_variables: {}`
 
 #### Q18. What is the reason for using Concerns in Rails?
 
@@ -214,7 +215,7 @@ class ProductController < ActionController::Base
 
   def update
     @product = Product.find(params[:id])
-    if @product.update_attributes(product_params)
+    if @product.update(product_params)
       redirect_to(product_path(@product))
     else
       render('edit')
@@ -230,9 +231,11 @@ end
 ```
 
 - [ ] The product will not be updated and the edit template will be rendered.
-- [x] The product will not be updated and the controller will raise an ActiveModel::ForbiddenAttributes exception.
-- [ ] The product will be updated with the values for name, style, and color, but the value for price will be ignored.
+- [ ] The product will not be updated and the controller will raise an ActiveModel::ForbiddenAttributes exception.
+- [x] The product will be updated with the values for name, style, and color, but the value for price will be ignored.
 - [ ] The product will be updated with the values for name, style, color, and price.
+
+[Reference](https://stackoverflow.com/a/19277971)
 
 #### Q25. A Rails project has ActiveRecord classes defined for Classroom and Student. If instances of these classes are related so that students are assigned the ID of one particular classroom, which choice shows the correct associations to define?
 
@@ -337,18 +340,20 @@ end
 - [ ] The method will ignore exceptions that occur during execution.
 - [x] It is a more powerful or destructive version of the method.
 
-#### Q33. What part of the code below causes the method `#decrypt_data` to be run?
+#### Q33. What options below would cause the method `#decrypt_data` to be run?
 
 ```rb
 class MyModel < ApplicationRecord
-after_find :decrypt_data
+  after_find :decrypt_data
 end
 ```
 
-- [ ] `MyModel.first.update(field: 'example')`
-- [x] `MyModel.where(id: 42)`
-- [ ] `MyModel.first.destroy`
+- [x] `MyModel.first.update(field: 'example')`
+- [ ] `MyModel.where(id: 42)`
+- [x] `MyModel.first.destroy`
 - [ ] `MyModel.new(field: 'new instance')`
+
+[Reference](https://guides.rubyonrails.org/active_record_callbacks.html#running-callbacks)
 
 #### Q34. Which Rails helper would you use in the application view to protect against CSRF (Cross-Site Request Forgery) attacks?
 
@@ -367,10 +372,18 @@ after_save :clear_cache, if: ->(model) { model.is_admin }
 before_destroy :notify_admin_users, if: ->(model) { model.is_admin }
 ```
 
-- [x] `encrypt_data`
-- [ ] `clear_cache`
+- [ ] `encrypt_data`
+- [x] `clear_cache`
 - [ ] `notify_admin_users`
 - [ ] None of these callbacks will be called when `is_admin` is true.
+      [Explanation]:
+      When saving the User model and model.is_admin is set to true, the after_save callback will be called.
+
+The before_save callback with the unless: ->(model) { model.is_admin } condition will not be called because the is_admin attribute is true.
+
+The before_destroy callback with the if: ->(model) { model.is_admin } condition will be called if the is_admin attribute is true and the record is being destroyed, but this is not relevant to the scenario of saving the User model.
+
+Therefore, only the after_save callback with the if: ->(model) { model.is_admin } condition will be called in this scenario. This callback will be triggered after the record has been saved, if the is_admin attribute is true. In this case, the clear_cache method will be called.
 
 #### Q36. In a Rails controller, what does the code `params.permit(:name, :sku)` do?
 
@@ -394,7 +407,7 @@ before_destroy :notify_admin_users, if: ->(model) { model.is_admin }
 
 - [x] A
 
-```
+```ruby
 class IAmADummy < ActiveRecord::Migration
   def change
     rename_column :accounts, :account_hodler, :account_holder
@@ -404,7 +417,7 @@ end
 
 - [ ] B
 
-```
+```ruby
 class FixSpellling < ActiveRecord::Migration
   def change
     rename :accounts, :account_hodler, :account_holder
@@ -414,7 +427,7 @@ end
 
 - [ ] C
 
-```
+```ruby
 class CoffeeNeeded < ActiveRecord::Migration
   def change
     remove_column :accounts, :account_hodler
@@ -425,7 +438,7 @@ end
 
 - [ ] D
 
-```
+```ruby
 class OopsIDidItAgain < ActiveRecord::Migration
   def rename
     :accounts, :account_hodler, :account_holder
@@ -435,38 +448,40 @@ end
 
 #### Q39. Which HTML is closes to what this code would output?
 
-```
+```ruby
 <% check_box(:post, :visible) %>
 ```
 
 - [x] A
 
-```
+```html
 <input type="hidden" name="post[visible]" value="0" />
 <input type="checkbox" name="post[visible]" value="1" />
 ```
 
 - [ ] B
 
-```
+```html
 <checkbox name="post[visible]" value="1" />
 ```
 
 - [ ] C
 
-```
+```html
 <input type="checkbox" name="post[visible]" value="1" data-default-value="0" />
 ```
 
 - [ ] D
 
-```
+```html
 <input type="checkbox" name="post[visible]" value="1" />
 ```
 
+[Reference](https://apidock.com/rails/ActionView/Helpers/FormHelper/check_box)
+
 #### Q40. There is a bug in this code. The logout message is not appearing on the login template. What is the cause?
 
-```
+```ruby
 class AccessController < ActionController::Base
   def destroy
     session[:admin_id] = nil
@@ -475,47 +490,53 @@ class AccessController < ActionController::Base
 end
 ```
 
-- [x] The string assigned to flash[:notice] will not be available until the next browser request.
+- [ ] The string assigned to flash[:notice] will not be available until the next browser request.
 - [ ] An instance variable should be used for flash[:notice]
-- [ ] This is an invalid syntax to use to assign valuse to flash[:notice]
+- [x] This is an invalid syntax to use to assign values to flash[:notice]
 - [ ] The previous value of flash[:notice] will not be cleared automatically
+      [Explanation]:
+      The cause of the bug is a syntax error in the line that sets the value of the flash[:notice] message. The string literal "You have been logged out" is not properly enclosed in the surrounding string literal.
 
 #### Q41. Which statement about ActiveRecord models is true?
 
-- [ ] Each database column requres adding a matching attr_accessor declaration in the ActiveRecord model.
+- [ ] Each database column requires adding a matching attr_accessor declaration in the ActiveRecord model.
 - [ ] All attributes in an ActiveRecord model are read-only declared as writable using attr_accessible
 - [x] An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table.
 - [ ] ActiveRecord models can have only attributes that have a matching database column
+
+[Reference](https://api.rubyonrails.org/classes/ActiveRecord/Base.html)
 
 #### Q42. What is the correct way to assign a value to the session?
 
 - [ ] A
 
-```
+```ruby
 $_SESSION['user_id'] = user.id
 ```
 
 - [ ] B
 
-```
+```ruby
 @session ||= Session.new << user.id
 ```
 
 - [ ] C
 
-```
+```ruby
 session_save(:user_id, user.id)
 ```
 
 - [x] D
 
-```
+```ruby
 session[:user_id] = user.id
 ```
 
+[Reference](https://guides.rubyonrails.org/v7.1/action_controller_overview.html#session)
+
 #### Q43. Which choice best describes the expected value of @result?
 
-```
+```ruby
 @result = Article.first.tags.build(name: 'Urgent')
 ```
 
@@ -528,29 +549,29 @@ session[:user_id] = user.id
 
 - [ ] A
 
-```
+```ruby
 <% render :head do %>
   <title>My page title</title>
 <% end %>
 ```
 
-- [ ] B
+- [x] B
 
-```
+```ruby
 <% content_for :head do %>
   <title>My page title</title>
 <% end %>
 ```
 
-- [x] C
+- [ ] C
 
-```
+```ruby
 <% render "shared/head, locals: {title: "My page title"} %>
 ```
 
 - [ ] D
 
-```
+```ruby
 <% tield :head do %>
   <title>My page title</title>
 <% end %>
@@ -560,7 +581,7 @@ session[:user_id] = user.id
 
 - [x] A
 
-```
+```ruby
 class Project
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: true
 end
@@ -568,7 +589,7 @@ end
 
 - [ ] B
 
-```
+```ruby
 class Project
   validate_attribute :name, [:presence, :uniqueness], :length => 1..50
 end
@@ -576,7 +597,7 @@ end
 
 - [ ] C
 
-```
+```ruby
 class Project
   validate_before_save :name, [:presence, [:length, 50], :uniqueness], :length => 1..50
 end
@@ -584,7 +605,7 @@ end
 
 - [ ] D
 
-```
+```ruby
 class Project
   validates_presense_of :name, :unique => true
   validates_length_of :name, :maximum => 50
@@ -593,7 +614,7 @@ end
 
 #### Q46. If a product has a user-uploadable photo, which ActiveStorage method should fill in the blank?
 
-```
+```ruby
 class Product << ApplicationRecord
   ____ :photo
 end
@@ -607,31 +628,31 @@ end
 
 #### Q47. If the only route defined is resources :products, what is an example of a URL that could be generated by this link_to method?
 
-```
+```ruby
 link_to('Link', {controller: 'products', action: 'index', page: 3})
 ```
 
 - [x] A
 
-```
+```ruby
 /products?page=3
 ```
 
 - [ ] B
 
-```
+```ruby
 /products/index/3
 ```
 
 - [ ] C
 
-```
+```ruby
 /products/page/3
 ```
 
 - [ ] D
 
-```
+```ruby
 /products/index/page/3
 ```
 
@@ -675,10 +696,12 @@ category.name = 'News'
 saved_name = _____
 ```
 
-- [ ] category.name_was
+- [x] category.name_was
 - [ ] category.saved(:name)
-- [x] category.changes[:name]
+- [ ] category.changes[:name]
 - [ ] category.name_changed?
+
+[Reference](https://api.rubyonrails.org/v7.1/classes/ActiveModel/Dirty.html#method-i-2A_was)
 
 #### Q53. Given two models, what is the issue with the query used to fetch them?
 
@@ -730,7 +753,7 @@ Rails.cache.delete(cache_key)
 end
 ```
 
-- [ ] C
+- [x] C
 
 ```ruby
 after_update_commit do
@@ -738,13 +761,15 @@ Rails.cache.delete(cache_key)
 end
 ```
 
-- [x] D
+- [ ] D
 
 ```ruby
 after_update_commit do
 Rails.cache.destroy(cache_key)
 end
 ```
+
+[Reference](https://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html#method-i-delete)
 
 #### Q57. After this migration has been executed, which statement would be true?
 
@@ -763,7 +788,7 @@ end
 
 - [ ] The galleries table will have no primary key.
 - [x] The galleries table will include a column named "updated_at".
-- [ ] The galleries table will contain exactly seven columns.
+- [x] The galleries table will contain exactly seven columns.
 - [ ] The galleries table will have an index on the position column.
 
 #### Q58. Which code would you add to return a 404 to the API caller if the user is not found in the database?
@@ -785,13 +810,13 @@ rescue => e
 end
 ```
 
-- [x] B
+- [ ] B
 
 ```ruby
 rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 ```
 
-- [ ] C
+- [x] C
 
 ```ruby
 rescue ActiveRecord::RecordNotFound
@@ -814,12 +839,12 @@ end
 - [ ] web server
 - [x] router
 
-#### Q60. When rendering a partial in a view, how would you pass local variables for rendering?
+#### Q60. WHich helper method escapes HTML and also formats line breaksin a text string?
 
-- [ ] `<%= render partial: "nav", globals: {selected: "about"} %>`
-- [x] `<%= render partial: "nav", local_variables: {selected: "about"} %>`
-- [ ] `<%= render partial: "nav", locals: {selected: "about"} %>`
-- [ ] `<%= render partial: "nav", selected: "about"} %>`
+- [ ] sanitize
+- [ ] escape_html
+- [x] simple_format
+- [ ] raw
 
 #### Q61. Given this code, and assuming `@user` is an instance of `User` that has an assigned location, which choice would be used to return the user's city?
 
@@ -829,22 +854,25 @@ end
         has_many :users
     end
     class User < ActiveRecord::Base
-        belovngs_to :location
+        belongs_to :location
 
         delegate :city, :state, to: :location, allow_nil: true, prefix: true
     end
 ```
 
-- [x] `@user.user_city`
-- [ ] `@user.location_city`
+- [ ] `@user.user_city`
+- [x] `@user.location_city`
 - [ ] `@user.city`
 - [ ] `@user.try(:city)`
+
+[Reference](https://apidock.com/rails/Module/delegate)
+[Reference](https://itnext.io/understanding-delegate-in-ruby-on-rails-i-wish-i-knew-before-5edd341bad47)
 
 #### Q62. Where would this code most likely be found in a Rails project?
 
 `scope :active, lambda { where(:active => true) }`
 
-- [x] an Active Record model
+- [x] an ActiveRecord model
 - [ ] an ActionView template
 - [ ] an ApplicationHelper file
 - [ ] an ActionController controller
@@ -854,7 +882,7 @@ end
 - [ ] The models used for STI must mix in the module `ActiveRecord::STI`
 - [ ] All models used for STI must include "self.abstract_class=true".
 - [ ] All database tables used for STI must be related to each other using a foreign key.
-- [ ] The database table used for STI must have a column named "type".
+- [x] The database table used for STI must have a column named "type".
 
 #### Q64. A way that views can share reusable code, such as formatting a date, is called a \_?
 
@@ -872,7 +900,7 @@ end
 
 #### Q66.You are working with a large database of portfolios that sometimes have an associated image. Which statement best explains the purpose of includes(:image) in this code?
 
-```
+```ruby
 @portfolios = Portfolio.includes(:image).limit(20)
 
 @portfolios.each do |portfolio|
@@ -883,4 +911,240 @@ end
 - [ ] It preloads the images files using asset pipeline.
 - [ ] It selects only portfolios that have an image attached.
 - [ ] It includes the number of associated images when determining how many records to return.
-- [x] It will execute two database queries of 21 database queries.
+- [x] It will execute two database queries instead of 21 database queries.
+
+#### Q67. What is RVM?
+
+- [ ] Rails Validation Model
+- [ ] Rails Version Manager
+- [ ] Rails View Model
+- [x] Ruby Version Manager
+
+#### Q68. Which line of inquiry would you follow after receiving this error message: No route matches [POST] "/burrito/create"?
+
+- [ ] Check that there is a matching path for "/burrito/create" in you paths.rb file.
+- [x] Check that there is a `post` route that matches "/burrito/create" in your routes.rb file.
+- [ ] Add the line `resources :burritos` to your routes.rb file.
+- [ ] Check that there is a `get` route that matches "burrito/create" in your paths.rb file.
+
+#### Q69. Which controller action is `not` in danger of returning double render errors?
+
+- [ ] A
+
+```ruby
+def show
+  if params[:detailed] == "1"
+    redirect_to(action: 'detailed_show')
+  end
+  render('show')
+end
+```
+
+- [ ] B
+
+```ruby
+def show
+  render('detailed_show') if params[:detailed] == "1"
+  render('show') and return
+end
+```
+
+- [ ] C
+
+```ruby
+def show
+  if params[:detailed] == "1"
+    render('detailed_show')
+  end
+  render('show')
+end
+```
+
+- [x] D
+
+```ruby
+def show
+  if params[:detailed] == "1"
+    render('detailed_show')
+  end
+end
+```
+
+#### Q70. Which keyword is used in a layout to identify a section where content from the view should be inserted?
+
+- [ ] render
+- [ ] puts
+- [ ] view_content
+- [x] yield
+
+[Reference](https://guides.rubyonrails.org/layouts_and_rendering.html)
+
+#### Q71. Check the following Ruby code and replace `__BLOCK__` with the correct code to achieve the result.
+
+```ruby
+class TodoList
+  def initialize
+    @todos = []
+  end
+
+  def add_todo(todo)
+    @todos << todo
+  end
+
+  def __BLOCK__
+    @todos.map { |todo| "- #{todo}" }.join("\n")
+end
+
+work = TodoList.new
+work.add_todo("Commit")
+work.add_todo("PR")
+work.add_todo("Merge")
+
+puts work
+=> - Commit
+=> - PR
+=> - Merge
+```
+
+- [x] to_s
+- [ ] work
+- [ ] inspect
+- [ ] **str**
+
+#### Q72. What decides which controller receives which requests?
+
+- [ ] web server
+- [x] router
+- [ ] view
+- [ ] model
+
+#### Q73. Which statement about this code will always be true?
+
+```ruby
+class UserController < ActionController::Base
+  def show
+    @user = User.find_by_id(session[:user_id])
+    @user ||= User.first
+  end
+end
+```
+
+- [ ] The variable `@user` will be set to the object returned by `User.first` unless `session[:user_id]` has a value.
+- [ ] The result of `User.find_by_id` is irrelevant because the variable `@user` will always be set to the object returned by `User.first`.
+- [ ] If `User.find_by_id` does not raise an exception, the variable `@user` will be set to the object returned by `User.first`.
+- [x] If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`.
+
+[Reference](https://www.rubyguides.com/2018/07/ruby-operators/) #Assignment_Operators
+
+#### Q74. When defining a resource route, seven routes are defined by default. Which two methods allow defining additional routes on the resource?
+
+- [ ] only, except
+- [ ] match, resolve
+- [ ] action, path
+- [x] member, collection
+
+#### Q75. You are rendering a partial with this code. What will display the user's name?
+
+`<%= render partial: 'user_info', object: { name: 'user' } %>`
+
+- [ ] `<%= locals.user_info.name %>`
+- [ ] `<%= object.name %>`
+- [x] `<%= user_info[:name] %>`
+- [ ] `<%= @user.name %>`
+
+#### Q76. Once this form is submitted, which code in the controller would retrieve the string for :name?
+
+```ruby
+<%= form_for(@category) do |f| %>
+  <%= f.text_field(:name) %>
+<% end %>
+```
+
+- [ ] `params[:name]`
+- [ ] `@params.name`
+- [ ] `params.require(:category).permit(:name)`
+- [x] `params[:category][:name]`
+
+[Reference](https://apidock.com/rails/ActionView/Helpers/FormHelper/form_for)
+
+#### Q77. Which missing line would best show the correct usage of strong parameters?
+
+```ruby
+class ProjectsController < ActionController::Base
+
+  def create
+    Project.create(project_params)
+  end
+
+  private
+
+  def project_params
+    # Missing line
+  end
+end
+```
+
+- [ ] `params[:project].allow(:name, :visible, :description)`
+- [ ] `params[:project].allowed`
+- [ ] `params.permit(:project).allow(:name, :visible, :description)`
+- [x] `params.require(:project).permit(:name, :visible, :description)`
+
+[Strong Params](https://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
+
+#### Q78. What is the purpose of the rake db:migrate command?
+
+- [ ] `To create a new database for the Rails application.`
+- [x] `To migrate the database schema to the latest version.`
+- [ ] `To seed the database with initial data.`
+- [ ] `To test the database connection.`
+
+[Reference](https://guides.rubyonrails.org/v3.2/migrations.html#:~:text=Active%20Record%20tracks%20which%20migrations,the%20structure%20of%20your%20database.)
+
+#### Q79. What is the execution result of the following Ruby code?
+
+```ruby
+class A
+  def self.get_self
+    self.class
+  end
+
+  def get_self
+    self
+  end
+end
+
+p "#{A.get_self.class} #{A.new.get_self.class}"
+```
+
+- [ ] `Class Class`
+- [ ] `A A`
+- [ ] `A Class`
+- [x] `Class A`
+
+[Reference](https://www.ignacio.al/self-class-ruby.html)
+
+#### Q80. Given the following model class and view , which code snippet should you use to fetch the correct results, and avoid the N+1 query issue?
+
+```ruby
+class Movies < ApplicationRecord
+  def recent_reviews
+    # Return the latest 10 reviews
+  end
+end
+```
+
+```ruby
+<%= @movie.recent_reviews.each do |review| %>
+  <div>
+    <header><%= review.critic.name %></header>
+    <div><%= review.comment %></div>
+  </div>
+<% end %>
+```
+
+- [ ] `@movie.reviews.order(created_at: :desc).limit(10)`
+- [ ] `@movie.reviews.joins(:critic).order(created_at: :desc).limit(10)`
+- [x] `@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`
+- [ ] `@movie.reviews.references(:critic).order(created_at: :desc).limit(10)`
+
+[Reference](https://hackernoon.com/differences-between-includes-and-joins-in-ruby-on-rails-1r2s35oj)

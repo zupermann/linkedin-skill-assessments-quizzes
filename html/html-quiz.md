@@ -5,7 +5,7 @@
 - [ ] The `<track>` tag is used for specifying subtitles. It is typically applied as a child of the `<audio>` and `<video>` tags.
 - [ ] The `<track>` tag is used for specifying subtitles. It is typically applied as a child of the `<video>` tag.
 - [ ] The `<track>` tag is used for specifying subtitles, captions, and other types of time-based text. It is typically applied as a child of the `<video>` tag.
-- [x] The `<track>` tag is used for specifying subtitles, captions, and other types of time-based text. It is typically applied as a child of the `<audio>` and `<video>` tag.
+- [x] The `<track>` tag is used for specifying subtitles, captions, and other types of time-based text. It is typically applied as a child of the `<audio>` and `<video>` tags.
 
 #### Q2. What are the best examples of void elements?
 
@@ -30,12 +30,12 @@
 
 #### Q5. What is the best way to apply bold styling to text?
 
-- [x] `<strong>`
-- [ ] Use CSS.
+- [ ] `<strong>`
+- [x] Use CSS.
 - [ ] `<bold>`
 - [ ] `<b>`
 
-#### Q6. When is the `<link>` tag used?
+#### Q6. What is the use of the `<link>` tag?
 
 - [ ] when linking style sheets, JavaScript, and icons for mobile apps
 - [x] when linking style sheets, favicons, and preloading assets
@@ -44,7 +44,7 @@
 
 #### Q7. What should fill the two blanks in the HTML code below?
 
-```html
+```HTML
 <address ______ _____>
   <span itemprop="streetAddress">6410 Via Real</span><br />
   <span itemprop="addressLocality">Carpinteria</span>,
@@ -58,7 +58,7 @@
 - [ ] `itemscope` `itemref="http://schema.org/PostalAddress"`
 - [ ] `itemid="address"` `itemtype="http://schema.org/PostalAddress"`
 
-#### Q8. When should you use the `<aside>` element?
+#### Q8. What is the use of the `<aside>` element?
 
 - [x] when the content can be removed without detracting from the page's message
 - [ ] for anything you want to move to the side, like a pull quote box, a sidebar, or an image with text wrapping around it
@@ -69,7 +69,7 @@
 
 - [ ] `<svg>, <picture>, <audio>, and <video>`
 - [x] `<picture>, <audio>, and <video>`
-- [ ] It is interchangeable with the `src` attribute, so any element which uses `src` may use `<source>`
+- [ ] It is interchangeable with the `src` attribute, so any element that uses `src` may use `<source>`
 - [ ] `<audio> and <video>`
 
 #### Q10. What is NOT a valid attribute for the `<textarea>` element?
@@ -85,7 +85,7 @@
 
 - [ ] A
 
-```html
+```HTML
 <details>
   <summary>Parmesan Deviled Eggs</summary>
   <p>
@@ -96,7 +96,7 @@
 
 - [ ] B
 
-```html
+```HTML
 <h4>▸ Parmesan Deviled Eggs</h4>
 <p>
   These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
@@ -105,7 +105,7 @@
 
 - [x] C
 
-```html
+```HTML
 <details open>
   <summary>Parmesan Deviled Eggs</summary>
   <p>
@@ -116,7 +116,7 @@
 
 - [ ] D
 
-```html
+```HTML
 <details>
   <h4>▸ Parmesan Deviled Eggs</h4>
   <p>
@@ -127,24 +127,24 @@
 
 #### Q12. What is the purpose of the `<samp>` element?
 
-- [ ] It connects the web browser to a SA-MP server.
+- [ ] It connects the web browser to an SA-MP server.
 - [ ] It identifies enclosed text as a sampler or an example.
 - [x] It identifies sample output from a computer program.
 - [ ] It uses a simple application messaging protocol to connect the browser to a texting device.
 
 #### Q13. When should you use `<ol>` and `<ul>` elements?
 
-- [x] Use `<ul>` when you want a bulleted list and `<ol>` when you want a numbered list.
+- [ ] Use `<ul>` when you want a bulleted list and `<ol>` when you want a numbered list.
 - [ ] Use `<ul>` when you have a list of items in which the order of the items matters. Use `<ol>` when you have a list of items that could go in any order.
 - [ ] Use `<ol>` when you want a bulleted list and `<ul>` when you want a numbered list.
-- [ ] Use `<ol>` when you have a list of items in which the order of the items matters. Use `<ul>` when you have a list of items that could go in any order.
+- [x] Use `<ol>` when you have a list of items in which the order of the items matters. Use `<ul>` when you have a list of items that could go in any order.
 
 #### Q14. What is the difference between the post and get methods in a form?
 
 - [ ] post is used for sending information to the server. get is used for retrieving form information from the server.
 - [ ] get is used for sending information to the server. post is used for retrieving form information from the server.
-- [ ] With get, data is included in the form body when send to the server. With post, the data goes through the URL.
-- [x] With post, data is included in the form body when send to the server. With get, the data goes through the URL.
+- [ ] With get, data is included in the form body when sent to the server. With the post, the data goes through the URL.
+- [x] With post, data is included in the form body when sent to the server. With get, the data goes through the URL.
 
 #### Q15. What is the difference between the `<div>` and `<span>` tags?
 
@@ -153,9 +153,9 @@
 - [ ] `<div>` is the industry-standard default tag, but you could use `<span>` if you prefer.
 - [ ] `<div>` is used where a generic inline tag is needed, while `<span>` is used where a generic block-level tag is needed.
 
-#### Q16. What should fill the blank in the HTML code bellow?
+#### Q16. What should fill the blank in the HTML code below?
 
-```html
+```HTML
 <form method="post" action="mailto:info@linkedin.com" ____="text/plain"></form>
 ```
 
@@ -164,35 +164,35 @@
 - [ ] type
 - [ ] rel
 
-#### Q17. What is the correct markup for `alt` attribute of an image?
+#### Q17. What is the correct markup for the `alt` attribute of an image?
 
 - [ ] A
 
-```html
+```HTML
 <img src="cubism.jpg" alt="Version of ""Whistler's Mother"" in cubist style">
 ```
 
 - [ ] B
 
-```html
+```HTML
 <img src="cubism.jpg" alt="Version of "Whistler's Mother" in cubist style">
 ```
 
 - [x] C
 
-```html
-<img src="cubism.jpg" alt='Version of "Whistler\'s Mother" in cubist style'>
+```HTML
+<img src="cubism.jpg" alt='Version of "Whistler&apos;s Mother" in cubist style' />
 ```
 
 - [ ] D
 
-```html
+```HTML
 <img src="cubism.jpg" alt="Version of \"Whistler's Mother\" in cubist style">
 ```
 
 #### Q18. In the code below, what is the purpose of the **id** attribute?
 
-```html
+```HTML
 <p id="warning">Be careful when installing this product.</p>
 ```
 
@@ -209,7 +209,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [x] A
 
-```html
+```HTML
 <p>
   On <time datetime="1969-07-21">July 21, 1969</time>, Neil Armstrong said,
   <q cite="https://www.hq.nasa.gov/alsj/a11l/a11.html"
@@ -220,7 +220,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] B
 
-```html
+```HTML
 <p>
   On July 21, 1969, Neil Armstrong said,
   <q cite="https://www.hq.nasa.gov/alsj/a11l/a11.html"
@@ -231,7 +231,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] C
 
-```html
+```HTML
 <p>
   On July 21, 1969, Neil Armstrong said,
   <q>"One small step for man, one giant leap for mankind."</q>
@@ -240,7 +240,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] D
 
-```html
+```HTML
 <p>
   On <time datetime="07-21-1969">July 21, 1969</time>, Neil Armstrong said,
   <q cite="https://www.hq.nasa.gov/alsj/a11l/a11.html"
@@ -251,13 +251,13 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q20. What should fill the blank in this HTML code?
 
-```html
+```HTML
 <a href="https://es.yahoo.com/" hreflang="____" target="_blank">Visita Yahoo</a>
 ```
 
-- [ ] es
+- [x] es
 - [ ] es-spanish
-- [x] es-es
+- [ ] es-es
 - [ ] spanish
 
 #### Q21. Review the text in the red box in the image shown. What is the best way to code this in HTML?
@@ -265,15 +265,15 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 ![Image of footer](images/ss-3.png?raw=true)
 
 - [ ] ordered list
-- [x] unordered list inside a nav element
+- [ ] unordered list inside a nav element
 - [ ] ordered list inside a nav element
-- [ ] unordered list
+- [x] unordered list
 
 #### Q22. What is the best way to code three choices within a form so that the user can select only one item?
 
 - [ ] A
 
-```html
+```HTML
 <label for="example">Make a choice:</label>
 <datalist id="example">
   <option value="Choice 1"></option>
@@ -284,7 +284,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] B
 
-```html
+```HTML
 <p>Make a choice:</p>
 <input id="choices" name="example" />
 
@@ -297,7 +297,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] C
 
-```html
+```HTML
 <label for="example">Make a choice:</label>
 <input list="example" id="choices" name="choices" />
 
@@ -310,7 +310,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [x] D
 
-```html
+```HTML
 <label for="example">Make a choice:</label>
 <input list="choices" id="example" name="example" />
 
@@ -351,7 +351,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] A
 
-```html
+```HTML
 <table>
   <scope cols="2" style="background-color: yellow">
   <tr>
@@ -369,7 +369,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [x] B
 
-```html
+```HTML
 <table>
   <colgroup span="2" style="background-color: yellow">
   <tr>
@@ -387,7 +387,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] C
 
-```html
+```HTML
 <table>
   <group cols="2" style="background-color: yellow">
   <tr scope="row">
@@ -405,7 +405,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 - [ ] D
 
-```html
+```HTML
 <table>
   <columns colspan="2" style="background-color: yellow">
   <tr>
@@ -421,20 +421,20 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 </table>
 ```
 
-#### Q26. What is the `<hr>`tag typically used for? / Alt.: What is the semantic meaning of the `<hr>` tag?
+#### Q26. What is the `<hr>` tag typically used for? / Alt.: What is the semantic meaning of the `<hr>` tag?
 
 - [ ] This tag is depreciated (alt.: deprecated) and should not be used.
 - [x] It designates a topic shift within a section at the paragraph level.
 - [ ] It draws a horizontal line.
 - [ ] It designates a shift of topic at the section level. / Alt.: It designates a separation of sections within an `<article>`.
 
-This is a confusing question and there can be an arguments for both the second and the third options being correct.
+`This is a confusing question and there can be arguments for both the second and the third options being correct.`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HTML `<hr>` element represents a thematic break between paragraph-level elements. Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
 
 #### Q27. What should fill the two blanks in the HTML code below?
 
-```html
+```HTML
 <section itemscope itemtype="http://schema.org/Restaurant">
   <h1 itemprop="name">Nadia's Garden</h1>
   <p itemscope ______ ______>
@@ -453,7 +453,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [x] A
 
-```html
+```HTML
 <a id="top"></a>
 
 <!-- placed at the top of the page -->
@@ -463,7 +463,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] B
 
-```html
+```HTML
 <a name="top"></a>
 
 <!-- placed at the top of the page -->
@@ -473,22 +473,22 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] C
 
-```html
+```HTML
 <a href="#">back to top</a> <a href="#top">back to top</a>
 ```
 
 - [ ] D
 
-```html
+```HTML
 <button href="#">back to top</button> <button href="#top">back to top</button>
 ```
 
-#### Q29. Which three tags where deprecated in HTML4 but returned to HTML5?
+#### Q29. Which three tags were deprecated in HTML4 but returned to HTML5?
 
-- [x] `<rb> <rp> <rt>`
+- [ ] `<rb> <rp> <rt>`
 - [ ] `<acronym> <code> <wbr>`
 - [ ] `<hgroup> <q> <wbr>`
-- [ ] `<b> <i> <u>`
+- [x] `<b> <i> <u>`
 
 #### Q30. The **\_** tag is used for marking up a short code snippet, while the \_ tag is used for marking up a longer block of code
 
@@ -497,9 +497,8 @@ This is a confusing question and there can be an arguments for both the second a
 - [ ] `<kdb>`, `<mark>`
 - [x] `<code>`, `<pre>`
 
-[Source: MDN Web Docs code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
-
-[Source: MDN Web Docs pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
+1. [Source: MDN Web Docs code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
+2. [Source: MDN Web Docs pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 
 #### Q31. What does the `<label>` element do?
 
@@ -521,29 +520,29 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] A
 
-```html
+```HTML
 <p>We are fond of our <span title="three-letter acronyms">TLAs</span> in web design.</p>
 ```
 
 - [ ] B
 
-```html
+```HTML
 <p>We are fond of our TLAs in web design.</p>
 ```
 
 - [x] C
 
-```html
+```HTML
 <p>we are fond of our <abbr title="three-letter acronyms">TLAs</abbr> in web design.</p>
 ```
 
 - [ ] D
 
-```html
+```HTML
 <p>we are fond of our <acronym title="three-letter acronym">TLAs</acronym> in web design.</p>
 ```
 
-`<acronym>` has been removed in HTML5 and shouldn't be used anymore. Instead web developers should use the `<abbr>` element.
+`<acronym>` has been removed in HTML5 and shouldn't be used anymore. Instead, web developers should use the `<abbr>` element.
 
 #### Q34. What is the correctly nested markup for this list?
 
@@ -551,7 +550,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] A
 
-```html
+```HTML
 <ul>
   <li>
     office
@@ -571,7 +570,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [x] B
 
-```html
+```HTML
 <ul>
   <li>
     Office Supplies
@@ -591,7 +590,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] C
 
-```html
+```HTML
 <ul>
   <li>office</li>
   <li>staple</li>
@@ -601,9 +600,9 @@ This is a confusing question and there can be an arguments for both the second a
 </ul>
 ```
 
-#### Q35. What should fill the blank below?
+#### Q35. What should fill in the blank below?
 
-```html
+```HTML
 <link href="phone.css" rel="stylesheet" _____="print" />
 ```
 
@@ -618,7 +617,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] A
 
-```html
+```HTML
 <p>
   "Making money is what you have to do to sustain a business—being driven to make something of value
   and purpose is much more powerful."
@@ -628,7 +627,7 @@ This is a confusing question and there can be an arguments for both the second a
 
 - [ ] B
 
-```html
+```HTML
 <blockquote>
   <q
     >"Making money is what you have to do to sustain a business—being driven to make something of
@@ -705,7 +704,7 @@ This is a confusing question and there can be an arguments for both the second a
 - [ ] `keyboard`
 - [ ] `access`
 
-#### Q42. What is the correct way to code a link that, when clicked, will send an email to `email@example.com` with a subject of "Hello"?
+#### Q42. What is the correct way to code a link that, when clicked, will send an email to `email@example.com` with the subject of "Hello"?
 
 - [ ] `<a href="mailto:email@example.com&subject=Hello">Click me</a>`
 - [ ] `<a href="mailto:email@example.com">Hello</a>`
@@ -714,18 +713,15 @@ This is a confusing question and there can be an arguments for both the second a
 
 #### Q43. Which tag is the root element of an HTML document?
 
-- [ ] `<DOCTYPE html>`
+- [ ] `<!DOCTYPE html>`
 - [x] `<html>`
 - [ ] `<body>`
 - [ ] `<root>`
 
-`
-The <html> tag is the root element of an HTML document, which means that it contains all the contents and tags of the HTML document within it.
+`The <html> tag is the root element of an HTML document, which means that it contains all the contents and tags of the HTML document within it. The HTML element represents the root of a document.`
 
-The html element represents the root of a document.
-`
-[Source](https://www.interviewbit.com/html-mcq/)
-[Source](https://www.w3.org/TR/2010/WD-html-markup-20100624/html.html)
+1. [Source](https://www.interviewbit.com/html-mcq/)
+2. [Source](https://www.w3.org/TR/2010/WD-html-markup-20100624/html.html)
 
 #### Q44. Which code snippet creates the layout shown, starting at `<table>` and ending at `</table>`?
 
@@ -733,7 +729,7 @@ The html element represents the root of a document.
 
 - [ ] A
 
-```html
+```HTML
 <tr>
   <td>Table cell 1</td>
   <td>Table cell 2</td>
@@ -745,7 +741,7 @@ The html element represents the root of a document.
 
 - [ ] B
 
-```html
+```HTML
 <tr>
   <td>Table cell 1</td>
   <td>Table cell 2</td>
@@ -755,7 +751,7 @@ The html element represents the root of a document.
 
 - [x] C
 
-```html
+```HTML
 <tr>
   <td>Table cell 1</td>
   <td>Table cell 2</td>
@@ -767,7 +763,7 @@ The html element represents the root of a document.
 
 - [ ] D
 
-```html
+```HTML
 <tr>
   <td>Table cell 1</td>
   <td>Table cell 2</td>
@@ -788,7 +784,7 @@ The html element represents the root of a document.
 
 - [ ] A
 
-```html
+```HTML
 <form>
   <legend>Title</legend>
   <fieldset>
@@ -801,7 +797,7 @@ The html element represents the root of a document.
 
 - [ ] B
 
-```html
+```HTML
 <form>
   <fieldset>
     <legend>Title</legend>
@@ -814,7 +810,7 @@ The html element represents the root of a document.
 
 - [x] C
 
-```html
+```HTML
 <form>
   <fieldset>
     <legend>Title</legend>
@@ -827,7 +823,7 @@ The html element represents the root of a document.
 
 - [ ] D
 
-```html
+```HTML
 <form>
   <legend>Title</legend>
   <label for="name">Your name:</label>
@@ -838,18 +834,18 @@ The html element represents the root of a document.
 
 #### Q47. What does the **poster** attribute do in the `<video>` tag?
 
-- [x] It specifies an image that should display while the video downloads and until the video is played.
+- [x] It specifies an image that should be displayed while the video downloads and until the video is played.
 - [ ] It specifies an image that only displays if there is a problem with the video.
-- [ ] It specifies an image that should display until the video is played.
-- [ ] It specifies an image that should display while the video downloads.
+- [ ] It specifies an image that should be displayed until the video is played.
+- [ ] It specifies an image that should be displayed while the video downloads.
 
 #### Q48. What does this code do?
 
-```html
+```HTML
 <audio controls src="sound.mp3" type="audio/mpeg">When does this text display?</audio>
 ```
 
-- [ ] The text displays over the audio controls, unless CSS is used to position it elsewhere.
+- [ ] The text displays over the audio controls unless CSS is used to position it elsewhere.
 - [ ] The text displays under the audio controls.
 - [x] The text displays when the browser cannot play the sound.
 - [ ] The text never displays.
@@ -870,7 +866,7 @@ The html element represents the root of a document.
 
 #### Q51. In the code below, what is the purpose of the **lang** attribute?
 
-```html
+```HTML
 <p lang="en-GB">Welcome to our wonderful website.</p>
 ```
 
@@ -888,7 +884,7 @@ The html element represents the root of a document.
 
 #### Q53. Review the code below. What is the absolute URL for a page called **page.html**?
 
-```html
+```HTML
 <base href="http://www.linkedin.com/dir/" />
 ```
 
@@ -911,16 +907,26 @@ The html element represents the root of a document.
 - [ ] Use the `<pre>` tag to make the line spacing look exactly like you want.
 - [ ] Separate the lines with the `<br>` tag.
 
+[From MDN (`<br>`: The Line Break element)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br#accessibility_concerns):
+
+```
+Accessibility concerns
+
+Creating separate paragraphs of text using <br> is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within <br>s. This can be a confusing and frustrating experience for the person using the screen reader.
+
+Use <p> elements, and use CSS properties like margin to control their spacing.
+```
+
 #### Q56. What does the `<wbr>` tag do?
 
 - [ ] It requires the browser to wrap the current line at that point.
 - [ ] It breaks a word into two pieces, using a hyphen to connect the words.
 - [ ] It formats a sentence to be easily breakable.
-- [x] It presents an opportunity for a break in a very long word, if needed for proper page display.
+- [x] It presents an opportunity for a break in a very long word if needed for proper page display.
 
 #### Q57. Review the code below. How do you include subnavigation for Link 2 that includes a link?
 
-```html
+```HTML
 <nav>
   <ul>
     <li><a href="#">Link 1</a></li>
@@ -932,7 +938,7 @@ The html element represents the root of a document.
 
 - [ ] A
 
-```html
+```HTML
 <nav>
   <ul>
     <li><a href="#">Link 1</a></li>
@@ -947,7 +953,7 @@ The html element represents the root of a document.
 
 - [x] B
 
-```html
+```HTML
 <nav>
   <ul>
     <li><a href="#">Link 1</a></li>
@@ -964,7 +970,7 @@ The html element represents the root of a document.
 
 - [ ] C
 
-```html
+```HTML
 <ul>
   <nav>
     <li><a href="#">Link 1</a></li>
@@ -983,7 +989,7 @@ The html element represents the root of a document.
 
 - [ ] D
 
-```html
+```HTML
 <nav>
   <ul>
     <li><a href="#">Link 1</a></li>
@@ -1014,7 +1020,7 @@ The html element represents the root of a document.
 
 #### Q60. What is the best semantic to use Quotes in HTML?
 
-`Steve Kruz Said: "He will Win"`
+`Steve Kruz said: "He will Win"`
 
 - [x] `<q>`
 - [ ] `<quote>`
@@ -1035,7 +1041,7 @@ The html element represents the root of a document.
 #### Q62. What is the correct way to describe an empty element / Alt.: What is the correct way to describe an empty element, such as a line break tag?
 
 - [ ] It has opening and closing tags but no child content.
-- [ ] It display nothing on a website.
+- [ ] It displays nothing on a website.
 - [x] It has no child content and no closing tag.
 - [ ] It has child content but no closing tag.
 
@@ -1056,18 +1062,18 @@ The html element represents the root of a document.
 
 - [ ] When the **Play** button is pressed, the browser plays the sound over and over again until the user stops it.
 - [ ] The browser plays the sound once automatically in the background. The user has no control over the sound.
-- [ ] The browser plays the sound automatically and continuously in the background. The user may stop the sound at any tune.
+- [ ] The browser plays the sound automatically and continuously in the background. The user may stop the sound at any time.
 - [x] It does nothing. Modern browsers require some form of interaction before they let a page autoplay with audio.
 
-References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio),
-[(MDN) autoplay](https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide)
+1. [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio),
+2. [(MDN) autoplay](https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide)
 
 #### Q65. What is the difference between the `<head>` and `<header>` tags?
 
 - [ ] There is only one `<head>` tag per page, while there may be many `<header>` tags.
 - [ ] The `<head>` tag may contain CSS and Javascript links, while the `<header>` tag may contain headings and navigational links.
-- [x] all of these answers
-- [ ] The `<head>` tag contains meta information, while the `<header>` tag contains navigation, logos, and other page identifying content.
+- [ ] The `<head>` tag contains meta information, while the `<header>` tag contains navigation, logos, and other page-identifying content.
+- [x] All of the above.
 
 #### Q66. In this code, what is the purpose of defer?
 
@@ -1080,7 +1086,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 #### Q67. The code below contains some errors. Which choice corrects all of the errors?
 
-```html
+```HTML
 <table>
   <tr>
     Cell 1
@@ -1094,7 +1100,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [ ] A
 
-```html
+```HTML
 <caption>
   A table
 </caption>
@@ -1112,7 +1118,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [ ] B
 
-```html
+```HTML
 <caption>
   A table
 </caption>
@@ -1126,7 +1132,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [x] C
 
-```html
+```HTML
 <table>
   <caption>
     A table
@@ -1140,7 +1146,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [ ] D
 
-```html
+```HTML
 <table>
   <tr>
     <td>Cell 1</td>
@@ -1152,7 +1158,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 </table>
 ```
 
-#### Q68. Given the file and directory structure shown here, what is the correct element to place in file profit.html to link to info.html?
+#### Q68. Given the file and directory structure shown here, what is the correct element to place in the file profit.html to link to info.html?
 
 ![Image of footer](images/ss-7.png?raw=true)
 
@@ -1174,7 +1180,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [ ] A
 
-```html
+```HTML
 <area />
 <embed />
 <strong></strong>
@@ -1182,7 +1188,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [ ] B
 
-```html
+```HTML
 <input />
 <br />
 <p></p>
@@ -1190,7 +1196,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [ ] C
 
-```html
+```HTML
 <link>
 <meta>
 <title>
@@ -1198,7 +1204,7 @@ References [(MDN) audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 - [x] D
 
-```html
+```HTML
 <wbr />
 <base />
 <source />
@@ -1297,7 +1303,7 @@ As Steve Krug once said, happy talk must die.
 
 - [x] A
 
-```html
+```HTML
 <h4>Mailing Address</h4>
 <address>
   6410 Via Real <br />
@@ -1308,7 +1314,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] B
 
-```html
+```HTML
 <h4><strong>Mailing Address</h4>
 <address><em>
   6410 Via Real <br>
@@ -1319,7 +1325,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] C
 
-```html
+```HTML
 <h4>Mailing Address</h4>
 <p>
   <em>
@@ -1332,7 +1338,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] D
 
-```html
+```HTML
 <p><strong>Mailing Address</strong></p>
 <p>
   <em>
@@ -1345,7 +1351,7 @@ As Steve Krug once said, happy talk must die.
 
 [Source: W3Schools](https://www.w3schools.com/tags/tag_address.asp)
 
-`The <address> tag defines the contact information for the author/owner of a document or an article. The contact information can be an email address, URL, physical address, phone number, social media handle, etc. The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.`
+`The <address> tag defines the contact information for the author/owner of a document or an article. The contact information can be an email address, URL, physical address, phone number, social media handle, etc. The text in the <address> element usually renders in italics, and browsers will always add a line break before and after the <address> element.`
 
 #### Q77. What is the primary purpose of HTML?
 
@@ -1369,7 +1375,7 @@ As Steve Krug once said, happy talk must die.
 
 #### Q79. How will this code render by default in most web browsers?
 
-```html
+```HTML
 <details>
   <h4>Mixed Berry Tart.</h4>
   <p>
@@ -1378,9 +1384,9 @@ As Steve Krug once said, happy talk must die.
 </details>
 ```
 
-- [x] A
+- [ ] A
       ![A](images/Q84-1.jpg)
-- [ ] B
+- [x] B
       ![B](images/Q84-2.jpg)
 - [ ] C
       ![C](images/Q84-3.jpg)
@@ -1401,9 +1407,8 @@ As Steve Krug once said, happy talk must die.
 - [ ] _disabled_ allows clicking in the `<textarea>` element. _readonly_ prevents all interaction with the control.
 - [ ] _disabled_ is invalid attribute for `<textarea>`, while _readonly_ is a valid attribute.
 
-[Source: readonly](https://www.w3schools.com/tags/att_readonly.asp)
-
-[Source: disabled](https://www.w3schools.com/tags/att_disabled.asp)
+1. [Source: readonly](https://www.w3schools.com/tags/att_readonly.asp)
+2. [Source: disabled](https://www.w3schools.com/tags/att_disabled.asp)
 
 #### Q82. In this code, what is _target_?
 
@@ -1418,29 +1423,29 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] A
 
-```html
+```HTML
 <button submit="http://example.com/process">Process data</button>
 ```
 
 - [ ] B
 
-```html
+```HTML
 <button action="http://example.com/process">Process data</button>
 ```
 
 - [x] C
 
-```html
+```HTML
 <button formaction="http://example.com/process">Process data</button>
 ```
 
 - [ ] D
 
-```html
+```HTML
 <button method="http://example.com/process">Process data</button>
 ```
 
-`formaction — The URL that processes the information submitted by the button. Overrides the action attribute of the button's form owner. Does nothing if there is no form owner.` [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formaction)
+`formation — The URL that processes the information submitted by the button. Overrides the action attribute of the button's form owner. Does nothing if there is no form owner.` [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formaction)
 
 #### Q84. Which is the best markup to produce this text?
 
@@ -1452,12 +1457,11 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<p>x<y&z>w</p>`
 
 `This question has an issue, however this answer will count as correct`
-
-`It's too strange question because all of that methods doesn't work. The good method is &amp, &lt, &gt using.`
+`It's too strange a question because all of that methods doesn't work. The good method is &amp, &lt, &gt using.`
 
 #### Q85. What is wrong with this code snippet?
 
-```html
+```HTML
 <label>Address:</label> <input type="text" name="address" id="address-input" />
 ```
 
@@ -1480,10 +1484,10 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<p>` Get 10% discount `<comment>`not valid in France`</comment></p>`
 - [ ] `<p>` Get 10% discount `<aside>`not valid in France`</aside></p>`
 
-#### Q88. Which choice will produce the spanish word <i>canción</i>?
+#### Q88. Which choice will produce the Spanish word <i>canción</i>?
 
-- [ ] `<p lang="es">canción</p>`
-- [x] `<p lang="es">canci&oacuten</p>`
+- [x] `<p lang="es">canción</p>`
+- [ ] `<p lang="es">canci&oacuten</p>`
 - [ ] `<p lang="es">cancio'n</p>`
 - [ ] `<p lang="es">canci'on</p>`
 
@@ -1494,11 +1498,11 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<caption>` provides captions for `<audio>`, `<video>`, and `<table>`.
 - [ ] `<caption>` provides captions for `<img>`, `<audio>`, and `<video>`.
 
-#### Q90. The value attribute is associated with which set of tags ?
+#### Q90. The `value` attribute is associated with which set of tags?
 
 - [x] A
 
-```html
+```HTML
 <li>
   <input />
   <option></option>
@@ -1507,7 +1511,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] B
 
-```html
+```HTML
 <input>
 <option>
 <textarea>
@@ -1515,7 +1519,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] C
 
-```html
+```HTML
 <button>
   <input />
   <form></form>
@@ -1524,7 +1528,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] D
 
-```html
+```HTML
 <input /> <label> <meter></meter></label>
 ```
 
@@ -1544,7 +1548,7 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<p>`The `<dt>`focal length`</dt>` of a lens gives the distance from the lens to the image sensor.`</p>`
 - [ ] `<p>`The `<dd>`focal length`</dd>` of a lens gives the distance from the lens to the image sensor.`</p>`
 
-`**Definition element => The <dfn> HTML element is used to indicate the term being defined within the context of a definition phrase or sentence. `<br>`**Description Term element => The <dt> HTML element specifies a term in a description or definition list, and as such must be used inside a <dl> element.`<br>` **Description Details element =>The <dd> HTML element provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).`
+**Definition** `element => The <dfn> HTML element is used to indicate the term being defined within the context of a definition phrase or sentence.`<br>`**Description Term element => The <dt> HTML element specifies a term in a description or definition list, and as such must be used inside an <dl> element.`<br>`**Description Details element =>The <dd> HTML element provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).`
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn)
 
@@ -1552,23 +1556,23 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] :
 
-```html
+```HTML
 <input type="radio" name="example" /> Choice 1 <br />
 <input type="radio" name="example" /> Choice 2 <br />
 <input type="radio" name="example" /> Choice 3
 ```
 
-- [x] :
+- [ ] :
 
-```html
+```HTML
 <input type="checkbox" name="example" /> Choice 1 <br />
 <input type="checkbox" name="example" /> Choice 2 <br />
 <input type="checkbox" name="example" /> Choice 3
 ```
 
-- [ ] :
+- [x] :
 
-```html
+```HTML
 <label><input type="checkbox" name="example" /> Choice 1</label><br />
 <label><input type="checkbox" name="example" /> Choice 2</label><br />
 <label><input type="checkbox" name="example" /> Choice 3</label>
@@ -1576,13 +1580,13 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] :
 
-```html
+```HTML
 <label><input type="radio" name="example" /> Choice 1</label><br />
 <label><input type="radio" name="example" /> Choice 2</label><br />
 <label><input type="radio" name="example" /> Choice 3</label>
 ```
 
-`<input> elements of type checkbox are rendered by default as boxes that are checked (ticked) when activated, like you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally this is a square but it may have rounded corners.`
+`<input> elements of type checkbox are rendered by default as boxes that are checked (ticked) when activated as you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally, this is a square but it may have rounded corners.`
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
 
@@ -1600,25 +1604,25 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<meta name="creator" content="Author Name">`
 - [x] `<meta name="author" content="Author Name">`
 
-#### Q96. Given the following requirements, select the correct `input` configuration: An `input` that allows the user to select from a range of integer values between 0 and 100 (inclusive) in increments of 5.
+#### Q96. Given the following requirements, select the correct `input` configuration: An `input` that allows the user to select from a range of integer values between 0 and 100 (inclusive) in increments of 5
 
 - [ ] `<input type="range" min="0" max="100" by="5" />`
 - [x] `<input type="range" min="0" max="100" step="5" />`
 - [ ] `<input type="number" min="0" max="100" step="5" />`
 - [ ] `<input type="number" min="0" max="100" by="5" />`
 
-`<input> elements of type range let the user specify a numeric value which must be no less than a given value, and no more than another given value. The step attribute is a number that specifies the granularity that the value must adhere to.`
+`<input> elements of type range let the user specify a numeric value which must be no less than a given value and no more than another given value. The step attribute is a number that specifies the granularity that the value must adhere to.`
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/range)
 
-#### Q97. Which choice is valid markup for a `<head>` element?
+#### Q97. Which choice is a valid markup for a `<head>` element?
 
-- [ ] `<head class="Page Section Information" id="head"><title>Page Title</title></head>`
+- [x] `<head class="Page Section Information" id="head"><title>Page Title</title></head>`
 - [ ] `<head><title>Page Title</title> <img src="favicon.icon" alt=""></head>`
-- [x] `<head><title>Page Title</title> <data value="email">email@example.com</data></head>`
+- [ ] `<head><title>Page Title</title> <data value="email">email@example.com</data></head>`
 - [ ] `<head><title>Page Title</title><address>email@example.com</address></head>`
 
-`The <head> HTML element contains machine-readable information (metadata) about the document, like its title.The <data> tag is used to add a machine-readable translation of a given content.`
+`The <head> HTML element contains machine-readable information (metadata) about the document, like its title. The <data> tag is used to add a machine-readable translation of a given content.`
 [Source 1](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)/
 [Source 2](https://www.w3schools.com/tags/tag_data.asp)
 
@@ -1664,10 +1668,10 @@ As Steve Krug once said, happy talk must die.
 </div>
 ```
 
-`The <article> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Example:a user-submitted comment.`
+`The <article> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Example: a user-submitted comment.`
 [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
 
-#### Q99. To make something editable by the user, you need to set the **\_** attribute to **\_**.
+#### Q99. To make something editable by the user, you need to set the **\_** attribute to **\_**
 
 - [ ] `access`; allow
 - [ ] `designMode`; true
@@ -1717,7 +1721,7 @@ As Steve Krug once said, happy talk must die.
 
 - [x] A
 
-```html
+```HTML
 <dl>
   <dt>Server</dt>
   <dd>Software used to serve webpages, like Apache.</dd>
@@ -1728,7 +1732,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] B
 
-```html
+```HTML
 <dt>
   <dl>Server</dl>
   <dd>Software used to serve webpages, like Apache.</dd>
@@ -1739,7 +1743,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] C
 
-```html
+```HTML
 <dl>
   <dt>Server</dt>
   <dd>Software used to serve webpages, like Apache.</dd>
@@ -1750,7 +1754,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] D
 
-```html
+```HTML
 <dl>
   <dd>Server</dd>
   <dt>Software used to serve webpages, like Apache.</dt>
@@ -1790,9 +1794,9 @@ As Steve Krug once said, happy talk must die.
 
 #### Q106. How would you mark up a header for a table row?
 
-- [x] A
+- [ ] A
 
-```html
+```HTML
 <table>
   <thead scope="row">
     <th row="1">Header</th>
@@ -1804,9 +1808,9 @@ As Steve Krug once said, happy talk must die.
 </table>
 ```
 
-- [ ] B
+- [x] B
 
-```html
+```HTML
 <table>
   <tr>
     <th scope="row">Header</th>
@@ -1818,7 +1822,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] C
 
-```html
+```HTML
 <table>
   <tr>
     <thead scope="row">
@@ -1832,7 +1836,7 @@ As Steve Krug once said, happy talk must die.
 
 - [ ] D
 
-```html
+```HTML
 <table>
   <tr>
     <th>Header</th>
@@ -1853,7 +1857,7 @@ As Steve Krug once said, happy talk must die.
 
 #### Q108. Users report that a form is not working. What is the culprit?
 
-```html
+```HTML
 <form action="/choices" disabled>
   <fieldset disabled>
     <legend>choices</legend>
@@ -1872,3 +1876,380 @@ As Steve Krug once said, happy talk must die.
 - [ ] There is no method set on the form.
 
 A disabled fieldset is unusable and un-clickable. [Source](https://www.w3schools.com/tags/att_fieldset_disabled.asp)
+
+#### Q109. Which description list is coded correctly?
+
+- [x] A
+
+```HTML
+<dl>
+  <dt>Server</dt>
+  <dd>Software used to server webpages, like Apache.</dd>
+  <dd>Hardware used to provide data to other computers.</dd>
+  <!--Other terms and descriptions -->
+</dl>
+```
+
+- [ ] B
+
+```HTML
+<dl>
+  <dd>Server</dd>
+  <dt>Software used to server webpages, like Apache.</dt>
+  <dt>Hardware used to provide data to other computers.</dt>
+  <!--Other terms and descriptions -->
+</dl>
+```
+
+- [ ] C
+
+```HTML
+<dt>
+    <dl>Server</dl>
+    <dd>Software used to server webpages, like Apache.</dd>
+    <dd>Hardware used to provide data to other computers.</dd>
+    <!--Other terms and descriptions -->
+</dt>
+```
+
+- [ ] D
+
+```HTML
+<dl>
+  <dt>Server</dt>
+  <dd>Software used to server webpages, like Apache.</dd>
+  <dt>Hardware used to provide data to other computers.</dt>
+  <!--Other terms and descriptions -->
+</dl>
+```
+
+#### Q110. what does the a in the HTML tag stand for?
+
+- [ ] assign
+- [ ] add tag
+- [x] anchor tag
+- [ ] None of the above
+
+[Source](https://stackoverflow.com/questions/39434659/what-does-the-a-in-the-html-a-tag-stand-for)
+
+#### Q111. What is the correct HTML element for inserting a line break?
+
+- [ ] `<break>`
+- [ ] `<lb>`
+- [x] `<br>`
+- [ ] `<a>`
+
+#### Q112. The HTML global attribute, "contenteditable" is used to
+
+- [ ] Update content from the server
+- [ ] Specifies a context menu for an element. The menu appears when a user right-clicks on the element.
+- [x] Specify whether the content of an element should be editable or not
+- [ ] Return the position of the first found occurrence of content inside a string
+
+#### Q113. HTML elements that aren't meant to store content or other elements are called **\_** elements
+
+- [x] void
+- [ ] independent
+- [ ] empty
+- [ ] paragraph
+
+[Source](https://www.w3.org/TR/2011/WD-html-markup-20110113/syntax.html#syntax-elements)
+
+#### Q114. The **\_** attribute of an HTML label element is a referencing mechanism to state what input or element the label is tied to
+
+- [ ] to
+- [ ] of
+- [ ] with
+- [x] for
+
+[Source](https://www.w3schools.com/tags/att_label_for.asp)
+
+#### Q115. Coding in HTML provides which of the following?
+
+- [ ] The responsiveness of the website
+- [ ] The style of the website
+- [x] The core website structure
+- [ ] The behavior of web elements
+
+#### Q116. Which HTML element is the container for all the renderable aspects of the document?
+
+- [ ] head
+- [x] body
+- [ ] title
+- [ ] meta
+
+#### Q117. The "h" in the HTML h1 tag is short for **\_**
+
+- [ ] head
+- [ ] horizontal
+- [ ] hypertext
+- [x] heading
+
+[Source](https://www.w3schools.com/html/html_headings.asp)
+
+#### Q118. Which is an invalid use of the `<a>` element?
+
+- [ ] A
+
+```HTML
+<a href="#additional-information" class="Card">
+  <video src="media.mp4" width="400" height="300"></video>
+</a>
+```
+
+- [x] B
+
+```HTML
+<a href="#additional-information" class="Card">
+  <details>
+    <summary>Additional Information</summary>
+  </details>
+</a>
+```
+
+- [ ] C
+
+```HTML
+<a href="#additional-information" class="Card">
+  <p>Additional Information</p>
+  <p></p
+></a>
+```
+
+- [ ] D
+
+```html
+<a href="#additional-information" class-"Card">
+  <img src="media.jpeg" alt="More information"></video>
+</a>
+```
+
+#### Q119. How to display preformatted text in HTML?
+
+- [ ] `<p>`
+- [x] `<pre>`
+- [ ] `<hr>`
+- [ ] All of the above
+
+#### Q120. Which is a valid title element?
+
+- [ ] `<title><em>Exciting</em> title</title>`
+- [ ] `<title></title>`
+- [ ] `<title name="Exciting Title" />`
+- [x] `<title>Exciting title</title>`
+
+[Source](https://www.w3schools.com/tags/tag_title.asp)
+
+#### Q121. Which link contains a valid URL?
+
+- [ ] `<link rel="stylesheet" href="/styles for me/styles.css">`
+- [ ] `<link rel="stylesheet" href="/styles|for|me/styles.css">`
+- [ ] `<link rel="css" href="\styles for me\styles.css">`
+- [x] `<link rel="stylesheet" href="/styles%20for%20me/styles.css">`
+
+[Source 1](https://www.w3schools.com/tags/att_link_href.asp)
+[Source 2](https://www.sistrix.com/ask-sistrix/technical-seo/site-structure/do-i-have-to-convert-the-spaces-in-urls)
+
+#### Q122. Which example is missing a mandatory closing tag, making it invalid?
+
+- [ ] `<p>Simple paragraph`
+- [x] `<ul><li>Simple list</li>`
+- [ ] `<ul><li>Simple list<ul>`
+- [ ] `<dl><dt>Simple term<dd>Simple description</dl>`
+
+[Source](https://blog.teamtreehouse.com/to-close-or-not-to-close-tags-in-html5)
+
+#### Q123. What is the semantic method for marking up a video with a caption in browsers that support it?
+
+- [ ] `<video src="video.mp4" caption="video.vtt"></video>`
+- [ ] `<video src="video.mp4"><track caption="video.vtt" /></video>`
+- [x] `<video src="video.mp4"><track default kind="captions" srclang="en" src="video.vtt" /></video>`
+- [ ] `<video src="video.mp4"><caption default srclang="en" src="video.vtt" /></video>`
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+
+#### Q124. A white paper has a sidebar and endnotes, both of which are complementary to the main text. How would you mark them up to make their distinct roles more broadly accessible?
+
+- [ ] A
+
+```HTML
+<custom-sidebar aria-label-"Sidebar"›Sidebar...</custom-sidebar><custom-footnote aria-
+label="Endnotes">Endnotes...</custom-footnote>
+```
+
+- [x] B
+
+```HTML
+<aside role="sidebar">Sidebar...</aside>
+<aside role="notes">Endnotes...</aside>
+```
+
+- [ ] C
+
+```HTML
+<aside role="complementary">Sidebar...</aside>
+<aside role="supplementary">Endnotes...</aside>
+```
+
+- [ ] D
+
+```HTML
+<aside aria-label-"Sidebar">Sidebar...</aside><aside aria-label="Endnotes">Endnotes...</aside>
+```
+
+[Source](https://www.w3.org/TR/wai-aria-practices-1.2/#doc_noteref)
+
+#### Q125. A white paper has a sidebar and endnotes, both of which are complementary to the main text. How would you mark them up to make their distinct roles more broadly accessible?
+
+- [x] `<aside aria-label="Sidebar">Sidebar...</aside><aside aria-label="Endnotes">Endnotes...</aside>`
+- [ ] `<custom-sidebar aria-label="Sidebar">Sidebar...</custom-sidebar><custom-footnote aria-label="Endnotes">Endnotes...</custom-footnote>`
+- [ ] `<aside role="Sidebar">Sidebar...</aside><aside role="Endnotes">Endnotes...</aside>`
+- [ ] `<aside role="complementary">Sidebar...</aside><aside role="supplementary">Endnotes...</aside>`
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+#### Q126. Which video example will autoplay in most browsers?
+
+- [x] `<video src="video.mp4" autoplay muted></video>`
+- [ ] `<video src="video.mp4" background></video>`
+- [ ] `<video src="video.mp4" autoplay></video>`
+- [ ] `<video src="video.mp4" autoplay="force"></video>`
+
+[Source](https://stackoverflow.com/questions/65157672/force-html5-video-autoplay-unmuted)
+
+#### Q127. In which order will these scripts execute, assuming they all take the same time to download?
+
+```HTML
+<script type="module" src="module.js"></script>
+// external module
+<script type="async" src="module.js"></script>
+// async
+<script type="defer" src="module.js"></script>
+// defer
+<script type="module" src="module.js">
+  // inline module
+</script>
+```
+
+- [ ] async, external module, defer, inline module
+- [ ] async, inline module, external module, defer
+- [x] external module, async, defer, inline module
+- [ ] inline module, external module, defer, async
+
+#### Q128. What is the backward-compatible method of turning a circle in an SVG into a link?
+
+- [ ] `<html:a href="/our-circle/"><circle cx="10" cy="10" r="5"/></html:a>`
+- [ ] `<a svg:href="/our-circle/"><circle cx="10" cy="10" r="5"/></a>`
+- [ ] `<a href="/our-circle/"><circle cx="10" cy="10" r="5"/></a>`
+- [x] `<a href="/our-circle/" xlink:href="/our-circle/"><circle cx="10" cy="10" r="5"/></a>`
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xlink:href)
+
+#### Q129. Users report that a form is not working. What is the culprit?
+
+```HTML
+  <form action="/choices" disabled>
+    <fieldset disabled>
+      <legend>Choices</legends>
+      <label>Choice 1 <input type="radio" name="choice" value="choice1" /></label>
+      <label>Choice 2 <input type="radio" name="choice" value="choice2" /></label>
+      <label>Choice 3 <input type="radio" name="choice" value="choice3" /></label>
+      <label>Choice 4 <input type="radio" name="choice" value="choice4" /></label>
+      <button>Choose!</button>
+    </fieldset>
+  </form>
+```
+
+- [x] There is no <input type="submit"> element.
+- [ ] There is no method set on the form.
+- [ ] The form element is disabled.
+- [ ] The fieldset is disabled.
+
+#### Q130. What is wrong with this table?
+
+```HTML
+<table>
+  <legend>A two body table!</legend>
+  <col />
+  <col />
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 1</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 1</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+- [ ] A table can only have one tbody element.
+- [ ] legend must appear at the end of a table element.
+- [ ] legend is not allowed in a table element.
+- [x] All col elements must be wrapped in a colgroup element.
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
+
+#### Q131. In this code, what is the purpose of the `id` attribute?
+
+```HTML
+<p id="warning">Be careful when installing this product.</p>
+```
+
+- [x] It establishes that `warning` is a unique identifier in the document, used for styling CSS, scripting, and linking within a webpage.
+- [ ] It establishes that `warning` is a unique identifier in the document, used for styling CSS and with JavaScript code.
+- [ ] It establishes that `warning` may be used for styling CSS several times per page.
+- [ ] It establishes that `warning` is a unique identifier in the website, used for styling CSS, scripting, and linking within a webpage.
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
+
+### Q132. What does the HTML `<em>` element represent?
+
+- [x] Stress emphasis, usually displayed as italic text
+- [ ] Italic text
+- [ ] A hyperlink
+- [ ] A line break
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
+
+### Q133. The \***\*\_\*\*** element is used to render simple graphics such as line art, graphs, and other custom graphical elements on the client side.
+
+- [ ] metadata
+- [ ] css
+- [x] canvas
+- [ ] art
+
+### Q134. Which attribute is not essential under <iframe>?
+
+- [x] frameborder
+- [ ] width
+- [ ] height
+- [ ] src
+
+### Q135.What does HTML stands for?
+
+- [ ] Hypertext Machine language.
+
+- [ ] Hypertext and links markup language.
+
+- [x] Hypertext Markup Language.
+
+- [ ] Hightext machine language.
+
+[Source]: https://www.geeksforgeeks.org/aptitude-html-course-practice-quiz-1-question-1/
+
+### Q136.Which of the following HTML element is used for creating an unordered list?
+
+- [ ] `<ui>`
+
+- [ ] `<i>`
+
+- [ ] `<em>`
+
+- [x] `<ul>`
+
+[Source]: https://www.geeksforgeeks.org/web-technologies-questions-html-course-practice-quiz-1-question-4/

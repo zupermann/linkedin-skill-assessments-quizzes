@@ -42,12 +42,12 @@
 - [ ] single bit
 - [ ] long
 
-#### Q7. What does redis use to sort the elements of a sorted set?
+#### Q7. What does Redis use to sort the elements of a sorted set?
 
-- [x] Scores.
-- [ ] Ids.
-- [ ] Values.
-- [ ] Keys.
+- [x] Scores
+- [ ] Ids
+- [ ] Values
+- [ ] Keys
 
 #### Q8. You need to change the shard key of an existing MongoDB collection. What do you do?
 
@@ -58,10 +58,10 @@
 
 #### Q9. Polyglot storage means using multiple types of what in the same application?
 
-- [ ] Security systems.
-- [ ] Database systems.
-- [x] Storage systems.
-- [ ] Query systems.
+- [ ] Security systems
+- [ ] Database systems
+- [x] Storage systems
+- [ ] Query systems
 
 #### Q10. You need to implement the simplest possible scalable, in-memory cache for your AWS application. Which service do you select?
 
@@ -161,7 +161,7 @@
 - [x] \$lookup
 - [ ] \$project
 
-#### Q24. For your mobile application, you need to select a Google cloud databse that can support compound, filtered document queries. Which do you choose?
+#### Q24. For your mobile application, you need to select a Google cloud database that can support compound, filtered document queries. Which do you choose?
 
 - [ ] Cloud SQL
 - [ ] Cloud Spanner
@@ -180,7 +180,7 @@
 - [ ] Neo4j
 - [ ] Cassandra
 - [x] Redis
-- [ ] MyS#### QL
+- [ ] MySQL
 
 #### Q27. SQL databases and NoSQL are which types of scalable?
 
@@ -288,33 +288,35 @@ var indexCollection = function(db) {return co(function*() {...});};
 
 #### Q41. Which Cypher code executes the multiquery block?
 
-- [ ]
+- [ ] A
 
 ```
 MATCH (c:Company {name: 'Neo4j'}) RETURN c, MATCH (p:Person) WHERE p.name = 'Jennifer' RETURN p,
 MATCH (t:Technology)-[:LIKES]-(a:Person {name: 'Jennifer'}) RETURN t.type;
 ```
 
-- [ ]
+- [x] B
 
 ```
 MATCH (c:Company {name: 'Neo4j'}) RETURN c, MATCH (p:Person) WHERE p.name = 'Jennifer' RETURN p,
 MATCH (t:Technology)-[:LIKES]-(a:Person {name: 'Jennifer'}) RETURN t.type
 ```
 
-- [ ]
+- [ ] C
 
 ```
 MATCH (c:Company {name: 'Neo4j'}) RETURN c AND MATCH (p:Person) WHERE p.name = 'Jennifer' RETURN p,
 AND MATCH (t:Technology)-[:LIKES]-(a:Person {name: 'Jennifer'}) RETURN t.type;
 ```
 
-- [ ]
+- [ ] D
 
 ```
 MATCH (c:Company {name: 'Neo4j'}) RETURN c;MATCH (p:Person) WHERE p.name = 'Jennifer' RETURN p;
 MATCH (t:Technology)-[:LIKES]-(a:Person {name: 'Jennifer'}) RETURN t.type;
 ```
+
+[Explanation:]The correct Cypher code to execute a multiquery block would use commas to separate each query in a single statement. In this case, option B has all the queries separated by commas, making it the correct choice. Option A has the correct queries, but they are separated by "RETURN" which is not correct syntax for multiquery. Option C has an additional "AND" before the second query which is also not correct syntax. Option D has each query separated by semicolons, which would execute them as separate queries, not as a multiquery block.
 
 #### Q42. You need to create a scalable database that supports immutable writes. What do you use?
 
@@ -360,9 +362,34 @@ MATCH (t:Technology)-[:LIKES]-(a:Person {name: 'Jennifer'}) RETURN t.type;
 
 #### Q48. You need to create a scalable database to store and query JSON data. What do you use?
 
-- [ ] relational DB
-- [x] document DB
-- [ ] graph DB
-- [ ] ledger DB
+- [ ] a relational database
+- [x] a document database
+- [ ] a graph database
+- [ ] a ledger database
+
+#### Q49. Which command gets all documents in a MongoDB datastore where the status equals A or the quantity is less than 30?
+
+- [ ] db.inventory.find( { status: "a", qty: { $lt: 30 } } )
+- [x] db.inventory.find( { $or: [ { status: "A" }, { qty: { $lt: 30 } } ] } )
+- [ ] db.inventory.find( { status: "A", qty: { $lt: 30 } } )
+- [ ] db.inventory.find( { $or: [ { status: "a" }, { qty: { $lt: 30 } } ] } )
 
 [store and query JSON](https://aws.amazon.com/nosql/document/#:~:text=The%20document%20database%20defined,use%20in%20their%20application%20code.)
+
+#### Q50. Benefit of using NoSQL database?
+
+- [ ] Strict data modeling
+- [ ] Limited scalability
+- [x] Easy schema evolution
+- [ ] Limited data storage capacity
+
+[Explanation:]One of the benefits of using NoSQL databases is easy schema evolution. NoSQL databases are designed to handle flexible data models, which can be easily modified and updated as the data evolves. This makes it easier to handle changing.
+
+#### Q51. NoSQL databases are most often referred to as?
+
+- [ ] Relational
+- [x] Distributed
+- [ ] Object-oriented
+- [ ] Network
+
+[Explanation:]Since this non-relational database design does not require a schema, it offers rapid scalability to manage large and typically unstructured data sets. NoSQL is also type of distributed database, which means that information is copied and stored on various servers, which can be remote or local.

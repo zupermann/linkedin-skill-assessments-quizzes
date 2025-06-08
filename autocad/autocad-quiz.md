@@ -4,8 +4,8 @@
 
 - [ ] cost
 - [ ] ease of maintenance vs. granularity of control
-- [x] all of these answers
 - [ ] the current storage engine used by the application, such as InnoDB or MyISAM
+- [x] All of the above
 
 #### Q2. The LAYOFF command turns off the layer of any selected object. What happens if you select an object on the current drafting layer?
 
@@ -14,7 +14,7 @@
 - [x] AutoCAD prompts you if you want to turn off that layer.
 - [ ] AutoCAD turns off the current drafting layer with no prompt.
 
-#### Q3. Sometimes you will need to match properties of one object to another using the Match Properties (MATCHPROP) command. When matching the properties of an existing viewport to a new one, which setting do you turn off in Match Properties to ensure that the viewport scale is not matched across to the new viewport?
+#### Q3. Sometimes you will need to match the properties of one object to another using the Match Properties (MATCHPROP) command. When matching the properties of an existing viewport to a new one, which setting do you turn off in Match Properties to ensure that the viewport scale is not matched across to the new viewport?
 
 - [ ] Special Properties/Viewport
 - [ ] Basic Properties/Layer
@@ -30,10 +30,10 @@
 
 #### Q5. When working in a layout, if a viewport is activated and locked and you accidentally zoom in or out, what happens to your viewport scale?
 
-- [ ] Nothing. The viewport scale remains the same.
+- [x] Nothing. The viewport scale remains the same.
 - [ ] The viewport scale returns to the default 1:1 scale.
 - [ ] The viewport scale changes to the next available standard scale.
-- [x] The viewport scale changes to a nonstandard scale.
+- [ ] The viewport scale changes to a nonstandard scale.
 
 #### Q6. Dynamic Input (DYNMODE) is switched on by default. Which function key do you use to control the Dynamic Input toggle?
 
@@ -63,7 +63,7 @@
 - [ ] block origin point
 - [x] insertion point
 
-#### Q10. External reference files (XREFs) link external drawings to the host drawing. You can set the XREF path type to no path, relative path, or full path. What value should be used for the relative path type?
+#### Q10. External reference files (XREFs) link external drawings to the host drawing. You can set the XREF path type to no path, relative path, or full path. What value should be used for the relative path-type?
 
 - [ ] REFPATHTYPE = 2
 - [ ] REFPATHTYPE = 3
@@ -98,7 +98,7 @@
 - [ ] only the objects completely encompassed by the crossing selection
 - [x] only the objects completely encompassed and crossed by the crossing selection
 
-#### Q15. You can dimension objects in AutoCAD from the Annotation panel on the Home tab of the ribbon. Where else can you dimension on the ribbon?
+#### Q15. You can dimension objects in AutoCAD from the Annotation panel on the Home tab of the ribbon. Where else can you dimension the ribbon?
 
 - [x] the Dimension panel on the Annotate tab
 - [ ] the Dimensional panel on the Parametric tab
@@ -145,12 +145,13 @@
 - [ ] calculates the Auto space as one and a half times (1.5x) the text height of the text in the dimension style being used
 - [x] calculates the Auto space as twice the distance between the first and second dimensions selected for spacing
 - [ ] calculates the Auto space as three times (3x) the text height of the text in the dimension style being used
+- [ ] Auto calculates the space based on the alignment of the stars in the constellation visible in the northern hemisphere at the time of drawing creation.
 
 #### Q22. There is often a need to hide or isolate selected objects, especially in complex drawings when detailing geometry. Where would you find the Isolate menu option—which is not on the ribbon?
 
 - [ ] the status bar
 - [x] a right-click shortcut menu after object selection
-- [ ] the Quick Access toolbar (QAT)
+- [ ] the Quick Access Toolbar (QAT)
 - [ ] the navigation bar
 
 #### Q23. System variables can be monitored in AutoCAD. When monitored, they can also be reset to preferred values. What command is used to control these system variables?
@@ -164,8 +165,8 @@
 
 - [ ] The hidden and isolated object layers go on to their own layer.
 - [ ] The isolated object layers stay on; all other layers are turned off in the Layer Properties Manager.
-- [x] Nothing happens.
 - [ ] The hidden object layers turn off; all other layers stay on in the Layer Properties Manager.
+- [x] Nothing happens
 
 #### Q25. When scaling a drawing from imperial feet and inches to metric millimeters, what scale factor do you use in the SCALE command, before adjusting your units settings?
 
@@ -197,14 +198,14 @@
 
 #### Q29. When plotting in AutoCAD, the default plotting style is a color-dependent plot style table (CTB). You can also use named plot style tables (STB). You can change a CTB drawing to an STB drawing using which command?
 
-- [ ] CONVERTPSTYLES
+- [x] CONVERTPSTYLES
 - [ ] CONVSTYLES
 - [ ] CONVERTPLOT
 - [ ] CONVPLOTSTYLE
 
 #### Q30. Single-line text can be added anywhere in a drawing. If middle-center justified text with height of 0 was required in model space that was 300 millimeters high, what workflow would you use?
 
-- [ ]
+- [ ] &shy;
 
 1. Right-click and select Justify.
 2. Select MC.
@@ -213,7 +214,7 @@
 5. Specify the height.
 6. Specify the rotation angle.
 
-- [x]
+- [x] &shy;
 
 1. Right-click and select Justify.
 2. Select MC.
@@ -222,7 +223,7 @@
 5. Pick a middle point.
 6. Type text.
 
-- [ ]
+- [ ] &shy;
 
 1. Right-click and select Justify.
 2. Select MC.
@@ -231,7 +232,7 @@
 5. Pick a middle point.
 6. Type text.
 
-- [ ]
+- [ ] &shy;
 
 1. Right-click and select Justify.
 2. Select MC.
@@ -250,7 +251,7 @@
 #### Q32. The Quick Access toolbar (QAT) is located in the top left of the AutoCAD application window. Which two commands in the QAT allow you to go backward and forward in your AutoCAD workflow?
 
 - [ ] Left and Right
-- [ ] Undo and Redo
+- [x] Undo and Redo
 - [ ] Rewind and Fast
 - [ ] Forward Unfix and Fix
 
@@ -280,7 +281,7 @@
 - [ ] internal and external quadrants
 - [ ] internal and external circumference
 - [ ] internal and external diameter
-- [ ] internal and external radius
+- [x] internal and external radius
 
 #### Q37. An inscribed polygopoln gives you what type of point at the end of the polygon radius?
 
@@ -312,7 +313,7 @@
 
 #### Q41. When working with objects in your drawings, you normally define their properties via their respective layers. However, you can define individual object properties with the Properties panel on the Home tab of the AutoCAD ribbon. Individual color and linetype can be defined there, along with what other typical object property?
 
-![q42](images/q42_autocad.png)
+![q42](images/q42_autocad.png?raw=png)
 
 - [ ] description
 - [x] plottable or not plottable
@@ -324,12 +325,12 @@
 - [ ] setting the spacing distance in the Properties palette
 - [ ] setting the spacing distance on the right-click shortcut menu
 - [ ] the Distribute option
-- [x] the Set Spacing option
+- [x] The Set Spacing option
 
 #### Q43. When utilizing named views in the Model tab to navigate, why should you keep an eye on your current drafting layer?
 
 - [ ] Each named view has its own current drafting layer.
-- [ ] Each named view can be saved with a layer snapshot, which might change your current drafting layer.
+- [x] Each named view can be saved with a layered snapshot, which might change your current drafting layer.
 - [ ] Each named view has its own current drafting layer, with the layer name being the same as the name of the named view.
 - [ ] Each named view changes the current drafting layer to a default drafting layer.
 
@@ -337,12 +338,12 @@
 
 - [ ] to make sure AutoCAD works properly
 - [ ] to isolate all the blocks you are using in the current drawing
-- [ ] to stop anyone seeing which AutoCAD palettes you are using
+- [ ] to stop anyone from seeing which AutoCAD palettes you are using
 - [x] to automatically hide the palette content and display only the docked palette title bar
 
 #### Q45. The navigation bar is normally on by default and is located to the right-hand side of the drawing area. Which variable controls the display of the navigation bar, and to what value does it need to be set for the navigation bar to display on the screen?
 
-- [ ] The NAVBARDISPLAY value should be set to 1
+- [x] The NAVBARDISPLAY value should be set to 1
 - [ ] The NAVBARDISPLAY value should be set to 0.
 - [ ] The NAVIGATIONBARDISPLAYON value should be set to 1.
 - [ ] The NAVIGATIONBARDISPLAYON value should be set to 0.
@@ -358,7 +359,7 @@
 
 - [ ] the status bar
 - [ ] the navigation bar
-- [ ] the Quick Access toolbar (QAT)
+- [x] the Quick Access toolbar (QAT)
 - [ ] the info bar
 
 #### Q48. When drafting with object snaps and object snap tracking, what other drafting setting can you use to set object snap tracking points?
@@ -393,7 +394,7 @@
 
 - [ ] Create Separate Hatches
 - [ ] Associative Boundaries
-- [ ] Set the HATCHMULTIPLE variable to 0 (OFF).
+- [x] Set the HATCHMULTIPLE variable to 0 (OFF).
 - [ ] Set the HATCHMULTIPLE variable to 1 (ON).
 
 #### Q53. AutoCAD allows you to select individual objects cumulatively to create a selection set. You can remove individual objects from that selection by using a mouse click combined with which keystroke?
@@ -417,14 +418,16 @@
 - [ ] When in the PEDIT command, select multiple lines to convert; then when selecting the Join option, you are prompted for a MINIGAP DISTANCE. This is the minimum gap distance for automatic joining.
 - [ ] When in the PEDIT command, select multiple lines to convert; then when selecting the Join option, you are prompted for a MIN GAP DISTANCE. This is the minimum gap distance for automatic joining.
 
-#### Q56. When creating a block with attributes, why should you use underscores between words in the attribute tag?
+![q55](images/q75_autocad.png?raw=png)
+
+#### Q56. When creating a block with attributes, why should you use underscores (\_) between words in the attribute tag?
 
 - [ ] Attribute tags must have an underscore to be recognized for data extraction.
 - [ ] Attribute tags do not allow spaces.
-- [x] Attribute tags need an underscore to be recognized by the BLOCK command.
-- [ ] Attribute tags must have an underscore in them.
+- [x] Attribute tags need an underscore to be recognized by the Block command (BLOCK).
+- [ ] Attribute tags need an underscore to be visible on the drawing.
 
-#### Q57. To insert a table in a drawing, you use the TABLE command. What is a prerequisite to control a table's appearance before inserting a table into a drawing?
+#### Q57. What is a prerequisite to control a table's appearance before inserting a table into a drawing?
 
 - [ ] a table dimension style
 - [x] a table style
@@ -511,7 +514,7 @@
 #### Q69. When using the Polyline (PLINE) command to draw an arrowhead, what polyline properties do you need to use?
 
 - [ ] the Halfwidth setting
-- [x] starting width and ending widths
+- [x] starting width and ending width
 - [ ] polyline start and polyline end
 - [ ] the START and END variables in the PLINE command
 
@@ -532,9 +535,9 @@
 #### Q72. Using the Array command, you have the option to create an associative array. What does this mean?
 
 - [ ] When dimensioning an array, the dimensions displayed are associative.
-- [x] The arrayed objects becomes a single entity and, when selected, display as a single entity.
-- [ ] The arrayed objects become associated to the X and Y coordinates used for the array.
-- [ ] The array is associated to the linetype scale.
+- [x] The arrayed objects become a single entity and, when selected, display as a single entity.
+- [ ] The arrayed objects become associated with the X and Y coordinates used for the array.
+- [ ] The array is associated with the linetype scale.
 
 #### Q73. When drawing a Start, Center, End arc, which key do you press to draw the arc in a clockwise direction?
 
@@ -545,7 +548,7 @@
 
 #### Q74. When using the POLYGON command in AutoCAD, you can create an inscribed polygon and a circumscribed polygon. What other type of polygon is available?
 
-![q75](images/q75_autocad.png)
+![q75](images/q75_autocad.png?raw=png)
 
 - [ ] side polygon
 - [ ] polyline polygon
@@ -554,9 +557,9 @@
 
 #### Q75. When using blocks in a drawing, a selected block displays only one grip: the insertion point. How would you get a block to display all of its associated grips?
 
-![q76](images/q76_autocad.png)
+![q76](images/q76_autocad.png?raw=png)
 
-- [ ] Change the GRIPBLOCK system variable to 1.
+- [x] Change the GRIPBLOCK system variable to 1.
 - [ ] Select the block and change it in the Properties palette.
 - [ ] Change the GRIPBLOCK system variable to 0.
 - [ ] Select the block and change it in the right-click shortcut menu.
@@ -566,11 +569,137 @@
 - [ ] Linesize
 - [ ] Linestyle
 - [ ] Lineweight
-- [ ] Linetype
+- [x] Linetype
 
-#### Q77. You selected multiple items and four of the items where not supposed to be selected. How do you deselect them?
+#### Q77. You selected multiple items and four of the items were not supposed to be selected. How do you deselect them?
 
 - [ ] Hold down Alt (Windows) or Option (Mac) and select the four items.
 - [ ] Hold down CTRL (Windows) or Command (Mac) and select the four items.
 - [ ] Simply select them.
-- [ ] Hold down Shift and select the four items.
+- [x] Hold down Shift and select the four items.
+
+#### Q78. How can you define the angle at which a rectangle is placed in the Rectangle command (RECTANGLE)?
+
+- [x] Use the ROTATION option on the ribbon after you have selected the first point of the rectangle.
+- [ ] Use the ROTATION option in the submenu after you have placed the second point of the rectangle.
+- [ ] Use the ROTATION option in the submenu after you have placed the first point of the rectangle.
+- [ ] Use the ROTATION option in the Properties palette after you have selected the rectangle.
+
+#### Q79. Why would you use viewports?
+
+- [ ] To save specific views of a 2D model. Then even if you rotate or move that model, you can umped back to the saved view.
+- [ ] To save specific views of a 3D model. Then even if you rotate or move that model, you can jump back to the saved view.
+- [x] To display views of model space. You create, scale, and place viewports in paper space on a layout.
+- [ ] To display views of paper space. You create, scale, and place viewports in model space.
+
+#### Q80. You have designed a shaft with a 1-inch diameter. Your specifications state that it is acceptable for this shaft diameter to be 0.05 inch smaller or 0.05 inch larger than 1 inch. Which tolerance method would you use to dimension this shaft?
+
+- [x] Engineering.
+- [ ] Deviation.
+- [ ] Fractional.
+- [ ] Symmetrical.
+
+#### Q81. When using the Point command and the Donut command to create a drawing object, you might add them to their own individual layers. Why would you do this?
+
+- [ ] In case the layer needs to be switched off or frozen for clarity in a drawing.
+- [x] In case the layer needs to be locked so that it cannot be used by anyone else.
+- [ ] In case the layer isn’t needed anymore.
+- [ ] In case the layer needs to be renamed for project purposes
+
+#### Q82. You can make a global linetype scale change by typing “TLSCALE” and pressing Enter (Windows) or Return (MAC). The default value for LTSCALE is 1. What does this represent?
+
+- [ ] 1%
+- [ ] 100%
+- [x] LTSCALE is ON (1)
+- [ ] LTSCALE is OFF (1)
+
+#### Q83. Which drafting setting can you use to restrict your cursor to specified angles?
+
+- [ ] Grid (GRID)
+- [ ] Dynamic Input (DYNMODE)
+- [ ] Selection Cycling (SELECTIONCYCLING)
+- [x] Polar Tracking (POLAR)
+
+#### Q84. What is the file extension of an AutoCAD Drawing Standard file?
+
+- [ ] DWGS
+- [x] DWGSTDS
+- [ ] DWFS
+- [ ] DWS
+
+#### Q85. With the default setting in place, double-clicking the mouse wheel invokes which AutoCAD command?
+
+- [ ] Zoom Previous
+- [ ] Zoom Windows
+- [x] Zoom Extents
+- [ ] Zoom All
+
+#### Q86. A window selection selects only the objects **\_** the window selection.
+
+- [ ] Completely encompassed by.
+- [x] Crossed by -- Crossing selection (window Left top to right bottom).
+- [ ] Completely outside by.
+- [ ] Not encompassed by.
+
+#### Q87. When using the Hatch command with the Pick Point selection method, which mode should be turned OFF to make sure the hatch is a single entity?
+
+- [x] Create Separate Hatches.
+- [ ] Associative Boundaries.
+- [ ] Hatch Associative (HPASSOC).
+- [ ] Hatch Multiple (HATCHMULTIPLE).
+
+#### Q89. You want to constrain a line such that it is always horizontal. Which tool could help you accomplish this?
+
+- [ ] Geometric Constraint (GCHORIZONTAL).
+- [x] Horizontal Line (HORIZONTAL).
+- [ ] Line (LINE).
+- [ ] Polyline (PLINE).
+
+#### Q90. When working with layers in your drawings, you may regularly go to the Layer drop-down menu on the **Layers** panel on the **Home** tab of the ribbon. Which part of the AutoCAD interface can you customize to allow **Layer** drop-down menu to be available regardless of which ribbon tab you are currently using?
+
+- [ ] The Status Bar.
+- [ ] The Navigation Bar.
+- [x] The Quick Access Toolbar (QAT).
+- [ ] The Info Bar.
+
+#### Q91. When drawing a Start, Center, or End arc, which key do you press to draw the arc in a clockwise direction?
+
+- [ ] D (direction).
+- [ ] C (clockwise).
+- [x] Ctrl (Windows) or Command (Mac).
+- [ ] Alt (Windows) or Option (Mac).
+
+#### Q92. When using the Point command (POINT) and the Donut command (DONUT) to create drawing objects, you might add them to their own individual layers. Why would you do this?
+
+- [x] in case the layer needs to be switched off or frozen for clarity in a drawing.
+- [ ] in case the layer isn't needed anymore.
+- [ ] in case the layer needs to be locked so that it cannot be used by anyone else.
+- [ ] in case the layer needs to be renamed for project purposes.
+
+#### Q93. Which drafting setting can you use to restrict your cursor to specified angles?
+
+- [x] Polar Tracking (POLAR).
+- [ ] Selection Cycling (SELECTIONCYCLING).
+- [ ] Dynamic Input (DYNMODE).
+- [ ] Grid (GRID).
+
+#### Q94. When using the Hatch command (HATCH) with the Pick Point selection method, which mode should be turned OFF to make sure the resulting hatch is a single entity?
+
+- [ ] Hatch Associative (HPASSOC).
+- [x] Hatch Multiple (HATCHMULTIPLE).
+- [ ] Associative Boundaries.
+- [ ] Create Separate Hatches.
+
+#### Q95. You can make a global linetype scale change by typing "LTSCALE" and pressing Enter (Windows) or Return (Mac). The default value for LTSCALE is 1. What does this represent?
+
+- [ ] 100%
+- [ ] LTSCALE is OFF (1).
+- [x] LTSCALE is ON (1).
+- [ ] 1 %
+
+### Q96. In AutoCAD, a circle has five grips: a center grip and four quadrant grips. When using the Tan Tan Radius (TTR) method to draw a circle in a right-angled corner, which of the two quadrant grips will be touching other objects?
+
+- [ ] the two grips that also act as the tangents in the TTR circle command
+- [x] the bottom and left grips
+- [ ] the top and right grips
+- [ ] the center and top grips

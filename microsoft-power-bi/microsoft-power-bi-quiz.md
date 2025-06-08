@@ -2,10 +2,10 @@
 
 #### Q1. A dataset that includes \_ can be used to create a map visualization. (Select all that apply.)
 
-    A. house numbers, street names
-    B. geospatial data
-    C. city names, country names
-    D. longitude, latitude
+A. house numbers, street names
+B. geospatial data
+C. city names, country names
+D. longitude, latitude
 
 - [x] A, B, C, D
 - [ ] A, C, D
@@ -35,10 +35,12 @@
 
 #### Q4. You are creating a report in Power BI Desktop and want to restrict the data to records where Country="Canada". To accomplish this, what do you need to create?
 
-- [x] a directive
-- [ ] a custom column
+- [ ] a directive
+- [x] a custom column
 - [ ] an indexed column
 - [ ] a parameter
+
+NOTE: The Power BI Documentation does not mention the word directive. The correct answer is B, NOT A!
 
 #### Q5. What is the primary benefit of using visualizations such as line charts, bar charts, and column charts?
 
@@ -56,17 +58,21 @@
 
 #### Q7. You need to add a required color to a bar chart. How can you add an exact color value to an existing bar chart?
 
-- [x] Click the color in the visual (e.g., the bars) and right-click to select the color.
+- [ ] Click the color in the visual (e.g., the bars) and right-click to select the color.
 - [ ] You cannot select custom colors in a bar chart or related visual.
 - [ ] Select the value closest to this color from the color formatting options.
-- [ ] Enter the hex value into the color formatting options.
+- [x] Enter the hex value into the color formatting options.
+
+NOTE: To enter a specific custom color (e.g., required color) you need to enter the required hex value. The correct answer is D.
 
 #### Q8. The Excel function IF is nearly the same as which DAX function?
 
 - [ ] SWITCH
-- [ ] IF
-- [x] IFX
+- [x] IF
+- [ ] IFX
 - [ ] IFS
+
+NOTE: DAX does not have IFX or IFS functions. The correct answer is B.
 
 #### Q9. Consider the Power BI extract, transform, and load process (ETL). During this process, data is read and then
 
@@ -74,6 +80,8 @@
 - [ ] written to an OLAP cube
 - [ ] assigned a data type
 - [ ] sorted by primary key
+
+[Reference](https://www.scaler.com/topics/sql-server/)
 
 #### Q10. Power BI's Publish to Web option allows you to embed visualizations within **\_**. (Select all that apply.)
 
@@ -84,10 +92,12 @@
 
 - [ ] A,C
 - [ ] C
-- [ ] A, B, C
-- [x] A, B, C, D
+- [x] A, B, C
+- [ ] A, B, C, D
 
-#### Q11. What can you do within the Power BI Desktop #### Query Settings pane? (Select all that apply.)
+NOTE: Documentation talks about blog posts, websites, emails or social media, but never mentions text messages. Correct answer is C
+
+#### Q11. What can you do within the Power BI Desktop Query Settings pane? (Select all that apply.)
 
     A. Rename a query step.
     B. Delete a query step.
@@ -101,22 +111,23 @@
 
 [proof link](https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-query-overview)
 
-#### Q12. After you enter text in the #### Q&A box or O&A visual, Power BI will `\_` your data to create a list of appropriate visualizations.
+#### Q12. After you enter text in the Q&A box or O&A visual, Power BI will `\_` your data to create a list of appropriate visualizations.
 
 - [ ] filter and group
-- [ ] sort and filter
+- [x] sort and filter
 - [ ] sort, filter, and group
-- [x] sort and group
+- [ ] sort and group
+
+NOTE: Power BI won't group your text, but it does filter and sort it.
 
 #### Q13. You just deleted a dashboard in the Power BI service and want to get it back. What should you do?
 
-- [x] Press Ctrl+Z.
+- [ ] Press Ctrl+Z.
 - [ ] Select Undo from the toolbar.
-- [ ] You cannot undo the deletion of a dashboard.
+- [x] You cannot undo the deletion of a dashboard.
 - [ ] Recover it from the Recycle Bin.
 
-1. [proof link1](https://docs.microsoft.com/en-us/power-bi/visuals/service-tips-and-tricks-for-color-formatting)
-2. [link2](https://www.edureka.co/community/26060/how-do-i-undo-something-in-power-bi)
+NOTE: You cannot undo the deletion of a dashboard in PowerBI Service. The links that were previously provided addressed PowerBI Desktop, not PowerBI Service.
 
 #### Q14. You have a sales data source and want to relate the tables. The table that contains sales transactions is a **\_** table that contains product information is a \_ table .
 
@@ -163,9 +174,11 @@
 #### Q19. What tool can you use in Power BI Desktop to reduce data?
 
 - [ ] report editor
-- [ ] Power Query Editor
+- [x] Power Query Editor
 - [ ] dashboard
-- [x] data modeler
+- [ ] data modeler
+
+NOTE: Data gets processed and reduced in the Power query editor. Corect answer is B.
 
 #### Q20. What is NOT a valid data connection type for Power BI Desktop?
 
@@ -274,10 +287,10 @@
 
 #### Q35. You want to combine several CSV files into a single data file after you connect a folder. What must be true about these CSV data files? (Select all that apply.)
 
-A. They must be stored in the same folder.
-B. They must have the same schema.
-C. They must have the same file type.
-D. They must have no duplicate data rows.
+    A. They must be stored in the same folder.
+    B. They must have the same schema.
+    C. They must have the same file type.
+    D. They must have no duplicate data rows.
 
 - [ ] B, C
 - [x] A, B, C
@@ -551,7 +564,7 @@ D. They must have no duplicate data rows.
 #### Q69. What are the first steps you take to connect to an Access database data source in Power BI?
 
 - [ ] You cannot to an Access database from Power BI.
-- [ ] Click **Reports > Database > Connect** in Power BI Desktop
+- [x] Click **Reports > Database > Connect** in Power BI Desktop
 - [ ] Click **Get Data > Database > Access Database > Connect** in Power BI Service
 - [ ] Click **Get Data > Database > Access Database > Connect** in Power BI Desktop
 
@@ -680,3 +693,143 @@ D. They must have no duplicate data rows.
 - [x] It will display the bar chart as it appears in the report now.
 - [ ] It will display an error message where the bar chart had been pinned.
 - [ ] It will display the bar chart as it appeared when it was pinned.
+
+#### Q85. In the Power Query Editor, how do you add an index column to an existing dataset?
+
+- [ ] On the Transform tab, click Add Column > Index.
+- [x] On the Add Column tab, click Add Index Column.
+- [ ] none of these answers
+- [ ] On the Home tab, click Add Index Column.
+
+#### Q86. Power BI desktop has a **\_** tool, found under the View tab, which can be used to record the time taken for each of the processes required to render a report to complete.
+
+- [ ] Simulation
+- [x] Performance Analyzer
+- [ ] Reporting Analytics
+- [ ] DAX Studio
+
+#### Q87. When you are looking for outliers, Z-scores above **\_** are a good starting point.
+
+- [ ] 30
+- [x] 3
+- [ ] 10
+- [ ] 100
+
+#### Q88. In DAX, a semi-additive measure can accumulate values over some dimension, but typically not **\_**.
+
+- [ ] calculations
+- [x] time
+- [ ] magnitude
+- [ ] rate
+
+#### Q89. In Power BI's Power Query Editor, a field data type shown as **\_** means the money data type.
+
+- [ ] a pile of coins icon
+- [ ] Money
+- [x] $
+- [ ] a stack of bills icon
+
+#### Q90. Which of the following choices is not a viewing option in the view selector of Power BI Desktop?
+
+- [ ] report view
+- [ ] model view
+- [x] query view
+- [ ] data view
+
+#### Q91. Which value for the type parameter in the DAX function PATHITEM indicates integer?
+
+- [ ] 0
+- [ ] "Integer"
+- [ ] TRUE
+- [x] 1
+
+#### Q92. Which type of chart in Power BI is beneficial for helping you visualize data over time?
+
+- [ ] pie charts
+- [ ] stacked column charts
+- [ ] tree maps
+- [x] line charts
+
+#### Q93. To combine multiple tables into a single table in Power BI, use the **\_** tool in the query editor.
+
+- [x] Append
+- [ ] Combine
+- [ ] Query
+- [ ] Report
+
+#### Q94. Which time intelligence function in DAX can be used for seeing month-on-month data?
+
+- [x] ParallelPeriod
+- [ ] TotalYTD
+- [ ] SamePeriodLastYear
+- [ ] MonthOnMonth
+
+#### Q95. Which part of Microsoft's data gateway's configuration allows you to switch between TCP and HTTPS modes?
+
+- [ ] Diagnostics
+- [ ] Service settings
+- [ ] Connectors
+- [x] Network
+
+#### Q96. You pinned an Excel pivot table to a dashboard. What will other users be allowed to do with this visualization?
+
+- [ ] View the pivot table.
+- [x] all of these answers
+- [ ] Rearrange pivot table fields.
+- [ ] Drill down in the pivot table.
+
+#### Q97. You pinned an Excel pivot table to a dashboard. What will other users be allowed to do with this visualization?
+
+- [ ] drill down in the pivot table.
+- [ ] Rearrange pivot table fields.
+- [ ] view the pivot table
+- [x] all of these answers
+
+#### Q98. Using Power BI service, you want to share a set of visualizations with your team so that they can, in turn, share the content with others. To do this, what should you share?
+
+- [ ] a report
+- [ ] a tile
+- [ ] a dashboard
+- [x] all of these answers
+
+#### Q99. What is true about paginated reports? (Select all that apply)
+
+    A. They are formatted to fit well on a page.
+    B. They shrink the report data to fit on a page.
+    C. They truncate the report data to fit on a single page.
+    D. They are both printable and shareable.
+
+- [x] A, D
+- [ ] B or C, both on user choice
+- [ ] A. B, D
+- [ ] A, C, D
+
+[reference](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-share-dashboards)
+
+#### Q100. What is the primary function of the Power Query Editor in Power BI?
+
+- [ ] Data modeling
+- [x] Data transformation and preparation
+- [ ] Data visualization
+- [ ] Data sharing and collaboration
+
+#### Q101. What is the purpose of DAX (Data Analysis Expressions) in Power BI?
+
+- [ ] To create visualizations
+- [ ] To design data models
+- [x] To perform advanced data calculations and aggregations
+- [ ] To connect to external data sources
+
+#### Q102. In Power BI, what is a "calculated column" used for?
+
+- [ ] It's a calculated measure used in visuals.
+- [ ] It's a calculated field that aggregates data.
+- [x] It's a column that you add to a table with a formula.
+- [ ] It's a column that displays hierarchical data.
+
+#### Q103. Which type of Power BI visual is most suitable for comparing values across categories using bars of varying lengths?
+
+- [ ] Line chart
+- [ ] Scatter plot
+- [ ] Pie chart
+- [x] Bar chart

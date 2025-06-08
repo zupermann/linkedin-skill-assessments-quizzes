@@ -1,5 +1,7 @@
 ## JavaScript
 
+[Assessment link(linkedin)](https://www.linkedin.com/skill-assessments/JavaScript/quiz-intro/)
+
 #### Q1. Which operator returns true if the two compared values are not equal?
 
 - [ ] `<>`
@@ -12,13 +14,13 @@
 #### Q2. How is a forEach statement different from a for statement?
 
 - [ ] Only a for statement uses a callback function.
-- [x] A for statement is generic, but a forEach statement can be used only with an array.
+- [x] A for statement is more generic and can be used with various iterable objects, while a forEach statement is mainly designed for arrays but can also be used with other iterable objects like Sets.
 - [ ] Only a forEach statement lets you specify your own iterator.
 - [ ] A forEach statement is generic, but a for statement can be used only with an array.
 
 [Reference Differences between forEach and for loop](https://www.geeksforgeeks.org/difference-between-foreach-and-for-loop-in-javascript/)
 
-#### Q3. Review the code below. Which statement calls the addTax function and passes 50 as an argument? How would you use this function to find out how much tax should be paid on \$50?
+#### Q3. Review the code below. Which statement calls the addTax function and passes 50 as an argument?
 
 ```js
 function addTax(total) {
@@ -70,7 +72,7 @@ console.log('Results shown');
 
 #### Q7. Which snippet could you add to this code to print "food" to the console?
 
-```javascript
+```js
 class Animal {
   static belly = [];
   eat() {
@@ -91,7 +93,9 @@ console.log(/* Snippet Here */); //Prints food
 
 #### Q8. You've written the code shown to log a set of consecutive values, but it instead results in the value 5, 5, 5, and 5 being logged to the console. Which revised version of the code would result in the value 1, 2, 3 and 4 being logged?
 
-```javascript
+- [ ] `A`
+
+```js
 for (var i = 1; i <= 4; i++) {
   setTimeout(function () {
     console.log(i);
@@ -99,9 +103,9 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [ ] .
+- [ ] `B`
 
-```javascript
+```js
 for (var i = 1; i <= 4; i++) {
   (function (i) {
     setTimeout(function () {
@@ -111,9 +115,9 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [ ] .
+- [ ] `C`
 
-```javascript
+```js
 for (var i = 1; i <= 4; i++) {
   setTimeout(function () {
     console.log(i);
@@ -121,9 +125,9 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [x] .
+- [x] `D`
 
-```javascript
+```js
 for (var i = 1; i <= 4; i++) {
   (function (j) {
     setTimeout(function () {
@@ -133,9 +137,9 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [ ] .
+- [ ] `E`
 
-```javascript
+```js
 for (var j = 1; j <= 4; j++) {
   setTimeout(function () {
     console.log(j);
@@ -157,7 +161,7 @@ for (var j = 1; j <= 4; j++) {
 
 #### Q10. Which statement creates a new function called discountPrice?
 
-- [x] .
+- [x] `A`
 
 ```js
 let discountPrice = function (price) {
@@ -165,7 +169,7 @@ let discountPrice = function (price) {
 };
 ```
 
-- [ ] .
+- [ ] `B`
 
 ```js
 let discountPrice(price) {
@@ -173,7 +177,7 @@ let discountPrice(price) {
 };
 ```
 
-- [ ] .
+- [ ] `C`
 
 ```js
 let function = discountPrice(price) {
@@ -181,7 +185,7 @@ let function = discountPrice(price) {
 };
 ```
 
-- [ ] .
+- [x] `D`
 
 ```js
 discountPrice = function (price) {
@@ -217,7 +221,7 @@ console.log(bob.precip);
 - [ ] `/[0-9]+:[0-9]+:[0-9]+/`
 - [ ] `/ : : /`
 
-NOTE: The first three are all partially correct and will match digits, but the **second option is the most correct** because it will **only** match **2 digit** time values (12:00:32). The first option would have worked if the repetitions range looked like `[0-9]{2}`, however because of the **comma** `[0-9]{2,}` it will select 2 **or more** digits (120:000:321). The third option will any range of time digits, single _and_ multiple (meaning `1:2:3` will also match).
+**NOTE**: The first three are all partially correct and will match digits, but the **second option is the most correct** because it will **only** match **2 digit** time values (12:00:32). The first option would have worked if the repetitions range looked like `[0-9]{2}`, however because of the **comma** `[0-9]{2,}` it will select 2 **or more** digits (120:000:321). The third option will any range of time digits, single _and_ multiple (meaning `1:2:3` will also match).
 
 **More resources:**
 
@@ -257,7 +261,7 @@ let roadTypes = ['street', 'road', 'avenue', 'circle'];
 
 #### Q15. What is the result of running this statement?
 
-```javascript
+```js
 console.log(typeof 42);
 ```
 
@@ -375,7 +379,7 @@ dessert.type = 'pudding';
 #### Q25. 0 && hi
 
 - [ ] ReferenceError
-- [ ] True
+- [ ] true
 - [x] 0
 - [ ] false
 
@@ -383,10 +387,10 @@ dessert.type = 'pudding';
 
 #### Q26. Which of the following operators can be used to do a short-circuit evaluation?
 
-- [ ] `\++`
-- [ ] `\--`
-- [ ] `\==`
-- [x] `\|\|`
+- [ ] `++`
+- [ ] `--`
+- [ ] `==`
+- [x] `||`
 
 [Reference short circuit javascript](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c)
 
@@ -437,7 +441,7 @@ dessert.type = 'pudding';
 
 #### Q32. Which variable is an implicit parameter for every function in JavaScript?
 
-- [x] Arguments
+- [x] arguments
 - [ ] args
 - [ ] argsArray
 - [ ] argumentsList
@@ -490,8 +494,8 @@ let diff = function (x, y) {
 - [x] Most operations involve looking up a record, and objects can do that better than arrays.
 - [ ] Working with objects makes the code more readable.
 
-**Explanation:** Records in an object can be retrieved using their key which can be any given value (e.g. an employee ID, a city name, etc), whereas to retrieve a record from an array we need to know its index.
 [Reference efficiency of lookups](https://stackoverflow.com/questions/17295056/array-vs-object-efficiency-in-javascript)
+**Explanation:** Records in an object can be retrieved using their key which can be any given value (e.g. an employee ID, a city name, etc), whereas to retrieve a record from an array we need to know its index.
 
 #### Q36. Which statement is true about the "async" attribute for the HTML script tag?
 
@@ -517,10 +521,10 @@ let diff = function (x, y) {
 [] == [];
 ```
 
-- [ ] True
+- [ ] true
 - [ ] undefined
 - [ ] []
-- [x] False
+- [x] false
 
 [Reference arrays in js are objects](https://stackoverflow.com/questions/30820611/why-doesnt-equality-check-work-with-arrays)
 
@@ -570,7 +574,7 @@ f2();
 - [x] You are calling a method named reduce on an object that's declared but has no value.
 - [ ] You are calling a method named reduce on an object that does not exist.
 - [ ] You are calling a method named reduce on an empty array.
-- [ ] You are calling a method named reduce on an object that's has a null value.
+- [ ] You are calling a method named reduce on an object that has a null value.
 
 **Explanation**: `You cannot invoke reduce on undefined object... It will throw (yourObject is not Defined...)`
 
@@ -596,7 +600,7 @@ f2();
 
 #### Q45. What type of scope does the end variable have in the code shown?
 
-```javascript
+```js
 var start = 1;
 if (start === 1) {
   let end = 2;
@@ -754,7 +758,7 @@ printA();
 - [ ] forEach allows you to specify your own iterator, whereas for does not.
 - [ ] forEach can be used only with strings, whereas for can be used with additional data types.
 - [x] forEach can be used only with an array, whereas for can be used with additional data types.
-- [ ] for loops can be nested; whereas forEach loops cannot.
+- [ ] for loops can be nested; whereas forEach loop cannot.
 
 [Reference Differences between forEach and for loop](https://www.geeksforgeeks.org/difference-between-foreach-and-for-loop-in-javascript/)
 
@@ -774,7 +778,7 @@ printA();
 - [ ] to make your code faster
 - [ ] to ensure that the call stack maintains a LIFO (Last in, First Out) structure
 
-**EXPLANATION:** "to ensure that tasks further down in your code are not initiated until earlier tasks have completed" you use the normal (synchronous) flow where each command is executed sequentially. Asynchronous code allows you to break this sequence: start a long running function (AJAX call to an external service) and continue running the rest of the code in parallel.
+**EXPLANATION:** `"to ensure that tasks further down in your code are not initiated until earlier tasks have completed" you use the normal (synchronous) flow where each command is executed sequentially. Asynchronous code allows you to break this sequence: start a long running function (AJAX call to an external service) and continue running the rest of the code in parallel.`
 
 #### Q59. Which expression evaluates to true?
 
@@ -783,8 +787,8 @@ printA();
 - [ ] `3 != '3'`
 - [ ] `3 === '3'`
 
-[Reference booleans](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-[Reference 2 - booleans](https://www.scaler.com/topics/boolean-in-javascript/)
+1. [Reference booleans](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+2. [Reference 2 - booleans](https://www.scaler.com/topics/boolean-in-javascript/)
 
 #### Q60. Which of these is a valid variable name?
 
@@ -813,7 +817,7 @@ printA();
 
 [Reference Node interface](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
-#### Q63. Which statement is used to skip iteration of the loop?
+#### Q63. What statement can be used to skip an iteration in a loop?
 
 - [ ] `break`
 - [ ] `pass`
@@ -822,7 +826,7 @@ printA();
 
 [Reference break vs continue](https://www.w3schools.com/js/js_break.asp)
 
-#### Q64. Which choice is valid example for an arrow function?
+#### Q64. Which choice is a valid example for an arrow function?
 
 - [x] `(a,b) => c`
 - [ ] `a, b => {return c;}`
@@ -869,7 +873,7 @@ printA();
 
 #### Q69. What is the result of running the statement shown?
 
-```javascript
+```js
 let a = 5;
 console.log(++a);
 ```
@@ -883,7 +887,7 @@ console.log(++a);
 
 #### Q70. You've written the event listener shown below for a form button, but each time you click the button, the page reloads. Which statement would stop this from happening?
 
-```javascript
+```js
 button.addEventListener(
   'click',
   function (e) {
@@ -946,7 +950,7 @@ button.addEventListener(
 
 #### Q76. What is the result in the console of running this code?
 
-```javascript
+```js
 function logThis() {
   console.log(this);
 }
@@ -962,7 +966,7 @@ logThis();
 
 #### Q77. Which class-based component is equivalent to this function component?
 
-```javascript
+```js
 const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 ```
 
@@ -971,24 +975,9 @@ const Greeting = ({ name }) => <h1>Hello {name}!</h1>;
 - [ ] `class Greeting extends React.Component { <h>Hello {this.props.name}!</h>; } }`
 - [ ] `class Greeting extends React.Component { render({ name }) { return <h1>Hello {name}!</h1>; } }`
 
-#### Q78. Which class-based lifecycle method would be called at the same time as this effect Hook?
-
-```javascript
-useEffect(() => {
-  // do things
-}, []);
-```
-
-- [ ] componentWillUnmount
-- [ ] componentDidUpdate
-- [ ] render
-- [x] componentDidMount
-
-[Reference react lifecycle methods](https://reactjs.org/docs/react-component.html)
-
 #### Q79. What is the output of this code?
 
-```javascript
+```js
 var obj;
 console.log(obj);
 ```
@@ -1002,7 +991,7 @@ console.log(obj);
 
 #### Q80. How would you use the TaxCalculator to determine the amount of tax on \$50?
 
-```javascript
+```js
 class TaxCalculator {
   static calculate(total) {
     return total * 0.05;
@@ -1067,7 +1056,7 @@ Javascript!
 
 - [ ] .
 
-```
+```plaintext
 I
 love
 Javascript!
@@ -1110,8 +1099,8 @@ const foo = {
 
 - [ ] There is no difference.
 - [ ] The `forEach()` method returns a single output value, whereas the `map()` method performs operation on each value in the array.
-- [x] The map() methods returns a new array with a transformation applied on each item in the original array, whereas the `forEach()` method iterates through an array with no return value.
-- [ ] The `forEach()` methods returns a new array with a transformation applied on each item in the original array, whereas the `map()` method iterates through an array with no return value.
+- [x] The map() method returns a new array with a transformation applied on each item in the original array, whereas the `forEach()` method iterates through an array with no return value.
+- [ ] The `forEach()` method returns a new array with a transformation applied on each item in the original array, whereas the `map()` method iterates through an array with no return value.
 
 1. [Reference map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 2. [Reference Differences between forEach and for loop](https://www.geeksforgeeks.org/difference-between-foreach-and-for-loop-in-javascript/)
@@ -1154,25 +1143,7 @@ console.log(addFive(3));
 
 [Reference Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
-#### Q89. What will be logged to the console??
-
-```js
-'use strict';
-function logThis() {
-  this.desc = 'logger';
-  console.log(this);
-}
-new logThis();
-```
-
-- [ ] window
-- [ ] undefined
-- [ ] function
-- [x] {desc: "logger"}
-
-[Reference strict in javascript classes](https://www.w3schools.com/js/js_strict.asp)
-
-#### Q90. What is the output of this code?
+#### Q89. What is the output of this code?
 
 ```js
 let rainForests = ['Amazon', 'Borneo', 'Cerrado', 'Congo'];
@@ -1187,7 +1158,7 @@ console.log(rainForests);
 
 [Reference array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-#### Q91. Which missing line would allow you to create five variables(one,two,three,four,five) that correspond to their numerical values (1,2,3,4,5)?
+#### Q90. Which missing line would allow you to create five variables(one,two,three,four,five) that correspond to their numerical values (1,2,3,4,5)?
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -1201,7 +1172,7 @@ const numbers = [1, 2, 3, 4, 5];
 
 [Reference array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-#### Q92. What will this code print?
+#### Q91. What will this code print?
 
 ```js
 const obj = {
@@ -1225,7 +1196,7 @@ console.log(obj2.a, obj2.b);
 
 [Reference spread syntax es6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-#### Q93. Which line could you add to this code to print "jaguar" to the console?
+#### Q92. Which line could you add to this code to print "jaguar" to the console?
 
 ```js
 let animals = ['jaguar', 'eagle'];
@@ -1238,9 +1209,17 @@ console.log(animals.pop()); //Prints jaguar
 - [ ] `animals.shift();`
 - [x] `animals.pop();`
 
-[Reference Javascript Array Reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+[Reference Javascript Array pop()](https://www.w3schools.com/jsref/jsref_pop.asp)
 
-#### Q94. What line is missing from this code?
+shift() - removes the FIRST element of an array and returns the removed item.
+
+pop() - removes the LAST element of an array and returns the removed item.
+
+reverse() - reverses the order of the elements in an array.
+
+filter() - get every element in the array that meets the condition.
+
+#### Q93. What line is missing from this code?
 
 ```js
 //Missing Line
@@ -1262,7 +1241,7 @@ for (var i = 0; i < vowels.length; i++) {
 
 [Reference working with arrays](https://www.w3schools.com/js/js_arrays.asp)
 
-#### Q95. What will be logged to the console?
+#### Q94. What will be logged to the console?
 
 ```js
 const x = 6 % 2;
@@ -1275,9 +1254,10 @@ console.log(y);
 - [ ] true
 - [x] Two
 
+**Note:** `this question is same with Q46.`
 [Reference ternary operator js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-#### Q96. How would you access the word It from this multidimensional array?
+#### Q95. How would you access the word It from this multidimensional array?
 
 `let matrix = [["You","Can"],["Do","It"],["!","!","!"]];`
 
@@ -1286,7 +1266,7 @@ console.log(y);
 - [ ] `matrix[1,2]`
 - [ ] `matrix[1][2]`
 
-#### Q97. What does this code do?
+#### Q96. What does this code do?
 
 ```js
 const animals = ['Rabbit', 'Dog', 'Cat'];
@@ -1300,7 +1280,7 @@ animals.unshift('Lizard');
 
 [Reference working with arrays](https://www.w3schools.com/js/js_arrays.asp)
 
-#### Q98. What is the output of this code?
+#### Q97. What is the output of this code?
 
 ```js
 let x = 6 + 3 + '3';
@@ -1314,7 +1294,7 @@ console.log(x);
 
 [Reference type coercion](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/)
 
-#### Q99. Which statement can take a single expression as input and then look through a number of choices until one that matches that value is found?
+#### Q98. Which statement can take a single expression as input and then look through a number of choices until one that matches that value is found?
 
 - [ ] else
 - [ ] when
@@ -1323,7 +1303,7 @@ console.log(x);
 
 [Reference switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 
-#### Q100. Which statement prints "roar" to the console?
+#### Q99. Which statement prints "roar" to the console?
 
 ```js
 var sound = 'grunt';
@@ -1342,7 +1322,7 @@ function roar() {
 2. [Reference this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 3. [Reference bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
-#### Q101. Which choice is a valid example of an arrow function, assuming c is defined in the outer scope?
+#### Q100. Which choice is a valid example of an arrow function, assuming c is defined in the outer scope?
 
 - [ ] `a, b => { return c; }`
 - [ ] `a, b => c`
@@ -1351,7 +1331,7 @@ function roar() {
 
 [Reference arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
-#### Q102. Which statement correctly imports this code from some-file.js?
+#### Q101. Which statement correctly imports this code from some-file.js?
 
 ```js
 //some-file.js
@@ -1365,7 +1345,7 @@ export const printMe = (str) => console.log(str);
 
 [Reference importing libraries in javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
-#### Q103. What will be the output of this code?
+#### Q102. What will be the output of this code?
 
 ```js
 const arr1 = [2, 4, 6];
@@ -1382,7 +1362,7 @@ console.log([...arr1, ...arr2]);
 
 [Reference spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-#### Q104. Which method call is chained to handle a successful response returned by `fetch()`?
+#### Q103. Which method call is chained to handle a successful response returned by `fetch()`?
 
 - [ ] `done()`
 - [x] `then()`
@@ -1391,7 +1371,7 @@ console.log([...arr1, ...arr2]);
 
 [Reference fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-#### Q105. Which choice is not an array method?
+#### Q104. Which choice is not an array method?
 
 - [ ] `array.slice()`
 - [ ] `array.shift()`
@@ -1400,7 +1380,7 @@ console.log([...arr1, ...arr2]);
 
 [Reference working with arrays](https://www.w3schools.com/js/js_arrays.asp)
 
-#### Q106. Which JavaScript loop ensures that at least a singular iteration will happen?
+#### Q105. Which JavaScript loop ensures that at least a singular iteration will happen?
 
 - [x] do…while
 - [ ] forEach
@@ -1409,9 +1389,9 @@ console.log([...arr1, ...arr2]);
 
 [Reference loops in js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
-#### Q107. What will be logged to the console?
+#### Q106. What will be logged to the console?
 
-```javascript
+```js
 console.log(typeof 'blueberry');
 ```
 
@@ -1422,7 +1402,7 @@ console.log(typeof 'blueberry');
 
 [Reference what is typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 
-#### Q108. What is the output that is printed when the div containing the text "Click Here" is clicked?
+#### Q107. What is the output that is printed when the div containing the text "Click Here" is clicked?
 
 ```html
 //HTML Markup
@@ -1433,7 +1413,7 @@ console.log(typeof 'blueberry');
 </div>
 ```
 
-```javascript
+```js
 //JavaScript
 document.querySelectorAll('div').forEach((e) => {
   e.onclick = (e) => console.log(e.currentTarget.id);
@@ -1448,7 +1428,7 @@ document.querySelectorAll('div').forEach((e) => {
 1. [Reference query selector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 2. [Reference events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-#### Q109. What will this code log to the console?
+#### Q108. What will this code log to the console?
 
 ```js
 const myNumbers = [1, 2, 3, 4, 5, 6, 7];
@@ -1458,14 +1438,14 @@ const myFunction = (arr) => {
 console.log(myFunction(myNumbers));
 ```
 
-- [ ] [4,5,6,7,8,9,10]
-- [ ] [4,5,6,7]
-- [ ] [1,2,3,4,5,6]
-- [x] [4,5,6]
+- [ ] `[4,5,6,7,8,9,10]`
+- [ ] `[4,5,6,7]`
+- [ ] `[1,2,3,4,5,6]`
+- [x] `[4,5,6]`
 
 [Reference functions in javascript](https://www.w3schools.com/js/js_functions.asp)
 
-#### Q110. What does this code print to the console?
+#### Q109. What does this code print to the console?
 
 ```js
 let rainForestAcres = 10;
@@ -1486,7 +1466,7 @@ console.log(animals);
 
 [Reference MDN JavaScript Looping code](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
 
-#### Q111. Which snippet could you add to this code to print "YOU GOT THIS" to the console?
+#### Q110. Which snippet could you add to this code to print "YOU GOT THIS" to the console?
 
 ```js
 let cipherText = [...'YZOGUT QGMORTZ MTRHTILS'];
@@ -1497,7 +1477,7 @@ let plainText = '';
 console.log(plainText); //Prints YOU GOT THIS
 ```
 
-- [ ]
+- [ ] A
 
 ```js
 for (let key of cipherText.keys()) {
@@ -1505,7 +1485,7 @@ for (let key of cipherText.keys()) {
 }
 ```
 
-- [ ]
+- [ ] B
 
 ```js
 for (let [index, value] of cipherText.entries()) {
@@ -1513,7 +1493,7 @@ for (let [index, value] of cipherText.entries()) {
 }
 ```
 
-- [x]
+- [x] C
 
 ```js
 for (let [index, value] of cipherText.entries()) {
@@ -1521,7 +1501,7 @@ for (let [index, value] of cipherText.entries()) {
 }
 ```
 
-- [ ]
+- [ ] D
 
 ```js
 for (let value of cipherText) {
@@ -1533,7 +1513,7 @@ for (let value of cipherText) {
 2. [Reference MDN JavaScript Array entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
 3. [Reference MDN JavaScript Remainder/Modulo](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
 
-#### Q112. Which Pokemon will be logged to the console?
+#### Q111. Which Pokemon will be logged to the console?
 
 ```js
 var pokedex = ['Snorlax', 'Jigglypuff', 'Charmander', 'Squirtle'];
@@ -1546,11 +1526,11 @@ console.log(pokedex.pop());
 - [ ] Snorlax
 - [ ] Squirtle
 
-**Explanation**: The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+**Explanation**: `The pop() method removes the last element from an array and returns that element. This method changes the length of the array.`
 
 [Reference Array.pop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
-#### Q113. Which statement can be used to select the element from the DOM containing the text "The LinkedIn Learning library has great JavaScript courses" from this markup?
+#### Q112. Which statement can be used to select the element from the DOM containing the text "The LinkedIn Learning library has great JavaScript courses" from this markup?
 
 ```html
 <h1 class="content">LinkedIn Learning</h1>
@@ -1564,7 +1544,7 @@ console.log(pokedex.pop());
 - [ ] document.querySelector(".content")
 - [ ] document.querySelector("div.span")
 
-#### Q114. Which value is not falsey?
+#### Q113. Which value is not falsey?
 
 - [x] `[]`
 - [ ] `undefined`
@@ -1573,7 +1553,7 @@ console.log(pokedex.pop());
 
 [Reference Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
-#### Q115. What line of code causes this code segment to throw an error?
+#### Q114. What line of code causes this code segment to throw an error?
 
 ```js
 const lion = 1;
@@ -1593,7 +1573,7 @@ tiger++;
 1. [Reference const in js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 2. [Reference TypeError: invalid assignment to const "x"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_const_assignment)
 
-#### Q116. What will be the value of `result` after running this code?
+#### Q115. What will be the value of `result` after running this code?
 
 ```js
 const person = { name: 'Dave', age: 40, hairColor: 'blue' };
@@ -1609,7 +1589,7 @@ const result = Object.keys(person).map((x) => x.toUpperCase());
 2. [Reference Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 3. [Reference String.prototype.toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
 
-#### Q117. Which snippet could you insert to this code to print "swim" to the console?
+#### Q116. Which snippet could you insert to this code to print "swim" to the console?
 
 ```js
 let animals = ["eagle", "osprey", "salmon"];
@@ -1627,7 +1607,7 @@ if(/* Insert Snippet Here */){
 
 [Reference Array.prototype.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
-#### Q118. What is the output of this code?
+#### Q117. What is the output of this code?
 
 ```js
 class RainForest {
@@ -1646,7 +1626,7 @@ console.log(congo.minimumRainFall);
 
 [Reference Classes static](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
 
-#### Q119. How can you attempt to access the property `a.b` on `obj` without throwing an error if a is undefined?
+#### Q118. How can you attempt to access the property `a.b` on `obj` without throwing an error if a is undefined?
 
 ```js
 let obj = {};
@@ -1659,7 +1639,7 @@ let obj = {};
 
 [Reference Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
-#### Q120. What happens when you run this code?
+#### Q119. What happens when you run this code?
 
 ```js
 if (true) {
@@ -1677,7 +1657,7 @@ console.log(x + y + z);
 
 [Reference let statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
-#### Q121. What does this code print to the console?
+#### Q120. What does this code print to the console?
 
 ```js
 const x = [1, 2];
@@ -1693,7 +1673,7 @@ console.log(z);
 
 [Reference spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-#### Q122. Given this code, which statement will evaluate to false?
+#### Q121. Given this code, which statement will be evaluated as false?
 
 ```js
 const a = { x: 1 };
@@ -1707,7 +1687,7 @@ const b = { x: 1 };
 
 [Reference](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)
 
-#### Q123. What will this code log to the console?
+#### Q122. What will this code log to the console?
 
 ```js
 console.log(typeof 41.1);
@@ -1720,7 +1700,7 @@ console.log(typeof 41.1);
 
 [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#basic_usage)
 
-#### Q124. What is the output of this code?
+#### Q123. What is the output of this code?
 
 ```js
 let scores = [];
@@ -1737,11 +1717,11 @@ console.log(score);
 - [ ] `6`
 - [ ] `7`
 
-1. [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-2. [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-3. [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+1. [Reference Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+2. [Reference Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+3. [Reference Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
-#### Q125. What does this code print to the console?
+#### Q124. What does this code print to the console?
 
 ```js
 let bear = {
@@ -1763,7 +1743,7 @@ bearSound();
 
 [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
-#### Q126. What is the output of this code?
+#### Q125. What is the output of this code?
 
 ```js
 var cat = { name: 'Athena' };
@@ -1782,7 +1762,7 @@ console.log(cat.name);
 - [ ] Tabby
 - [ ] Athena
 
-#### Q127. What will this code output to the log?
+#### Q126. What will this code output to the log?
 
 ```js
 var thing;
@@ -1798,7 +1778,7 @@ func(null);
 - [ ] null null
 - [x] no arg null
 
-#### Q128. What will this code print to the console?
+#### Q127. What will this code print to the console?
 
 ```js
 const myFunc = () => {
@@ -1815,7 +1795,7 @@ test();
 - [ ] It won't print anything.
 - [x] a is 2
 
-#### Q129. What will this code print to the console?
+#### Q128. What will this code print to the console?
 
 ```js
 const myFunc = (num1, num2 = 2, num3 = 2) => {
@@ -1831,7 +1811,7 @@ console.log(test);
 - [ ] 2
 - [ ] 12
 
-#### Q130. Which code would you use to access the Irish flag?
+#### Q129. Which code would you use to access the Irish flag?
 
 ```js
 var flagsJSON =
@@ -1847,3 +1827,442 @@ var flagDatabase = JSON.parse(flagsJSON);
 - [x] flagDatabase.countries[0].flag
 - [ ] flagDatabase[1].flag
 - [ ] flagsJSON.countries[0].flag
+
+#### Q130. Which snippet allows the acresOfRainForest variable to increase?
+
+```js
+let conservation = true;
+let deforestation = false;
+let acresOfRainForest = 100;
+if (/* Snipped goes here */){
+    ++acresOfRainForest;
+}
+```
+
+- [x] conservation && !deforestation
+- [ ] !deforestation && !conservation
+- [ ] !conservation || deforestation
+- [ ] deforestation && conservation || deforestation
+
+#### Q131. Which of these evaluate to true?
+
+- [x] Boolean("false")
+- [ ] Boolean("")
+- [ ] Boolean(0)
+- [ ] Boolean(NaN)
+
+#### Q132. How would you add a data item named animal with a value of sloth to local storage for the current domain?
+
+- [ ] LocalStorage.setItem("animal","sloth");
+- [ ] document.localStorage.setItem("animal","sloth");
+- [ ] localStorage.setItem({animal:"sloth"});
+- [x] localStorage.setItem("animal","sloth");
+
+[Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)
+
+#### Q133. What value is printed to the console after this code execute?
+
+```js
+let cat = Object.create({ type: 'lion' });
+cat.size = 'large';
+
+let copyCat = { ...cat };
+cat.type = 'tiger';
+
+console.log(copyCat.type, copyCat.size);
+```
+
+- [ ] tiger large
+- [ ] lion undefined
+- [x] undefined large
+- [ ] lion large
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
+#### Q134. What does this code print to the console?
+
+```js
+let animals = [{ type: 'lion' }, 'tiger'];
+let clones = animals.slice();
+
+clones[0].type = 'bear';
+clones[1] = 'sheep';
+
+console.log(animals[0].type, clones[0].type);
+console.log(animals[1], clones[1]);
+```
+
+- [x] bear bear
+      tiger sheep
+- [ ] lion bear
+      sheep sheep
+- [ ] bear bear
+      tiger tiger
+- [ ] lion bear
+      tiger sheep
+
+[Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)
+
+#### Q135. What will be the output of the following code?
+
+```js
+a=5;
+b=4;
+alert(a++(+(+(+b))));
+```
+
+- [ ] 18
+- [ ] 10
+- [x] 9
+- [ ] 20
+
+#### Q136. Which snippet could you add to this code to print "{"type": "tiger"}" to the console?
+
+```js
+let cat = { type: "tiger", size: "large" };
+
+let json = /* Snippet here */;
+
+console.log(json); // print {"type":"tiger"}
+```
+
+- [ ] `cat.toJSON("type");`
+- [x] `JSON.stringify(cat, ["type"]);`
+- [ ] `JSON.stringify(cat);`
+- [ ] `JSON.stringify(cat, /type/);`
+
+[Reference](https://www.w3schools.com/jsref/jsref_stringify.asp)
+
+#### Q137. Which document method is not used to get a reference to a DOM node?
+
+- [x] document.getNode();
+- [ ] document.getElementsByClassName();
+- [ ] document.querySelectorAll();
+- [ ] document.querySelector();
+
+[Reference](<https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById#:~:text=querySelector()%20and%20Document.,element%20objects%20in%20the%20DOM.>)
+
+#### Q138. In JavaScript, all objects inherit a built-in property from a **\*\*\*\***\_\_\_**\*\*\*\***.
+
+- [ ] node
+- [ ] instance variable
+- [x] prototype
+- [ ] accessor
+
+[Reference](https://www.freecodecamp.org/news/javascript-prototype-explained-with-examples/)
+
+#### Q139. Which of the following are not server-side Javascript objects?
+
+- [ ] Date
+- [x] FileUpload
+- [ ] Function
+- [ ] All of the above
+
+[Reference](https://docs.oracle.com/cd/E19957-01/816-6411-10/jsserv.htm#1035757)
+
+#### Q140. What will be the output of the following code snippet?
+
+```javascript
+const obj1 = { first: 20, second: 30, first: 50 };
+console.log(obj1);
+```
+
+- [ ] first: 30 , second: 50
+- [x] first: 50 , second: 30
+- [ ] first: 30 , second: 20
+- [ ] None of the above
+
+#### Q141. Which object in Javascript doesn’t have a prototype?
+
+- [x] Base Object
+- [ ] All objects have prototype
+- [ ] None of the objects have prototype
+- [ ] None of the above
+
+[Reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
+#### Q142. What does … operator do in JS?
+
+- [x] Used to spread iterables to individual elements
+- [ ] Describe datatype of undefined
+- [ ] No such operator exists
+- [ ] None of the above
+
+#### Q143. How to stop an interval timer in Javascript?
+
+- [x] clearInterval
+- [ ] clearTimer
+- [ ] intervalOver
+- [ ] None of the above
+
+[Reference](https://www.interviewbit.com/javascript-mcq/)
+
+#### Q144. What will be the output of the following code snippet?
+
+```javascript
+print(typeof NaN);
+```
+
+- [ ] Object
+- [x] Number
+- [ ] String
+- [ ] None of the above
+
+#### Q145. What will be the output of the following code snippet?
+
+```javascript
+<script type="text/javascript">a = 5 + "9"; document.write(a);</script>
+```
+
+- [ ] Compilation Error
+- [ ] 14
+- [ ] Runtime Error
+- [x] 59
+
+#### Q146. Which of the following methods can be used to display data in some form using Javascript?
+
+- [ ] document.write()
+- [ ] console.log()
+- [ ] window.alert()
+- [x] all of the above
+
+#### Q147. What value is assigned to total after this code executes?
+
+```javascript
+function sum(num1, num2 = 2, num3 = 3) {
+  return num1 + num2 + num3;
+}
+let values = [1, 5];
+let total = sum(4, ...values);
+```
+
+- [x] 10
+- [ ] 6
+- [ ] 7
+- [ ] 8
+
+[Reference: Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+#### Q148. Which statement is applicable to the defer attribute of the HTML <script> tag?
+
+- [x] defer allows the browser to continue processing the page while the script loads in the background.
+- [ ] defer causes the script to be loaded from the backup content delivery network (CDN).
+- [ ] defer blocks the browser from processing HTML below the tag until the script is completely loaded.
+- [ ] defer lazy loads the script, causing it to download only when it is called by another script on the page.
+
+[Reference: defer html script attribute](https://www.w3schools.com/tags/att_script_defer.asp)
+
+#### Q149. Which method of a class is called to initialize an object of that class?
+
+- [ ] init()
+- [ ] create()
+- [ ] new()
+- [x] constructor()
+
+[Reference: constructor method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+
+#### Q150. Which expression evaluates to true?
+
+- [ ] Boolean(NaN)
+- [ ] Boolean(0)
+- [x] Boolean("false")
+- [ ] Boolean("")
+
+[Reference: Boolean object](https://www.w3schools.com/js/js_booleans.asp)
+
+#### Q151. How would you check if the word "pot" is in the word "potato"?
+
+- [ ] "pot".indexOf("potato") !== -1
+- [ ] "potato".includes("Pot")
+- [x] "potato".includes("pot")
+- [ ] "potato".contains("pot");
+
+[Reference: String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+#### Q152. Which collection object allows a unique value to be inserted only once?
+
+- [ ] Map
+- [ ] Array
+- [x] Set
+- [ ] Object
+
+[Reference: developer.mozilla Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+#### Q153. How would you change the color of this header to pink?
+
+```javascript
+<h2 id="cleverest">girls</h2>
+```
+
+- [ ] document.getElementByName("cleverest").style.color = "pink";
+- [ ] document.getElementsByTagName("h2").style.color = "pink";
+- [ ] document.getElementByName("h2").style.color = "pink";
+- [x] document.getElementById("cleverest").style.color = "pink";
+
+[Reference: W3Schools HTML DOM Style color Property](https://www.w3schools.com/jsref/prop_style_color.asp)
+
+#### Q154. Which line is missing from this code if you expect the code to evaluate to true?
+
+```js
+var compare = function (test1, test2) {
+  // Missing line
+};
+
+compare(1078, '1078'); // yields true
+```
+
+- [ ] `test1==test2;`
+- [ ] return test1===test2;
+- [x] return test1==test2;
+- [ ] return test1!=test2;
+
+[Reference: MDN Equality Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+
+#### Q155. What is the output of this code?
+
+```js
+if (true) {
+  var first = 'You';
+}
+
+function fScope() {
+  var second = 'got this!';
+}
+fScope();
+console.log(first);
+console.log(second);
+```
+
+- [ ] You  
+       undefined
+- [x] You  
+       ReferenceError
+- [ ] undefined  
+       undefined
+- [ ] You  
+       got this!
+
+[Reference: W3schools JS Scoping](https://www.w3schools.com/js/js_scope.asp)
+
+#### Q156. What is the output for the code given below?
+
+```js
+console.log('hello' + 'world' + '!');
+```
+
+- [x] helloworld!
+- [ ] helloworld !
+- [ ] hello world!
+- [ ] hello world !
+
+#### Q157. What is the output of this code?
+
+```js
+console.log(10 + 10);
+```
+
+- [ ] 10
+- [x] 20
+- [ ] 30
+- [ ] 40
+
+#### Q158. Events related to the browser window can be handled by?
+
+- [ ] Onclicks
+- [x] Window
+- [ ] querySelector
+- [ ] None of the above
+
+[Reference: GeeksForGeeks](https://www.geeksforgeeks.org/javascript-course-quiz-1/)
+
+#### Q159. How do you define a function in JavaScript?
+
+- [x] function myFunction() {}
+- [ ] def myFunction() {}
+- [ ] var myFunction = () => {}
+- [ ] func myFunction() {}
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+
+#### Q160. Your code is producing the error: TypeError: Cannot read property 'reduce' of undefined. What does that mean?
+
+- [x] You are calling a method named reduce on an object that's declared but has no value.
+- [ ] You are calling a method named reduce on an object that does not exist.
+- [ ] You are calling a method named reduce on an empty array.
+- [ ] You are calling a method named reduce on an object that has a null value.
+
+#### Q161. Which of the following methods can be used to display data in some form using Javascript?
+
+- [ ] document.write()
+- [ ] console.log()
+- [ ] window.alert()
+- [x] all of the above
+
+#### Q162. Which document method is not used to get a reference to a DOM node?
+
+- [x] document.getNode();
+- [ ] document.getElementsByClassName();
+- [ ] document.querySelectorAll();
+- [ ] document.querySelector();
+
+#### Q163. Which of these is a valid variable name?
+
+- [ ] 5thItem
+- [x] firstName
+- [ ] grand total
+- [ ] function
+
+#### Q164. What function is used in JavaScript to schedule a function to run after a specified number of milliseconds?
+
+- [x] setTimeout()
+- [ ] setInterval()
+- [ ] delay()
+- [ ] wait()
+
+[Reference](https://www.w3schools.com/js/js_timing.asp)
+
+#### Q165. Which of the following is a server-side Java Script object?
+
+- [ ] Function
+- [x] File
+- [ ] FileUpload
+- [ ] Date
+
+[Reference](https://www.wscubetech.com/quiz-result.html)
+
+#### Q166. Which statement best describes the var keyword's scope in JavaScript?
+
+- [ ] Block scope
+- [x] Function scope
+- [ ] Global scope
+- [ ] Instance scope
+
+#### Q167. What will be logged to the console?
+
+```js
+const foo = () => console.log('First');
+const bar = () => setTimeout(() => console.log('Second'), 0);
+foo();
+bar();
+console.log('Third');
+```
+
+- [ ] Second, First, Third
+- [x] First, Third, Second
+- [ ] First, Second, Third
+- [ ] Third, First, Second
+
+#### Q168. What will be the output of running this code?
+
+```js
+function scream(words) {
+  return words.toUpperCase() + '!!!';
+}
+
+scream('yay');
+```
+
+- [x] YAY!!!
+- [ ] ReferenceError
+- [ ] Undefined
+- [ ] TypeError

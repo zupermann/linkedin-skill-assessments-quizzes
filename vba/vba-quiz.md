@@ -2,7 +2,7 @@
 
 #### Q1. Which two sets of values are printed by this function and sub?
 
-```
+```vb
 Function GetVitals(ID As Long, Age As Long, Optional Weight As Long) As String
     GetVitals="ID=" & ID &"Age=" & Age & "Weight=" & Weight
 End Function
@@ -59,7 +59,7 @@ ID=6 Age = 25 Weight=130
 
 #### Q4. What value does the MsgBox statement display?
 
-```
+```vb
 Sub MySub(VarA As Long, ParamArray VarB() As Variant)
 MsgBox VarB(0)
 End Sub
@@ -76,13 +76,13 @@ End Sub
 #### Q5. What object is needed to put a userform module in a VBA project?
 
 - [ ] associated standard code module
-- [ ] UserForm
+- [x] UserForm
 - [ ] associated class module
 - [ ] userForm class
 
 #### Q6. What is the output?
 
-```
+```vb
 Sub UseSum()
 Dim TestArray() As Integer, Total As Integer
 ReDim TestArray(1)
@@ -100,9 +100,9 @@ End Sub
 
 #### Q7. The Driver subroutine is declared by Sub Driver (Y). Which statement results in a compile error?
 
-- [ ] Driver x
+- [x] Driver x
 - [ ] call Driver(x)
-- [ ] call Driver x
+- [x] call Driver x
 - [ ] Driver (X)
 
 #### Q8. You have several variables to display on a user form, and there are too many variables to display at once. Which control best enables the user to see all the variables?
@@ -114,7 +114,7 @@ End Sub
 
 #### Q9. Below is a function named SquareIt. Which version of the subroutine named Area results in a compile error?
 
-```
+```vb
 Function SquareIt(ByRef Basis As Integer) As Long
 SquareIt = Basis ^ 2
 End Function
@@ -122,7 +122,7 @@ End Function
 
 - [ ] sub Area()
 
-```
+```vb
 Dim Result As Long, Side As Integer
 Side = 5
 Result = Squarelt(Side)
@@ -131,7 +131,7 @@ End Sub
 
 - [ ] Sub Area()
 
-```
+```vb
 Dim Result As Long, Side
 Side = 5
 Result = SquareIt(Cint(Side))
@@ -169,7 +169,7 @@ End Sub
 
 - [x] :
 
-```
+```vb
 Type CBC
 Name As String
 Next As String
@@ -178,7 +178,7 @@ End Type
 
 - [ ] :
 
-```
+```vb
 Type CBC
 Name As String
 _Next As String
@@ -187,7 +187,7 @@ End Type
 
 - [ ] :
 
-```
+```vb
 Type CBC
 Name As String
 @Option As String
@@ -196,7 +196,7 @@ End Type
 
 - [ ] :
 
-```
+```vb
 Type CBC
 Name As String
 %For As String
@@ -237,7 +237,7 @@ End Type
 - [ ] Word's Macro Recorder does not record actions initiated by keyboard shortcuts.
 - [ ] Word's Macro Recorder does not support Find & Replace edits.
 - [ ] Word's Macro Recorder does not record actions initiated by clicking a button on the Ribbon's Developer tab.
-- [x] Word's Macro Recorder does not record actions that inlove selection of text by pointing with the mouse pointer.
+- [x] Word's Macro Recorder does not record actions that inlove the selection of text by pointing with the mouse pointer.
 
 #### Q16. Which statement should precede a subroutine's error handler?
 
@@ -263,10 +263,10 @@ Dim MyArray(5) As Integer
 
 - [ ] Set establishes a value in a class; Let returns a value from a class.
 - [ ] Let establishes a value in a class; Set returns a value from a class.
-- [x] Let establishes a value in a class; Get returns a value from a class.
+- [x] Let establish a value in a class; Get returns a value from a class.
 - [ ] Get establishes a value in a class; Set returns a value from a class.
 
-#### Q19. A declaration has scope, which has three levels. What are they?
+#### Q19. A declaration has a scope, which has three levels. What are they?
 
 - [ ] Module, Project and Automation
 - [x] Procedure, Private Module and Public Module
@@ -315,7 +315,7 @@ Dim MyArray(5) As Integer
 - [ ] Set Module Level Scope at the top of Module1
 - [x] Set Option Private Module at the top of Module1
 
-#### Q26. When used with an array named MyArray, what is the preferred way to set beginning and ending values of a loop control variable?
+#### Q26. When used with an array named MyArray, what is the preferred way to set the beginning and ending values of a loop control variable?
 
 - [ ] For i = 0 To UBound(MyArray,1)
 - [ ] For i = 1 To UBound(MyArray,1)
@@ -324,7 +324,7 @@ Dim MyArray(5) As Integer
 
 #### Q27. What is the value of Test3?
 
-```
+```vb
 Enum TestEnum
     Test1
     Test2
@@ -377,7 +377,7 @@ End Enum
 
 #### Q31. Explicit variable declaration is required. MyVar is declared at both the module and the procedure level. What is the value of MyVar after first AAA() and then BBB() are run?
 
-```
+```vb
 Dim MyVar As String
 Sub AAA()
 Dim MyVar As String
@@ -397,7 +397,7 @@ End Sub
 
 - [ ] :
 
-```
+```vb
 Public Property Get HDL() As Double
 HDL = pHDL
 End Property
@@ -408,7 +408,7 @@ End Property
 
 - [ ] :
 
-```
+```vb
 Property Get HDL() As Double
 HDL = Value
 End Property
@@ -419,7 +419,7 @@ End Property
 
 - [ ] :
 
-```
+```vb
 Public Property Get HDL() As Double
 HDL = Value
 End Property
@@ -430,7 +430,7 @@ End Property
 
 - [x] :
 
-```
+```vb
 Public Property Get HDL() As Single
 HDL = pHDL
 End Property
@@ -444,7 +444,7 @@ End Property
 - [ ] The scope of constants is limited to the procedure that declares them
 - [ ] Constants are declared at compile time, but variables are declared at run time
 - [ ] Once declared in a project, the value of a constant cannot be changed. There is no need to look up the current value of FileCount when it is a constant.
-- [x] The Const declaraton specifies the most efficient type given the constant's value
+- [x] The Const declaration specifies the most efficient type given the constant's value
 
 #### Q34. A VBA project must declare four classes. How many class modules are needed?
 
@@ -455,7 +455,7 @@ End Property
 
 #### Q35. What does this code display?
 
-```
+```vb
 Sub MakeErrors()
 Dim Y As Variant, Z As Variant
 On Error Resume Next
@@ -476,7 +476,7 @@ End Sub
 
 - [ ] :
 
-```
+```vb
 Private Sub CommandButton1_Click()
 If FoundErrors(Me) Then _
 Me.Show
@@ -485,7 +485,7 @@ End Sub
 
 - [ ] :
 
-```
+```vb
 Private Sub CommandButton1_Click()
 If Not FoundErrors(UserForm1) Then _
 Unload UserForm1
@@ -494,7 +494,7 @@ End Sub
 
 - [x] :
 
-```
+```vb
 Private Sub CommandButton1_Click()
 Me.Hide
 Do While FoundErrors(Me)
@@ -505,7 +505,7 @@ End Sub
 
 - [ ] :
 
-```
+```vb
 Private Sub CommandButton1_Click()
 Do While FoundErrors(UserForm1)
 UserForm1.show
@@ -513,13 +513,13 @@ Loop
 End Sub
 ```
 
-> The first requirement is to make UserForm1 loaded but not visible, therefore we need Me.Hide, **Me** in here referring to UserForm1
+> The first requirement is to make UserForm1 loaded but not visible, therefore, we need Me.Hide, **Me** in here referring to UserForm1
 
 #### Q37. Which is the correct way to structure a With block?
 
 - [ ] :
 
-```
+```vb
 With Selection
 &TypeText Text:="8/24/2019"
 &TypeParagraph
@@ -529,7 +529,7 @@ End With
 
 - [x] :
 
-```
+```vb
 With Selection
 .TypeText Text:="8/24/2019"
 .TypeParagraph
@@ -539,7 +539,7 @@ End With
 
 - [ ] :
 
-```
+```vb
 With Selection
 TypeText Text:="8/24/2019"
 TypeParagraph
@@ -549,7 +549,7 @@ End With
 
 - [ ] :
 
-```
+```vb
 With Selection:
 &TypeText Text:="8/24/2019"
 &TypeParagraph
@@ -561,7 +561,7 @@ End With
 
 #### Q38. Why does this code generate a "Subscript out of range" error?
 
-```
+```vb
 Sub Example()
     Dim MyArr() As Variant
     ReDim MyArr(3, 4)
@@ -572,14 +572,14 @@ End Sub
 
 - [ ] Arrays cannot be resized more than once.
 - [ ] MyArr was originally declared with three "rows".
-- [ ] You can resize only the last dimension of an array when you specify `ReDim Preserve`.
+- [x] You can resize only the last dimension of an array when you specify `ReDim Preserve`.
 - [ ] The correct syntax is `ReDim Preserve MyArr(0 To 4, 0 To 4)`.
 
-#### Q39. Which subroutine declaration does `not` cause a compile error?
+#### Q39. Which subroutine declaration does not cause a compile error?
 
-- [ ] `Sub Called(Salary As Long, ParamArray Vals() As Variant)`
+- [x] `Sub Called(Salary As Long, ParamArray Vals() As Variant)`
 - [ ] `Sub Called(ParamArray Vals() As Variant, Salary As Long)`
-- [ ] `Sub Called(Optional Salary As Long, ParamArray Vals() As Variant)`
+- [x] `Sub Called(Optional Salary As Long, ParamArray Vals() As Variant)`
 - [ ] `Sub Called(Salary As Long, ParamArray Vals() As String)`
 
 #### Q40. How can a user enter data on a worksheet or document, or switch windows, while UserForm1 is displayed on the screen?
@@ -587,7 +587,7 @@ End Sub
 - [ ] Show the form with this statement: `UserForm1.Show vbModal`
 - [ ] Include this statement in the code: `UserForm1.Hwnd = False.`
 - [ ] Set the user from's `SpecialEffect` property to `frmShowModal`
-- [ ] Set the user from's `ShowModal` property to False.
+- [x] Set the user from's `ShowModal` property to False.
 
 #### Q41. SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?
 
@@ -598,35 +598,35 @@ End Sub
 
 #### Q42. Which procedure declaration is syntactically correct?
 
-- [ ] :
+- [x] :
 
-```
+```vb
 Sub MySub(VarA As String, Optional VarB _
 As Variant, Optional VarC As Long)
 ```
 
 - [ ] :
 
-```
+```vb
 Sub MySub(VarA As String, Optional VarB _
 As Variant, VarC As Long)
 ```
 
 - [ ] :
 
-```
+```vb
 Sub MySub(Optional VarA As String, Optional VarB _
 As Variant, VarC as Long)
 ```
 
 - [ ] :
 
-```
+```vb
 Sub MySub(OPtional VarA As String, VarB _
 As Variant, Optional VarC as Long)
 ```
 
-#### Q43. What are the two principal kinds of procedure in VBA?
+#### Q43. What are the two principal kinds of procedures in VBA?
 
 - [x] Function and Event
 - [ ] Function and Scope
@@ -636,7 +636,7 @@ As Variant, Optional VarC as Long)
 #### Q44. Which code block compiles without error?
 
 - [ ] `Sub Decs() Dim MyFixed As String * 0 MyFixed = "A" MsgBox MyFixed End Sub`
-- [ ] `Sub Decs() Dim MyInt% * 1 MyInt = 7 MsgBox MyInt End Sub`
+- [x] `Sub Decs() Dim MyInt% * 1 MyInt = 7 MsgBox MyInt End Sub`
 - [ ] `Sub Decs() Dim MyInt% As Integer * 1 MyInt = 5 MsgBox MyInt End Sub`
 - [ ] `Sub Decs() Dim MyInt, MyNum As Integer MyInt = "A" MsgBox MyInt End Sub`
 
@@ -650,7 +650,7 @@ As Variant, Optional VarC as Long)
 #### Q46. At which level can you declare a variable in this way: Private TopSecret As String?
 
 - [ ] function
-- [ ] module
+- [x] module
 - [ ] subroutine
 - [ ] procedure
 
@@ -664,27 +664,27 @@ As Variant, Optional VarC as Long)
 #### Q48. SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?
 
 - [ ] Declare SubB as Sub SubB(Static MyVar).
-- [ ] Declare SubB as Sub SubB(ByVal MyVar).
+- [x] Declare SubB as Sub SubB(ByVal MyVar).
 - [ ] Declare SubB as Sub SubB(MyVar).
 - [ ] Declare SubB as Sub SubB(ByRef MyVar).
 
 #### Q49. Arrays cannot be resized more than once.
 
-```
+```vb
 Sub Example() Dim MyArr() As Variant ReDim MyArr(3, 4) 'some code ReDim Preserve MyArr(4, 4)
 End Sub Sub Example() Dim MyArr() As Variant ReDim MyArr(3, 4) 'some code ReDim Preserve MyArr(4, 4) End Sub
 ```
 
 - [ ] The correct syntax is ReDim Preserve MyArr(0 To 4, 0 To 4).
-- [ ] You can resize only the last dimension of an array when you specify ReDim Preserve.
+- [x] You can resize only the last dimension of an array when you specify ReDim Preserve.
 - [ ] MyArr was originally declared with three "rows."
 - [ ] Declare SubB as Sub SubB(ByRef MyVar).
 
 #### Q50. Which block of code ends with the variable i equal to 5 and the variable X equal to 10?
 
-- [ ]
+- [ ] :
 
-```
+```vb
 Do
 X = X + 1
 i = i + 1
@@ -692,9 +692,9 @@ Loop Until i < 5
 End Sub
 ```
 
-- [ ]
+- [ ] :
 
-```
+```vb
 Sub Loopi()
 Dim X As Integer, i As Integer
 For i = 1 To 5
@@ -703,9 +703,9 @@ Next I
 End Sub
 ```
 
-- [ ]
+- [x] :
 
-```
+```vb
 Sub Loopi()
 Dim X As Integer, i As Integer
 Do Until i < 5
@@ -715,9 +715,9 @@ Loop
 End Sub
 ```
 
-- [ ]
+- [ ] :
 
-```
+```vb
 Sub Loopi()
 Dim X As Integer, i As Integer
 Do
@@ -743,7 +743,7 @@ End Sub
 
 #### Q53. This code is trying to establish a new collection consisting of employee names and numbers. Assoc is a class. What statement is missing from the code?
 
-```
+```vb
 Dim Associates As Collection, Assoc As CAssoc, i As Byte
 For i = 1 To 200
     Set Assoc = New CAssoc
@@ -778,3 +778,67 @@ Next i
 - [ ] in the worksheet's object module
 - [ ] in the Worksheet_Change class module
 - [x] in the workbook's code module
+
+#### Q57. You are building an event procedure for a worksheet, and you edit the argument list in the event procedure's Sub statement. What happens when the event procedure runs?
+
+- [ ] There's no difference compared to the results of a standard procedure.
+- [ ] The results are unpredictable.
+- [x] The procedure won't compile.
+- [ ] The procedure throws a run-time error.
+
+#### Q58. Based on this code, which procedure calls the subroutine SumCosts correctly?
+
+```vb
+Sub Sumosts(AcctName As String, Amount As Long)
+    Range("A1") = AcctName
+End Sub
+```
+
+- [ ] call SumCosts "Totalcosts", 3
+- [ ] SumCosts "Totalcosts", 3
+- [x] SumCosts("Totalcosts", 3)
+- [ ] Call SumCosts
+
+[Source](https://learn.microsoft.com/en-us/office/vba/language/concepts/getting-started/calling-sub-and-function-procedures)
+
+#### Q59. You want to declare an object that describes cars so that your VBA code can apply tests such as the following. What keyword do you use to declare Cars?
+
+```vb
+If Cars(1).Make="Ford" And Cars (1).MPG > 20
+    Then Cars(1).Selected = True
+```
+
+- [ ] Dataframe
+- [x] Type
+- [ ] object
+- [ ] Variant
+
+#### Q60. What is the purpose of the .Range("A1:E5").Select portion of this statement?
+
+```vb
+ActiveCell.Offset(3,4).Range("A1:E5").Select
+```
+
+- [ ] If specifies the range that is to be selected after the offset is found
+- [x] it specifies the range of cells in which the contents of the offset are to be written
+- [ ] It provides Resize information - in this case, the offset returns a reference of five rows and five columns
+- [ ] It specifies the range of cells at which the offset is to be based
+
+#### Q61. In Excel, what is the effect of the two statements below?
+
+```vb
+Range("b3:f5, c4:d9").Select
+    	Range("b3:f5", "c4:d9").Select
+```
+
+- [ ] If specifies the range that is to be selected after the offset is found
+- [x] it specifies the range of cells in which the contents of the offset are to be written
+- [ ] It provides Resize information - in this case, the offset returns a reference of five rows and five columns
+- [ ] It specifies the range of cells at which the offset is to be based
+
+#### Q62. What does VBA stand for in the context of programming?
+
+- [ ] Very Basic Application
+- [x] Visual Basic Application
+- [ ] Volatile Business Automation
+- [ ] Visualized Binary Algorithm

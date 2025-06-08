@@ -7,6 +7,9 @@
 - [ ] django.middleware.cache.FetchFromCacheMiddleware
 - [x] django.middleware.cache.AcceleratedCacheMiddleware
 
+**Reference:**
+Django comes with a robust cache system that lets you save dynamic pages, so they don’t have to be computed for each request. For convenience, Django offers cache with different granularity — from entire website to pages to part of pages to DB query results to any objects in memory. Cache middleware. If enabled, each Django-powered page will be cached based on URL.
+
 #### Q2. In which programming language is Django written?
 
 - [ ] C++
@@ -23,30 +26,30 @@
 
 #### Q4. A client wants their site to be able to load "Rick & Morty" episodes by number or by title—e.g., shows/3/3 or shows/picklerick. Which URL pattern do you recommend?
 
-- [ ] <span>
+- [ ] A
 
-```
+```python
 url(r'shows/<int:season>/<int:episode>/', views.episode_number),
 url(r'shows/<slug:episode_name>/', views.episode_name)
 ```
 
-- [x] <span>
+- [x] B
 
-```
+```python
 path('shows/<int:season>/<int:episode>/', views.episode_number),
-path(r'shows/<slug:episode_name>/', views.episode_name)
+path('shows/<slug:episode_name>/', views.episode_name)
 ```
 
-- [ ] <span>
+- [ ] C
 
-```
+```python
 path('shows/<int:season>/<int:episode>', views.episode_number),
-path(r'shows/<slug:episode_name>/', views.episode_number)
+path('shows/<slug:episode_name>/', views.episode_number)
 ```
 
-- [ ] <span>
+- [ ] D
 
-```
+```python
 url(r'^show/(?P<season>[0-9]+)/(?P<episode>[0-9]+)/$', views.episode_number),
 url(r'^show/(?P<episode_name>[\w-]+)/', views.episode_name
 ```
@@ -130,36 +133,36 @@ url(r'^show/(?P<episode_name>[\w-]+)/', views.episode_name
 
 #### Q16. How would you define the relationship between a star and a constellation in a Django model?
 
-- [x] <span>
+- [x] A
 
-```
+```python
 class Star(models.Model):
 name = models.CharField(max_length=100)
 class Constellation(models.Model):
 stars = models.ManyToManyField(Star)
 ```
 
-- [ ] <span>
+- [ ] B
 
-```
+```python
 class Star(models.Model):
 constellation = models.ForeignKey(Constellation, on_delete=models.CASCADE)
 class Constellation(models.Model):
 stars = models.ForeignKey(Star, on_delete=models.CASCADE)
 ```
 
-- [ ] <span>
+- [ ] C
 
-```
+```python
 class Star(models.Model):
 name = models.CharField(max_length=100)
 class Constellation(models.Model):
 stars = models.OneToManyField(Star)
 ```
 
-- [ ] <span>
+- [ ] D
 
-```
+```python
 class Star(models.Model):
 constellation = models.ManyToManyField(Constellation)
 class Constellation(models.Model):
@@ -183,8 +186,8 @@ name = models.CharField(max_length=100)
 #### Q19. Should you create a custom user model for new projects?
 
 - [ ] No. Using a custom user model could break the admin interface and some third-party apps.
-- [ ] Yes. It is easier to make changes once it goes into production.
-- [x] No. Django's built-in models.User class has been tried and tested—no point in reinventing the wheel.
+- [x] Yes. It is easier to make changes once it goes into production.
+- [ ] No. Django's built-in models.User class has been tried and tested—no point in reinventing the wheel.
 - [ ] Yes, as there is no other option.
 
 #### Q20. You want to create a page that allows editing of two classes connected by a foreign key (e.g., a question and answer that reside in separate tables). What Django feature can you use?
@@ -224,10 +227,10 @@ name = models.CharField(max_length=100)
 
 #### Q25. Django supplies sensible default values for settings. In which Python module can you find these settings?
 
-- [ ] django.utils.default_settings.py
-- [ ] django.utils.global_settings.py
-- [ ] django.conf.default_settings.py
-- [x] django.conf.global_settings.py
+- [ ] `django.utils.default_settings.py`
+- [ ] `django.utils.global_settings.py`
+- [ ] `django.conf.default_settings.py`
+- [x] `django.conf.global_settings.py`
 
 #### Q26. Which variable name is best according to PEP 8 guidelines?
 
@@ -250,7 +253,7 @@ name = models.CharField(max_length=100)
 - [ ] use aggregate functions more easily
 - [ ] build reusable QuerySets
 
-#### Q29. Which is not a Django filed type for integers?
+#### Q29. Which is not a Django field type for holding integers?
 
 - [ ] SmallIntegerField
 - [x] NegativeIntegerField
@@ -303,16 +306,14 @@ name = models.CharField(max_length=100)
 
 #### Q36. How would you define the relation between a book and an author - book has only one author.
 
-- [ ] <span>
-
-```
+```python
 class Author (models.model):
 book=models.foreignkey(Book,on_delete=models.cascade)
 class Book(models.model):
 name=models.charfield(max_length=100)
 ```
 
-- [x] <span>
+- [ ] A
 
 ```python
 class Author (models.model):
@@ -321,27 +322,27 @@ class Book(models.model):
 author=models.foreignkey(Author,on_delete=models.cascade)
 ```
 
-- [ ] <span>
+- [x] B
 
-```
+```python
 class Author (models.model):
 name=models.charfield(max_length=100)
 class Book(models.model):
 author=models.foreignkey(Author)
 ```
 
-- [ ] <span>
+- [ ] C
 
-```
+```python
 class Author (models.model):
 name=models.charfield(max_length=100)
 class Book(models.model):
 author=models.foreignkey(Author,on_delete=models.cascade)
 ```
 
-- [ ] <span>
+- [ ] D
 
-```
+```python
 class Author (models.model):
 name=models.charfield(max_length=100)
 class Book(models.model):
@@ -378,7 +379,7 @@ author=Author.name
 
 #### Q41. How should the code end?
 
-```
+```python
 { percentage if spark >= 50 percentage }
 Lots of spark
 {percentage elif spark == 42 percentage}
@@ -391,23 +392,23 @@ Lots of spark
 
 #### Q42. Which code block will create a serializer?
 
-```
+```python
 from rest_framework import serializers
 from .models import Planet
 ```
 
-- [x] <span>
+- [x] A
 
-```
+```python
 class PlanetSerializer(serializers.ModelSerializer):
 class Meta:
 model=Planet
 fields=('name','position', 'mass', 'rings')
 ```
 
-- [ ] <span>
+- [ ] B
 
-```
+```python
 from rest_framework import serializers
 from .models import Planet
 class PlanetSerializer():
@@ -416,9 +417,9 @@ fields=('name','position', 'mass', 'rings')
 model=Planet
 ```
 
-- [ ] <span>
+- [ ] C
 
-```
+```python
 from django.db import serializers
 from .models import Planet
 class PlanetSerializer(serializers.ModelSerializer):
@@ -426,9 +427,9 @@ fields=('name','position', 'mass', 'rings')
 model=Sandwich
 ```
 
-- [ ] <span>
+- [ ] D
 
-```
+```python
 from django.db import serializers
 from .models import Planet
 class PlanetSerializer(serializers.ModelSerializer):
@@ -481,9 +482,7 @@ model=Planet
 
 #### Q49. What is the result of this template code?
 
-```
-{{"live long and prosper"|truncate:3}}
-```
+{{"live long and prosper"|truncatewords:3}}
 
 - [x] live long and ...
 - [ ] live long and
@@ -508,7 +507,7 @@ model=Planet
 - [ ] an NGINX web server
 - [ ] a NoSQL database
 - [ ] a larger hard drive
-- [ ] CORS middleware
+- [x] CORS middleware
 
 #### Q52. To expose an existing model via an API endpoint, what do you need to implement?\*\*
 
@@ -517,7 +516,7 @@ model=Planet
 - [ ] a query
 - [x] a serializer
 
-#### Q53. How would you stop Django from performing database table creation or deletion operations via migrations for a particular model?\*\*
+#### Q53. How would you stop Django from performing database table creation or deletion operations via migrations for a particular model?
 
 - [ ] Run the `migrate` command with `--exclude=[model_name]`.
 - [ ] Move the model definition from `models.py` into its own file.
@@ -533,12 +532,14 @@ model=Planet
 
 #### Q55. What is WSGI?
 
-- [x] a server
-- [ ] an interface specification
+- [ ] a server
+- [x] an interface specifications
 - [ ] a Python module
 - [ ] a framework
 
-#### Q56. Which generic view should be used for displaying the tittles of all Django Reinhardt's songs?
+Reference link:- https://wsgi.tutorial.codepoint.net/intro
+
+#### Q56. Which generic view should be used for displaying the titles of all Django Reinhardt's songs?
 
 - [ ] DetailView
 - [ ] TittleView
@@ -658,3 +659,243 @@ model=Planet
 - [ ] 80
 - [ ] 8000
 - [ ] It would fail to start
+
+#### Q72. Which statement about Django apps is false?
+
+- [x] A Django app is the top-level container for a web application powered by Django.
+- [ ] Django apps are small libraries designed to represent a single aspect of a project.
+- [ ] Each Django app should do one thing, and one thing alone.
+- [ ] A Django project is made up of many apps.
+
+#### Q73. Which characters are illegal in template variable names?
+
+- [ ] underscores.
+- [ ] uppercase letters.
+- [x] punctuation marks .
+- [ ] numbers.
+
+[Reference](https://docs.djangoproject.com/en/4.1/ref/templates/language/#:~:text=Variable%20names%20consist%20of%20any,may%20not%20be%20a%20number.)
+
+#### Q74. Which is not a valid closing template tag?
+
+- [ ] `% endautoescape %`
+- [x] `% endifempty %`
+- [ ] `% endcomment %`
+- [ ] `% endfilter %`
+
+#### Q75. When would you need to use the reverse_lazy utility function instead of reverse?
+
+- [ ] when you want to provide a reverse URL as a default value for a parameter in a function's signature
+- [x] all of the these answers
+- [ ] when you want to provide a reverse URL as the url attribute of a class-based generic view
+- [ ] when you want to provide a URL to a decorator, such as the login_url argument for the permission_required() decorator
+
+#### Q76. What is the purpose of the \_\_init\_\_.py file?
+
+- [ ] to extend the set of modules found in a package
+- [ ] to allow compiled modules from different releases and different versions of Python to coexist
+- [ ] to initialize project settings
+- [x] to declare the directory contents as a Python module
+
+[Reference](<https://docs.djangoproject.com/en/4.1/ref/urlresolvers/#:~:text=reverse_lazy()&text=It%20is%20useful%20for%20when,a%20generic%20class%2Dbased%20view>)
+
+#### Q77. What python package can be used to edit numbers into more readable form like "1200000" to "1.2 million"?
+
+- [ ] black
+- [ ] puffer
+- [ ] pitch
+- [x] humanize
+
+#### Q78. Where would you find the settings.py file?
+
+- [x] \[projectname\]/settings.py
+- [ ] \[projectname\]/\[projectname\]/settings.py
+- [ ] \[PYTHON_ROOT\]/settings.py
+- [ ] \[DJANGO_ROOT]/settings.py
+
+#### Q79. What would you write to define the relationship between a book and an author--assuming a book has only one author-in a Django model?
+
+- [x] A
+
+```python
+class Author (models.Model):
+  name = models. CharField (max_length=100)
+class Book(models .Model):
+  author = models. ForeignKey (Author, on_delete=models. CASCADE)
+```
+
+- [ ] B
+
+```python
+class Author (models.Model):
+  name = models. CharField(max length=100)
+class Book(models .Model):
+  author = models. ForeignKey (Author)
+```
+
+- [ ] C
+
+```python
+class Author (models .Model):
+  name = models.CharField (max_length=100)
+class Book (models .Author) :
+  author = Author. name
+```
+
+- [ ] D
+
+```python
+class Author (models. Model):
+  book = models. ForeignKey (Book, on_delete=models.CASCADE)
+class Book(models.Model):
+  name = models. CharField (max length=100)
+```
+
+#### Q80. What method can you use to check if form data has been changed when using a Form instance?
+
+- [x] changed_data()
+- [ ] has changed()
+- [ ] has_updated()
+- [ ] is_modified()
+
+#### Q81. Which statement is most accurate, regarding using the default SQLite database on your local/development machine but Postgres in production?
+
+- [ ] It's the most efficient way to build a project
+- [ ] There's less chance of introducing bugs since SQLite already works out of the box
+- [ ] It's a bad idea and could lead to issues down the road
+- [x] It's fine, you just need to keep both instances synchronized
+
+#### Q82. How does Django handle URL routing?
+
+- [ ] by using classes
+- [ ] by using functiones
+- [x] by using regular expressions
+- [ ] by using fixed path
+
+#### Q83. What is the purpose of Django's middleware?
+
+- [ ] To define the database schema
+- [ ] To manage URL routing
+- [x] To handle HTTP requests and responses globally
+- [ ] To create user interfaces
+
+[Reference](https://medium.com/scalereal/everything-you-need-to-know-about-middleware-in-django-2a3bd3853cd6)
+
+#### Q84. Which of the following is true about Django's Object-Relational Mapping (ORM)?
+
+- [ ] It's used to define URL routing in a Django application.
+- [x] It allows you to query the database using Python code.
+- [ ] It's used to define the structure of HTML templates.
+- [ ] It's responsible for managing user authentication.
+
+#### Q85. Which of the following is true about Django's "many-to-many" field in a model?
+
+- [ ] It's used to define a one-to-one relationship between two models.
+- [ ] It creates a foreign key relationship between two models.
+- [x] It allows multiple objects to be associated with each other.
+- [ ] It enforces unique constraints on a field.
+
+#### Q86. Django's class-based generic views provide which classes that implement common web development tasks?
+
+- [ ] concrete
+- [ ] thread-safe
+- [x] abstract
+- [ ] dynamic
+
+#### Q87. Which skills do you need to maintain a set of Django templates?
+
+- [ ] template syntax
+- [x] HTML and template syntax
+- [ ] Python, HTML, and template syntax
+- [ ] Python and template syntax
+
+#### Q88. Which is a nonstandard place to store templates?
+
+- [x] at the root level of a project
+- [ ] inside the application
+- [ ] in the database
+- [ ] on Github
+
+#### Q89. If you left the 8080 off the command python manage.py runserver 8080 what port would Django use as default?
+
+- [x] 8080
+- [ ] 80
+- [ ] 8000
+- [ ] It would fail to start
+
+#### Q90. What is the purpose of Django's Object-Relational Mapping (ORM)?
+
+- [ ] To define URL routing in a Django application.
+- [ ] To handle HTTP requests and responses globally.
+- [x] To map Python objects to database tables and simplify database operations.
+- [ ] To create user interfaces.
+
+#### Q91. In Django, what does the term "migration" refer to?
+
+- [ ] A change in URL routing configuration.
+- [x] The process of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema.
+- [ ] A way to define custom middleware.
+- [ ] The process of creating HTML templates for your application.
+
+#### Q92. What is the purpose of Django's "context" in the context of rendering templates?
+
+- [x] To pass data from your views to your templates so that the data can be rendered dynamically.
+- [ ] To define URL patterns for your application.
+- [ ] To manage HTTP requests and responses.
+- [ ] To create user interfaces.
+
+#### Q93. What does the Django `QuerySet` class represent?
+
+- [ ] A Python class used for defining URL routing in Django.
+- [ ] A class for managing HTTP requests and responses.
+- [x] A database query made by Django, represented in Python.
+- [ ] A class for defining HTML templates.
+
+#### Q94. In Django, what is the purpose of the "collectstatic" management command?
+
+- [ ] To collect user data for analytics.
+- [ ] To collect database records from multiple sources.
+- [x] To collect all static files (CSS, JavaScript, images) from each of your applications into a single location.
+- [ ] To collect logs for debugging purposes.
+
+#### Q95. What is the Django Admin site used for?
+
+- [ ] To manage user authentication.
+- [ ] To define URL routing for Django applications.
+- [x] To provide an automatically generated admin interface for your models.
+- [ ] To write and run database queries.
+
+#### Q96. What does Django's "middleware" refer to?
+
+- [ ] A way to create user interfaces.
+- [ ] A database query in Django.
+- [x] A way to process HTTP requests and responses globally before they reach the view or after they leave the view.
+- [ ] A way to configure URL routing in Django.
+
+#### Q97. What is the primary purpose of Django's "migration files"?
+
+- [x] To define and store changes to the database schema over time.
+- [ ] To manage static files like CSS and JavaScript.
+- [ ] To configure URL patterns.
+- [ ] To create HTML templates.
+
+#### Q98. Which authentication system does Django provide out of the box?
+
+- [ ] OAuth 2.0
+- [x] User authentication with built-in user models and views.
+- [ ] JWT (JSON Web Tokens)
+- [ ] SAML (Security Assertion Markup Language)
+
+#### Q99. In Django, what does the "Model-View-Controller" (MVC) architectural pattern refer to?
+
+- [ ] A pattern for defining URL routing.
+- [ ] A pattern for creating HTML templates.
+- [x] A pattern that divides the application into three interconnected components: Model, View, and Controller (Django often refers to it as MTV, Model-View-Template).
+- [ ] A pattern for user authentication.
+
+#### Q100. What is the purpose of Django's "templates"?
+
+- [ ] To define database schema and model relationships.
+- [x] To define the structure and layout of HTML pages to be served to the user.
+- [ ] To configure URL patterns for your application.
+- [ ] To store and serve static files like images and JavaScript.

@@ -4,29 +4,29 @@
 
 - [x] A
 
-  - Reset administrator password.
-  - Set network name.
-  - Set network security.
-  - Set network password.
+- Reset administrator password.
+- Set network name.
+- Set network security.
+- Set network password.
 
 - [ ] B
 
-  - Reset administrator password.
-  - Set network name.
-  - Set network password.
+- Reset administrator password.
+- Set network name.
+- Set network password.
 
 - [ ] C
 
-  - Set network name.
-  - Set network password.
-  - Assign DNS servers.
+- Set network name.
+- Set network password.
+- Assign DNS servers.
 
 - [ ] D
 
-  - Change administrator account name.
-  - Set network password.
-  - Set network name.
-  - Assign DNS servers.
+- Change administrator account name.
+- Set network password.
+- Set network name.
+- Assign DNS servers.
 
 #### Q2. Can you connect a DisplayPort monitor to a USB-C port on your computer?
 
@@ -60,20 +60,20 @@
 
 - [x] A
 
-  1. Modem
-  2. Gateway
-  3. Switch
+1. Modem
+2. Gateway
+3. Switch
 
 - [ ] B
 
-  1. Modem
-  2. Switch
-  3. Gateway
+1. Modem
+2. Switch
+3. Gateway
 
 - [ ] C
 
-  1. Gateway
-  2. Switch
+1. Gateway
+2. Switch
 
 - [ ] The order is not important.
 
@@ -100,29 +100,33 @@
 
 #### Q10. Which components are typically found on the motherboard?
 
-- [x]
-  basic I/O
-  graphics
-  NIC
-  battery
-  expansion slots
+- [x] &shy;
+      basic I/O
+      graphics
+      NIC
+      battery
+      expansion slots
 
-- [ ] basic I/O
+- [ ] &shy;
+      basic I/O
       cooling
       NIC
       graphics
       expansion slots
-- [ ] basic I/O
+
+- [ ] &shy;
+      basic I/O
       graphics
       NIC
       mass storage
       expansion slots
-- [ ]
-  basic I/O
-  graphics
-  NIC
-  power supply
-  expansion slots
+
+- [ ] &shy;
+      basic I/O
+      graphics
+      NIC
+      power supply
+      expansion slots
 
 #### Q11. What does the acronym RAID refer to?
 
@@ -228,7 +232,7 @@
 
 #### Q25. Which type of power connector is this?
 
-![Q24](images/Q24.PNG)
+![Q24](images/Q24.png?raw=png)
 
 - [ ] Edison
 - [x] Molex
@@ -256,7 +260,7 @@
 - [x] NIC
 - [ ] Router
 
-#### Q29. Networking wire is referred to as **\_**
+#### Q29. Networking wire is referred to as **\_**.
 
 - [x] CAT-5 or CAT-6 Ethernet cable
 - [ ] thin pair or twisted pair
@@ -335,7 +339,7 @@
 - [ ] Restart the computer.
 - [ ] Review the output of the netstat utility to check for incoming connections to the file.
 
-#### Q40. Which service allows clients to work remotely and supplies the clients with an IP address on the same local area network as the offce?
+#### Q40. Which service allows clients to work remotely and supplies the clients with an IP address on the same local area network as the office?
 
 - [ ] DNS
 - [ ] FTP
@@ -369,7 +373,7 @@
 
 - [ ] Task Manager
 - [x] Event Viewer
-- [ ] Perfomance Monitor
+- [ ] Performance Monitor
 - [ ] Resource Monitor
 
 #### Q45. While planning a conference at a center in the mountains, you call ahead to ensure that it has broadband Internet access. Which connection type would be an unsuitable choice?
@@ -379,7 +383,7 @@
 - [ ] cable
 - [x] dial-up
 
-#### Q46. What is a fixed disk
+#### Q46. What is a fixed-disk?
 
 - [ ] mass storage that has been repaired
 - [x] nonremovable mass storage
@@ -395,7 +399,7 @@
 
 [Reference](https://pediaa.com/difference-between-short-term-and-long-term-memory/)
 
-#### Q48. What is referred to by SSID
+#### Q48. What is referred to by SSID?
 
 - [x] Service Set Identifier, a wireless network's name
 - [ ] an older security protocol for Wi-Fi networks
@@ -455,21 +459,21 @@ Idea behind the answer: let's go for a quick restart to see whether the problem 
 - [ ] The powered hub supplies 12V of power, whereas the standard hub only 5V.
 - [ ] Powered hubs are external to the computer case.
 
-#### Q56. Which user has the smartest approach to online security?
+#### Q56. Which of the following users has the smartest approach to online security?
 
 - [ ] Jarred uses a unique password for each site.
 - [ ] Jen uses the same password on each site, but with two-factor authentication.
 - [x] Jason uses a unique password for each site along with two-factor authentication.
 - [ ] Jackie uses the same password on each site, but with a different user name.
 
-#### Q57. Which is an example of a phishing attach?
+#### Q57. Which is an example of a phishing attack?
 
 - [ ] Yousef sees an onscreen notification indicating that an operating system is pending and instructing him to click a link to continue.
 - [ ] After visiting a website, Carla notices that her computer is running slowly.
 - [x] Bob receives an email from his bank, asking him to click a link to verify his account.
 - [ ] Ellen's email inbox is flooded with unwanted advertising.
 
-#### Q58. You receive a malware warning regarding a specific file. Which approach should you take to ensure you do not have false positive?
+#### Q58. You receive a malware warning regarding a specific file. Which approach should you take to ensure that you do not have false positive?
 
 - [ ] Restart in Safe Mode to remove the file.
 - [ ] Remove the file.
@@ -497,11 +501,11 @@ Idea behind the answer: let's go for a quick restart to see whether the problem 
 - [x] 254
 - [ ] 256
 
-#### Q62. Tania was told to address an issue in the UEFI. How is it accessed?
+#### Q62. Tania was told to change a setting in the UEFI. How is it accessed?
 
 - [ ] by using the System Configuration Utility (MSCONFIG)
-- [x] from the BIOS
-- [ ] from the computer's startup menu
+- [ ] from the BIOS
+- [x] from the computer's startup menu
 - [ ] on the network
 
 #### Q63. What is the technical reason why you must properly eject media?
@@ -524,3 +528,87 @@ Idea behind the answer: let's go for a quick restart to see whether the problem 
 - [ ] PCMCIA
 - [ ] ISA
 - [x] PCIe
+
+#### Q66. Which action triggers a UAC warning?
+
+- [ ] all settings changes in Windows
+- [ ] any unauthorized access to the computer system
+- [x] an attempt to change a setting with consequences that affect the entire system
+- [ ] any action involving the user account, such as a password reset
+
+#### Q67. Which choice is not a current mass storage type?
+
+- [ ] SSD
+- [ ] MO
+- [ ] HDD
+- [x] NVMe
+
+#### Q68. Which statement most accurately describes the north-bridge or host-bridge?
+
+- [x] It is a high priority connection to the processor, also called the Memory Controller Hub.
+- [ ] It has been integrated into the southbridge to provide support for the CPU.
+- [ ] It is the peripheral and I/O controller, connected to the processor via the southbridge.
+- [ ] It provides mathematical and 3D physics support for the CPU in the absence of a GPU.
+
+#### Q69. Which characters are not allowed in a filename?
+
+- [ ] anything other than a letter, number, or space
+- [ ] spaces, periods, and commas
+- [x] `\, /, :, ?, and *`
+- [ ] `!, ^, &, (,), and "`
+
+#### Q70. What is the most direct way to change the desktop background in Windows OS?
+
+- [ ] Alter your user account settings or preferences.
+- [x] Right-click a blank part of the desktop.
+- [ ] Run programs full-screen.
+- [ ] Use Settings (Windows) or Preferences (Mac).
+
+#### Q71. Which I/O components are typically found in a chipset on the motherboard?
+
+- [x] USB, SATA and internal communications
+- [ ] display adapter, networking, audio, and basic I/O
+- [ ] the processor, RAM, and expansion cards
+- [ ] I/O components are not on the motherboard. They are located on the rear of the case
+
+#### Q72. What does the acronym RAID refer to?
+
+- [x] Redudant Array of Independent Disk
+- [ ] Repeating Architecture for Internal Drives
+- [ ] Recoverable Advanced Integration and Duplication
+- [ ] Replicated Array of Internal Devices
+
+#### Q73. What is an example of a top-level domain (TLD)?
+
+- [x] NET
+- [ ] HTTP
+- [ ] //
+- [ ] DNS
+
+#### Q74. Jan is setting up a coffee shop's wireless network. Given the number of Wi-Fi networks within range, which are the best choices for a 2.4GHz Wi-Fi channel?
+
+- [ ] 3, 6, 9
+- [ ] 3, 10, 12
+- [x] 1, 6, 11
+- [ ] 1, 2, 8
+
+#### Q75. When elevated access is required, what steps must a user take?
+
+- [x] Type the administrator account password.
+- [ ] Hold the Shift key and try again.
+- [x] Sign out and sign in again with an administrator account.
+- [ ] User account permissions are elevated in Settings or Preferences.
+
+#### Q76. What is a duplex printer?
+
+- [ ] a printer that also acts as a scanner, copier. and fax machine
+- [ ] a printer with automatic and manual feeding mechanism
+- [x] a printer than can print on both sides of a sheet of paper
+- [ ] a printer has two paper trays
+
+#### Q77. Which choice is not an internal computer upgrade?
+
+- [ ] primary storage
+- [x] I/O devices
+- [ ] memory
+- [ ] expansion card

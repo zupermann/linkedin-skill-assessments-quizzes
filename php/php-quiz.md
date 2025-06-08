@@ -11,6 +11,7 @@
 
 **_Both sides of the "spaceship" are equal, so the answer is 0. PHP will convert '76 trombones' to 76 in this context, as the string starts with '76'. Try it!_**
 **_For php 8.0 and forward the answer is [x] -1, for previous versions the answer is [x] 0._**
+[PHP 8 changed the way non-strict comparison between numbers and non-numeric strings work.](https://www.php.net/manual/en/migration80.incompatible.php#migration80.incompatible.core.string-number-comparision)
 
 #### Q2. Which is the most secure way to avoid storing a password in clear text in database?
 
@@ -35,7 +36,7 @@ if ($email === false) {
 
 #### Q4. In the following script, which line(s) will cause an error(s)?
 
-```
+```php
 1 <?php
 2       $count = 0;
 3       $_xval = 5;
@@ -73,7 +74,7 @@ if ($email === false) {
 - [ ] GET is intended for changing the server state and it carries more data than POST.
 - [ ] GET is more secure than POST and should be used for sensitive information.
 
-#### Q8. The ** operator is useful for sorting operations. It compares two values and returns an integer less than, equal to, or greater than 0 depending on whether the value on the ** is less than, equal to, or greater than the other.
+#### Q8. The **operator is useful for sorting operations. It compares two values and returns an integer less than, equal to, or greater than 0 depending on whether the value on the** is less than, equal to, or greater than the other
 
 - [ ] greater-than; right
 - [x] spaceship; left
@@ -97,10 +98,10 @@ if ($email === false) {
 #### Q11. What is missing from this code, which is supposed to create a test cookies?
 
 ```php
-1 $string_name = "testcookie";
-2 $string_value = "This is a test cookie";
-3 $expiry_info = info()+259200;
-4 $string_domain = "localhost.localdomain";
+$string_name = "testcookie";
+$string_value = "This is a test cookie";
+$expiry_info = info()+259200;
+$string_domain = "localhost.localdomain";
 ```
 
 - [ ] The `$_REQUEST` is missing.
@@ -134,11 +135,11 @@ if ($email === false) {
 #### Q15. What is the best way to explain what this script does?
 
 ```php
-1 if (!$_SESSION['myusername'])
-2 {
-3   header('locaton: /login.php');
-4   exit;
-5 }
+if (!$_SESSION['myusername'])
+{
+  header('locaton: /login.php');
+  exit;
+}
 ```
 
 - [ ] This script times out the session for myusername.
@@ -169,81 +170,95 @@ if ($email === false) {
 
 #### Q19. The PHP function array_reduce() takes a callback function that accepts a value carried over each iteration and the current item in the array, and reduces an array to a single value. Which code sample will sum and output the values in the provided array?
 
-- [ ]
-  ```php
-  1 <?php
-  2 echo array_reduce([1, 2, 5, 10, 11], function ($item, $carry) {
-  3     $carry = $carry + $item;
-  4 });
-  5?>
-  ```
-- [ ]
-  ```php
-  1 <?php
-  2 echo array_reduce([1, 2, 5, 10, 11], function ($carry, $item) {
-  3     return $carry = $item + $item;
-  4 });
-  5?>
-  ```
-- [ ]
-  ```php
-  1 <?php
-  2 array_reduce([11 2, 5, 10, 11], function ($item, $carry) {
-  3     echo $carry + $item;
-  4 });
-  5?>
-  ```
-- [x]
-  ```php
-  1 <?php
-  2 echo array_reduce([1, 2, 5, 10, 11], function ($carry, $item) {
-  3     return $carry += $item;
-  4 });
-  5?>
-  ```
+- [ ] &shy;
+
+```php
+  <?php
+  echo array_reduce([1, 2, 5, 10, 11], function ($item, $carry) {
+      $carry = $carry + $item;
+  });
+?>
+```
+
+- [ ] &shy;
+
+```php
+  <?php
+  echo array_reduce([1, 2, 5, 10, 11], function ($carry, $item) {
+      return $carry = $item + $item;
+  });
+?>
+```
+
+- [ ] &shy;
+
+```php
+  <?php
+  array_reduce([11 2, 5, 10, 11], function ($item, $carry) {
+      echo $carry + $item;
+  });
+?>
+```
+
+- [x] &shy;
+
+```php
+  <?php
+  echo array_reduce([1, 2, 5, 10, 11], function ($carry, $item) {
+      return $carry += $item;
+  });
+?>
+```
 
 #### Q20. Which PHP script uses a constructor to display the string "Winter is almost over!"?
 
-- [x]
-  ```php
-  1 class MyClass {
-  2 public function _construct()
-  3 {
-  4 echo 'Winter is almost over!'."\n";
-  5 }
-  6 }
-  7 $userclass = new MyClass;
-  ```
-- [ ]
-  ```php
-  1 class MyClass {
-  2 public function _construct()
-  3 {
-  4 echo 'Winter is almost over!.."\n";
-  5 }
-  6 }
-  7 $userclass = new MyClass;
-  ```
-- [ ]
-  ```php
-  1 class MyClass {
-  2 public function _construct()
-  3 {
-  4 echo 'Winter is almost over!.."\n";
-  5 }
-  6 }
-  7 $userclass = new MyClass;
-  ```
-- [ ]
-  ```php
-  1 class MyClass {
-  2 public function _construct()
-  3 {
-  4 echo 'Winter is almost over!'."n";
-  5 }
-  6 }
-  7 $userclass = MyClass;
-  ```
+- [x] &shy;
+
+```php
+  class MyClass {
+  public function _construct()
+  {
+  echo 'Winter is almost over!'."\n";
+  }
+  }
+  $userclass = new MyClass;
+```
+
+- [ ] &shy;
+
+```php
+  class MyClass {
+  public function _construct()
+  {
+  echo 'Winter is almost over!.."\n";
+  }
+  }
+  $userclass = new MyClass;
+```
+
+- [ ] &shy;
+
+```php
+  class MyClass {
+  public function _construct()
+  {
+  echo 'Winter is almost over!.."\n";
+  }
+  }
+  $userclass = new MyClass;
+```
+
+- [ ] &shy;
+
+```php
+  class MyClass {
+  public function _construct()
+  {
+  echo 'Winter is almost over!'."n";
+  }
+  }
+  $userclass = MyClass;
+```
 
 #### Q21. How might you troubleshoot a "call to undefined function" error?
 
@@ -277,8 +292,8 @@ if ($email === false) {
 
 ```php
 function process(...$vals) {
-        // do some processing
- }
+    // do some processing
+}
 ```
 
 - [ ] It makes the function variadic, allowing it to accept as an argument an array containing an arbitrary number of values.
@@ -293,7 +308,7 @@ function process(...$vals) {
 - [ ] `class Unicorn implements Horse {}`
 - [ ] `class Horse inherits Unicorn {}`
 
-#### Q27. Both triple === and double == can be used to ** variables in php. If you want to hear that string "33" and the number 33 are equal, you would use ** . If you want to check if an array contains a particular string value at a particular index, you would use \_
+#### Q27. Both triple === and double == can be used to **variables in php. If you want to hear that string "33" and the number 33 are equal, you would use** . If you want to check if an array contains a particular string value at a particular index, you would use \_
 
 - [x] compare; doubles; triples
 - [ ] compare; triples; doubles
@@ -309,9 +324,9 @@ function process(...$vals) {
 
 #### Q29. Which is the way to create an array of "seasons"?
 
-- [ ]
+- [ ] &shy;
 
-```
+```php
 seasons=array(
     1=>'spring',
     2=>'summer',
@@ -324,7 +339,7 @@ seasons=array(
 - [ ] `$seasons=('spring','summer','autumn','winter');`
 - [x] `$seasons=['spring','summer','autumn','winter'];`
 
-#### Q30. Both `self` and `this` are keywords that can be used to refer to member variables of an enclosing class. The difference is that `$this->member` should be used for ** members and `self::$member` should be used for ** members.
+#### Q30. Both `self` and `this` are keywords that can be used to refer to member variables of an enclosing class. The difference is that `$this->member` should be used for **members and `self::$member` should be used for** members
 
 - [ ] private, public
 - [ ] object,primitive
@@ -428,7 +443,7 @@ echo "No, mail is not set";
 - [ ] The opening and closing single quotes should be replaced by double quotes; and the apostrophe should be escaped by a backslash.
 - [x] The apostrophe needs to be escaped by a backslash to prevent it from being treated as the closing quote.
 
-#### Q42. A PDO object called `$db` has been set up to use for database operations, including user authentication. All user-related properties are set. The script line `public function __construct(&$db)` shows a constructor that initializes all user-related properties to \_ if no user has logged in. These parameters will be properly set by the login functions when a user logs in.
+#### Q42. A PDO object called `$db` has been set up to use for database operations, including user authentication. All user-related properties are set. The script line `public function __construct(&$db)` shows a constructor that initializes all user-related properties to \_ if no user has logged in. These parameters will be properly set by the login functions when a user logs in
 
 - [x] NULL
 - [ ] TRUE
@@ -444,38 +459,45 @@ echo "No, mail is not set";
 
 #### Q44. Which code snippet demonstrates encapsulation?
 
-- [ ]
-  ```php
+- [ ] &shy;
+
+```php
   class Cow extends Animal {
       private $milk;
   }
-  ```
-- [ ]
-  ```php
+```
+
+- [ ] &shy;
+
+```php
   class Cow {
       public $milk;
   }
   $daisy = new Cow();
   $daisy->milk = "creamy";
-  ```
-- [ ]
-  ```php
+```
+
+- [ ] &shy;
+
+```php
   class Cow {
       public $milk;
       function getMilk() {`
           return $this->milk;
       }
   }
-  ```
-- [x]
-  ```php
+```
+
+- [x] &shy;
+
+```php
   class Cow {
       private $milk;
       public function getMilk() {
           return $this->milk;
       }
   }
-  ```
+```
 
 #### Q45. The following XML document is in books.xml. Which code will output "Historical"?
 
@@ -499,26 +521,33 @@ echo "No, mail is not set";
 </books>
 ```
 
-- [ ]
-  ```php
+- [ ] &shy;
+
+```php
   $books = simplexml_load_string('books.xml');
   echo $books->book[0]->categories->category[1];
-  ```
-- [x]
-  ```php
+```
+
+- [x] &shy;
+
+```php
   $books = simplexml_load_file('books.xml');
   echo $books->book[0]->categories->category[1];
-  ```
-- [ ]
-  ```php
+```
+
+- [ ] &shy;
+
+```php
   $books = SimpleXMLElement('books.xml');
   echo $books->book[0]->categories->category[1];
-  ```
-- [ ]
-  ```php
+```
+
+- [ ] &shy;
+
+```php
   $books = SimpleXML('books.xml');
   echo $books->book[0]->categories->category[1];
-  ```
+```
 
 #### Q46. When it comes to the value of a variable, what is the difference between NULL and empty?
 
@@ -544,7 +573,7 @@ function doStuff($haystack, $needle) {
 - [x] `startsWith`
 - [ ] `contains`
 
-#### Q48. If you want to pass a formfield to another page when a button is clicked, you should use the ** . If you want to store information across multiple pages, you should use the ** ?
+#### Q48. If you want to pass a formfield to another page when a button is clicked, you should use the **. If you want to store information across multiple pages, you should use the** ?
 
 - [ ] request; response
 - [ ] response; request
@@ -578,26 +607,33 @@ isset($_POST['submit'])
 
 #### Q52. What are the recommended settings in the PHP configuration file, php.ini, for a testing environment?
 
-- [ ]
-  ```php
+- [ ] &shy;
+
+```php
   report_errors = E_ALL
   display_errors = On
-  ```
-- [x]
-  ```php
+```
+
+- [x] &shy;
+
+```php
   error_reporting = E_ALL
   display_errors = On
-  ```
-- [ ]
-  ```php
+```
+
+- [ ] &shy;
+
+```php
   error_reporting = E_ALL & ~E_NOTICE
   display_errors = Off
-  ```
-- [ ]
-  ```php
+```
+
+- [ ] &shy;
+
+```php
   error_reporting = E_ALL & ~E_NOTICE
   display_errors = On
-  ```
+```
 
 #### Q53. Which PHP variable name is invalid?
 
@@ -668,50 +704,50 @@ setcookie('login', $_REQUEST['username']. ','. md5($_REQUEST['username'].$secret
 
 #### Q59. A PHP "variable variable" takes the value of a variable and treats that as the name of a variable. For example, if `$var` is a variable then `$$var` is a variable variable whose name is the value of `$var`. Which script produces the output below, using variable variables?
 
-```php
+```plaintext
 Cat
 Dog
 Dog
 ```
 
-- [ ]
+- [ ] :
 
 ```php
-      $name = "Cat";
-      $name = "Dog";
-      echo $name . "<br/>";
-      echo $$name . "<br/>";
-      echo $Dog;
+  $name = "Cat";
+  $name = "Dog";
+  echo $name . "<br/>";
+  echo $$name . "<br/>";
+  echo $Dog;
 ```
 
-- [ ]
+- [ ] :
 
 ```php
-      $name = "Cat";
-      $$name = "Dog";
-      echo $name . "<br/>";
-      echo $$name . "<br/>";
-      echo $Dog;
+  $name = "Cat";
+  $$name = "Dog";
+  echo $name . "<br/>";
+  echo $$name . "<br/>";
+  echo $Dog;
 ```
 
-- [x]
+- [x] :
 
 ```php
-      $name = "Cat";
-      $$name = "Dog";
-      echo $name . "<br/>";
-      echo $$name . "<br/>";
-      echo $Cat;
+  $name = "Cat";
+  $$name = "Dog";
+  echo $name . "<br/>";
+  echo $$name . "<br/>";
+  echo $Cat;
 ```
 
-- [ ]
+- [ ] :
 
 ```php
-      $name = "Cat";
-      $$name = "Dog";
-      echo $name . "<br/>";
-      echo $name . "<br/>";
-      echo $Cat;
+  $name = "Cat";
+  $$name = "Dog";
+  echo $name . "<br/>";
+  echo $name . "<br/>";
+  echo $Cat;
 ```
 
 #### Q60. Imagine a web application, built following a MVC architecture, that contains a quiz and a button to score it, When the user presses the Score button, which component should handle the request?
@@ -723,82 +759,82 @@ Dog
 
 #### Q61. Which script might be used to continue a user's search for music, across different webpages?
 
-- [ ]
+- [ ] &shy;
 
 ```php
-        <?php
-           start_session();
-           $music = $_SESSION['music'];
-        ?>
+  <?php
+      start_session();
+      $music = $_SESSION['music'];
+  ?>
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
-        <?php
-           session_start();
-           $music = $SESSION['music'];
-        ?>
+  <?php
+      session_start();
+      $music = $SESSION['music'];
+  ?>
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
-        <?php
-           start_session();
-           $music =$session['music'];
-        ?>
+  <?php
+      start_session();
+      $music =$session['music'];
+  ?>
 ```
 
-- [x]
+- [x] &shy;
 
 ```php
-        <?php
-           session_start();
-           $music = $_SESSION['music'];
-        ?>
+  <?php
+      session_start();
+      $music = $_SESSION['music'];
+  ?>
 ```
 
 #### Q62. Which PHP script finds the earliest and latest dates from an array?
 
-- [x]
+- [x] &shy;
 
 ```php
-        <?php
-        $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
-        echo "Latest Date: ". max($dates)."\n";
-        echo "Earliest Date: ". min($dates)."\n";
-        ?>
+  <?php
+  $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
+  echo "Latest Date: ". max($dates)."\n";
+  echo "Earliest Date: ". min($dates)."\n";
+  ?>
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
-        <?php
-        $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
-        echo "Latest Date: ". min($dates)."\n";
-        echo "Earliest Date: ". max($dates)."\n";
-        ?>
+  <?php
+  $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
+  echo "Latest Date: ". min($dates)."\n";
+  echo "Earliest Date: ". max($dates)."\n";
+  ?>
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
-        <?php
-        $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
-        echo "Latest Date: ". ($dates)."\n";
-        echo "Earliest Date: ". ($dates)."\n";
-        ?>
+  <?php
+  $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
+  echo "Latest Date: ". ($dates)."\n";
+  echo "Earliest Date: ". ($dates)."\n";
+  ?>
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
-        <?php
-        $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
-        echo "Latest Date: " max($dates)."\n";
-        echo "Earliest Date: " min($dates)."\n";
-        ?>
+  <?php
+  $dates = array('2018-02-01', '2017-02-02', '2015-02-03');
+  echo "Latest Date: " max($dates)."\n";
+  echo "Earliest Date: " min($dates)."\n";
+  ?>
 ```
 
 #### Q63. What is the resulting output of this for statement?
@@ -812,39 +848,39 @@ for (;;) {
 }
 ```
 
-- [x]
+- [x] &shy;
 
 ```
-        kilometers = 0.6214 miles.
-        kilometers = 1.2428 miles.
-        kilometers = 1.8642 miles.
-        kilometers = 2.4856 miles.
-        kilometers = 3.107 miles.
+  kilometers = 0.6214 miles.
+  kilometers = 1.2428 miles.
+  kilometers = 1.8642 miles.
+  kilometers = 2.4856 miles.
+  kilometers = 3.107 miles.
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```
-        kilometers = 0.6214 miles.
-        kilometers = 1.2428 miles.
-        kilometers = 1.8642 miles
-        kilometers = 2.4856 miles.
-        kilometers = 3.107 miles.
-        kilometers = 3.7284 miles.
+  kilometers = 0.6214 miles.
+  kilometers = 1.2428 miles.
+  kilometers = 1.8642 miles
+  kilometers = 2.4856 miles.
+  kilometers = 3.107 miles.
+  kilometers = 3.7284 miles.
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```
-        kilometers = 1.2428 miles.
-        kilometers = 1.8642 miles.
-        kilometers = 2.4856 miles.
-        kilometers = 3.107 miles.
+  kilometers = 1.2428 miles.
+  kilometers = 1.8642 miles.
+  kilometers = 2.4856 miles.
+  kilometers = 3.107 miles.
 ```
 
 - [ ] FATAL ERROR syntax error, unexpected ')', expecting ';' on line number 2
 
-#### Q64. In PHP 7, What is the correct way to import multiple classes from namespace in a single declaration ?!
+#### Q64. In PHP 7, What is the correct way to import multiple classes from namespace in a single declaration ?
 
 - [x] use myApp\myNamespace\{ClassA, ClassB, ClassC};
 - [ ] use myApp\myNamespace\ClassA, ClassB, ClassC;
@@ -878,7 +914,7 @@ for (;;) {
 
 [reference](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/php/php_superglobals.asp.html)
 
-#### Q68. Describe what happens if you run this code in a testing environment:
+#### Q68. Describe what happens if you run this code in a testing environment
 
 ```php
 $capitals = ['UK' => 'London', 'France' => 'Paris'];
@@ -973,7 +1009,7 @@ print $match[1]."\n";
 - [ ] `$statement->bindParam(':name', '%' . $_GET['name'] . '%');`
 - [ ] `$statement->bindParam('%' . $_GET['name'] . '%', ':name');`
 
-#### Q79. Create an associative array using `$array1` as the keys and `$array2` as the values:
+#### Q79. Create an associative array using `$array1` as the keys and `$array2` as the values
 
 `$array1 = ['country', 'capital', 'language'];`
 `$array2 = ['France', 'Paris', 'French'];`
@@ -1016,16 +1052,16 @@ print $match[1]."\n";
 
 - [ ] `$i = 0;`
       `while ($i <= 10) {`
-      ` echo $i++ . '<br/>';`
+      `echo $i++ . '<br/>';`
       `}`
 
 - [ ] `while ($i &lt;= 10) {`
-      ` echo ++$i . '<br/>';`
+      `echo ++$i . '<br/>';`
       `}`
 
 - [x] `$i = 0;`
       `while ($i < 10) {`
-      ` echo ++$i . '<br/>';`
+      `echo ++$i . '<br/>';`
       `}`
 
 #### Q83. Which are types of control structures in PHP?
@@ -1119,7 +1155,7 @@ if( isset($user_info['url']) ) {
 
 #### Q92. A form to subscrive to a newsletter is submitted using the POST method. The form has only one field: an input text field named "email". How would you check if the field is empty and, if it is, print "The email cannot be empty"?
 
-- [x]
+- [x] &shy;
 
 ```php
 if(empty($_POST['email'])) {
@@ -1127,7 +1163,7 @@ if(empty($_POST['email'])) {
 }
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
 if(empty($_GET['email'])) {
@@ -1135,7 +1171,7 @@ if(empty($_GET['email'])) {
 }
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
 if(empty($_POST('email'))) {
@@ -1143,10 +1179,602 @@ if(empty($_POST('email'))) {
 }
 ```
 
-- [ ]
+- [ ] &shy;
 
 ```php
 if(isset($email)) {
     echo "The email cannot be empty";
 }
 ```
+
+#### Q93. What is the PHP fatal error type?
+
+- [ ] This type of error causes a termination of the script execution when it occurs.
+- [ ] This type of error's causes are not detected by compiler and causes incorrect results.
+- [ ] This type of error causes erroneous results or may cause termination of program.
+- [x] This type of error causes termination after showing the list of errors and the line number where the errors have occured.
+
+1. [reference1](https://www.geeksforgeeks.org/php-types-of-errors/#:~:text=an%20error%20message.-,Fatal%20Error,-%3A%20It%20is)
+2. [reference2](https://www.c-sharpcorner.com/UploadFile/051e29/types-of-error-in-php/#:~:text=2.-,Fatal%20Errors,-Fatal%20errors%20are)
+
+#### Q94. Which script properly validates the IP address given?
+
+- [ ] &shy;
+
+```php
+$valid = ip2long($ip) !== false;
+```
+
+- [x] &shy;
+
+```php
+$ip_address = "164.12.2540.1";
+if(filter_var($ip_address, FILTER_VALIDATE_IP)){
+  echo "$ip_address is a valid IP address";
+} else {
+  echo "$ip_address is not a valid IP address";
+}
+```
+
+- [ ] &shy;
+
+```php
+$ip_address = "164.12.2540.1";
+if(validate_ip($ip_address)){
+  echo "$ip_address is a valid IP address";
+} else {
+  echo "$ip_address is not a valid IP address";
+}
+```
+
+- [ ] &shy;
+
+```php
+$ip_address = "164.12.2540.1"
+echo is_valid($ip_address, VALIDATE_IP);
+```
+
+#### Q95. What is the output of this code?
+
+```php
+    $i = 0;
+    while($i < 6) {
+    if($i++ == 3) break;
+    }
+    echo "loop stopped at $i by break statement";
+```
+
+- [ ] loop stopped at 3 by break statement
+- [x] loop stopped at 4 by break statement
+- [ ] loop stopped at 6 by break statement
+- [ ] loop stopped at 2 by break statement
+
+#### Q96. After creating your objects, you can call member functions related to that object, such as setting the names and prices for three "Pet" objects. What is the likely output of this code snippet?
+
+```php
+    $dof->setTitle("Spot");
+    $cat->setTitle("Mimi");
+    $horse-?setTitle("Trigger");
+    $dog->setPrice(10);
+    $cat->setPrice(15);
+    $horse->setPrice(7);
+    print_r($cat);
+```
+
+- [ ] Pet Object ( [title]=> Spot[price]=>10)
+- [x] Pet Object ( [title]=> Mimi [price]=>15 )
+- [ ] Pet Object ( [title]=> Mimi[price]=>10 )
+- [ ] Pet Object ( [title]=> Trigger [price]=> 7)
+
+#### Q97. Given the associative array below, wich PHP code determines wich element(s) of the array is/are apple?
+
+```php
+$array = array(
+'fruit1' => 'apple',
+'fruit2' => 'orange',
+'fruit3' => 'grape',
+'fruit4' => 'apple',
+'fruit5' => 'apple');
+```
+
+- [x] &shy;
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruit_name == 'apple') {
+        echo key($array).'<br />';
+    }
+    next($array);
+}
+```
+
+- [ ] &shy;
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruitname == 'apple') {
+        echo key($array).'<br />';
+    }
+    next($array);
+}
+```
+
+- [ ] &shy;
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruit_name == 'apple')
+        echo key($array).'<br />';
+    }
+    next($array);
+}
+```
+
+- [ ] &shy;
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruit_name == 'apple') {
+        echo key($array).'<br />';
+    }
+```
+
+#### Q98. What does this code return?
+
+#### Q98. What does this code print?
+
+```php
+class Smurf {
+
+  public $name = "Papa Smurf";
+
+  public function __construct($name) {
+    $this->name = $name;
+  }
+
+  public function set_name($name) {
+    $name = $name;
+  }
+}
+
+$smurf = new Smurf("Smurfette");
+$smurf->set_name("Handy Smurf");
+echo $smurf->name;
+```
+
+- [ ] nothing
+- [ ] Handy Smurf
+- [x] Smurfette
+- [ ] Papa Smurf
+
+#### Q99. You have an online form with a file input field called "image" for uploading files. Assuming the path to the upload directory is $path, which code should you use to make sure the file is uploaded from your form to the correct location?
+
+- [x] &shy;
+
+```php
+if ($_FILES['image']['error'] === 0) {
+      move_uploaded_file($_FILES)['image']['temp_name'],
+          $path . $_FILES['image']['name']);
+ )
+```
+
+- [ ] &shy;
+
+```php
+if ($_FILES['image']['error'] === false) {
+      move_uploaded_file($_FILES)['image']['temp_name'],
+          $path . $_FILES['image']['name']);
+ )
+```
+
+- [ ] &shy;
+
+```php
+if ($_FILES['image']['error'] == 0) {
+      copy($_FILES)['image']['temp_name'],
+          $path . $_FILES['image']['name']);
+ )
+```
+
+- [ ] &shy;
+
+```php
+if ($_FILES['image']['error'] == false) {
+      upload_file($_FILES)['image']['temp_name'],
+          $path . $_FILES['image']['name']);
+ )
+```
+
+#### Q100. Which super global variable holds information about headers, paths, and script locations?
+
+- [ ] `$_GET`
+- [ ] `$GLOBALS`
+- [ ] `$_SESSION`
+- [x] `$_SERVER`
+
+#### Q101. Using a for loop, how would you write PHP code to count backward from 10 to 1, in that order?
+
+- [ ] &shy;
+
+```php
+<?
+for ($i=1; $i <= 10; $i++) {
+    echo $i;
+}
+?>
+```
+
+- [ ] &shy;
+
+```php
+<?
+$i = 10;
+while($i>=0) {
+    echo $i;
+    $i--;
+}
+?>
+```
+
+- [ ] &shy;
+
+```php
+<?
+    for($i = 10; $i > 0; $i++) {
+        print "$i <br />\n";
+    } // end for loop '''
+?>
+```
+
+- [x] &shy;
+
+```php
+<?
+    for($i = 10; $i > 0; $i--) {
+        print "$i <br />\n";
+    } // end for loop
+?>
+```
+
+#### Q102. What is the output of this code?
+
+```php
+function knights(){
+return "a shrubbery";
+}
+
+if (knights())
+printf "you are just and fair";
+else
+printf "NI!";
+```
+
+- [ ] NI!
+- [ ] a syntax error
+- [ ] a shrubbery
+- [x] you are just and fair
+
+#### Q103. Which script defines the United States of America as a constant and prints this code?
+
+**Our country is United States of America**
+**Our country has a total of 50 states**
+
+- [ ] &shy;
+
+```php
+define('country',"United States of America");
+define('states',50);
+echo "Our country is "country"<br>";
+echo "Our country has a total of ".states." states";
+```
+
+- [x] &shy;
+
+```php
+define('country',"United States of America");
+define('states',50);
+echo "Our country is ".country."<br>";
+echo "Our country has a total of ".states." states";
+```
+
+- [ ] &shy;
+
+```php
+define(country,"United States of America");
+define('states',50);
+echo "Our country is ".country."<br>";
+echo "Our country has a total of ".states." states";
+```
+
+- [ ] &shy;
+
+```php
+define('country',"United States of America");
+define('states','fifty');
+$K = 'strval'; echo "Our {$K(Country)} has {$K(FIFTY)} states.";
+```
+
+#### Q104. What does this code output?
+
+```php
+try{
+echo "bodacious";
+throw new Exception();
+} catch (Exception $e) {
+echo "egregious";
+} finally {
+echo "excellent";
+}
+```
+
+- [ ] bodacious
+      excellent
+- [ ] egregious
+      excellent
+- [x] bodacious
+      egregious
+      excellent
+- [ ] bodacious
+      egregious
+
+#### Q105. Passing by reference is a way to pass a variable to a function and modify it inside the function, and have that modification stick when the variable is used outside the function. Which code correctly uses passing by reference to modify the variable for use outside the function?
+
+- [ ] 1 function append($initial){ return $newString = $initial . ' belong to us'; }
+      2 $initialString = 'All your base are’;
+      3 $initialString = append($initialString);
+      4 echo $initialString;
+
+- [ ] 1 function append(&$initial){ return $newString = $initial . ' belong to us'; }
+      2 $initialString = 'All your base are’;
+      3 append($initialString);
+      4 echo $initialString;
+
+- [ ] 1 function append(&$initial){ return $newString = $initial . ' belong to us'; }
+      2 $initialString = 'All your base are’;
+      3 $initialString = append($initialString);
+      4 echo $initialString;
+
+- [x] 1 function append(&$initial){ $initial = $initial . ' belong to us'; }
+      2 $initialString = 'All your base are’;
+      3 append($initialString);
+      4 echo $initialString;
+
+#### Q106. What is the output of this script?
+
+```php
+$believable = 'false';
+$myth = 'The moon is made of green cheese';
+$calc = 10**3+1;
+if ($believable) {
+    echo $myth;
+}
+else {
+    echo $calc;
+}
+```
+
+- [ ] 10000
+- [ ] 31
+- [ ] 1001
+- [x] The moon is made of green cheese
+
+Explanation : 'false' evaluates to true since it is a string so the if condition is met.
+
+#### Q107. What PHP control structure is used inside of a loop to skip the rest of the current loop's code and go back to the start of the loop for the next iteration?
+
+- [ ] return
+
+- [ ] else
+
+- [ ] break
+
+- [x] continue
+
+### Q108. What is the output of this code?
+
+```php
+$x = "5";
+$y = &$x;
+$y = "2$y";
+echo $x;
+```
+
+- [ ] 5
+- [ ] 2
+- [x] 25
+- [ ] An error occurs
+
+### Q109. Which function is used to check if a file exists in PHP?
+
+- [ ] file_exists()
+- [ ] is_file()
+- [ ] file_check()
+- [x] Both file_exists() and is_file()
+
+### Q110. What does the following code output?
+
+```php
+$array = array(1, 2, 3, 4, 5);
+echo array_sum($array) / count($array);
+```
+
+- [ ] 15
+- [x] 3
+- [ ] 5
+- [ ] An error occurs
+
+### Q111. Which of the following is NOT a valid way to start a PHP session?
+
+- [ ] session_start();
+- [ ] $\_SESSION = array();
+- [x] session_begin();
+- [ ] ini_set('session.auto_start', 1);
+
+### Q112. What is the purpose of the 'finally' block in a try-catch-finally structure?
+
+- [ ] To handle exceptions that weren't caught in the catch block
+- [ ] To define custom exceptions
+- [x] To execute code regardless of whether an exception was thrown or caught
+- [ ] To end the try-catch block
+
+### Q113. Which function would you use to remove HTML tags from a string?
+
+- [ ] html_clean()
+- [x] strip_tags()
+- [ ] remove_html()
+- [ ] sanitize_string()
+
+### Q114. What is the output of this code?
+
+```php
+$str = "Hello";
+$str[0] = "J";
+echo $str;
+```
+
+- [ ] Hello
+- [x] Jello
+- [ ] An error occurs
+- [ ] H
+
+### Q115. Which of the following is NOT a magic method in PHP?
+
+- [ ] \_\_construct()
+- [ ] \_\_destruct()
+- [ ] \_\_toString()
+- [x] \_\_change()
+
+### Q116. What does the 'yield' keyword do in PHP?
+
+- [ ] It's used to define abstract methods
+- [ ] It's used to pause the execution of a function
+- [x] It's used to define generator functions
+- [ ] It's used to force garbage collection
+
+### Q117. Which function would you use to get the ASCII value of a character?
+
+- [ ] ascii()
+- [ ] char_to_ascii()
+- [x] ord()
+- [ ] ascii_val()
+
+### Q118. What is the output of this code?
+
+```php
+$a = array(1, 2, 3);
+$b = array("one", "two", "three");
+$c = array_combine($a, $b);
+print_r($c);
+```
+
+- [ ] Array ( [0] => 1 [1] => 2 [2] => 3 )
+- [ ] Array ( [0] => one [1] => two [2] => three )
+- [x] Array ( [1] => one [2] => two [3] => three )
+- [ ] An error occurs
+
+### Q119. Which of the following is NOT a valid PHP comparison operator?
+
+- [ ] ===
+- [ ] !==
+- [ ] <>
+- [x] =>
+
+### Q120. What does the 'static' keyword do when used inside a function?
+
+- [ ] It makes the function available globally
+- [x] It preserves the value of the variable between function calls
+- [ ] It prevents the function from being called more than once
+- [ ] It makes the function run faster
+
+### Q121. Which function would you use to get the current timestamp in PHP?
+
+- [ ] now()
+- [ ] current_time()
+- [x] time()
+- [ ] timestamp()
+
+### Q122. What is the output of this code?
+
+```php
+$str = "abcdef";
+echo substr($str, -2, 1);
+```
+
+- [ ] f
+- [x] e
+- [ ] ef
+- [ ] de
+
+### Q123. Which of the following is NOT a valid way to comment in PHP?
+
+- [ ] // Single line comment
+- [ ] /_ Multi-line comment _/
+- [ ] # Shell-style comment
+- [x] ' Single quote comment
+
+### Q124. What does the 'instanceof' operator do in PHP?
+
+- [ ] It checks if a variable is an instance of a class
+- [ ] It creates a new instance of a class
+- [ ] It checks if a class exists
+- [x] It checks if an object is an instance of a class or interface
+
+### Q125. Which function would you use to check if a variable is an array?
+
+- [ ] is_array()
+- [ ] array_check()
+- [ ] typeof()
+- [x] is_array()
+
+### Q126. What is the output of this code?
+
+```php
+$x = 5;
+$y = 10;
+function myTest() {
+    global $x, $y;
+    $y = $x + $y;
+}
+myTest();
+echo $y;
+```
+
+- [ ] 10
+- [ ] 5
+- [x] 15
+- [ ] An error occurs
+
+### Q127. Which of the following is NOT a valid PHP array function?
+
+- [ ] array_push()
+- [ ] array_pop()
+- [ ] array_shift()
+- [x] array_delete()
+
+### Q128. What does the 'final' keyword do when used before a class declaration?
+
+- [ ] It makes the class abstract
+- [x] It prevents the class from being inherited
+- [ ] It makes the class static
+- [ ] It makes all methods in the class private
+
+### Q129. Which function would you use to get the length of a string in PHP?
+
+- [ ] count()
+- [ ] length()
+- [x] strlen()
+- [ ] size()
+
+### Q130. What is the output of this code?
+
+```php
+$a = "Hello";
+$b = &$a;
+$b = "World";
+echo $a;
+```
+
+- [ ] Hello
+- [x] World
+- [ ] HelloWorld
+- [ ] An error occurs

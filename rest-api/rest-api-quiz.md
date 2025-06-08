@@ -9,10 +9,10 @@
 
 #### Q2. Which URL pattern is recommended when working with one resource and a collection of resources?
 
-- [ ] `/companies/{id} and/company`
-- [ ] `/company/{id} and/companies`
-- [x] `/companies/{id} and/companies`
-- [ ] `/company/{id} and/company`
+- [ ] `/companies/{id} and /company`
+- [ ] `/company/{id} and /companies`
+- [x] `/companies/{id} and /companies`
+- [ ] `/company/{id} and /company`
 
 #### Q3. When dealing with JSON web Tokens (JWTs), what is a claim?
 
@@ -81,7 +81,7 @@
 - [ ] `It offers better security.`
 - [x] `It reduce load on servers.`
 
-#### Q12. Your API resource does no allow deletion, and a client application attempted to delete the resource. What HTTP response code should you return?
+#### Q12. Your API resource does not allow deletion, and a client application attempted to delete the resource. What HTTP response code should you return?
 
 - [ ] `409 Conflict`
 - [ ] `400 Bad Request`
@@ -346,9 +346,9 @@
 
 #### Q47. When a user attempts to access a record that is not their own, which HTTP response code is the most appropriate?
 
-- [ ] `403`
+- [x] `403`
 - [ ] `404`
-- [x] `401`
+- [ ] `401`
 - [ ] `405`
 
 [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
@@ -392,7 +392,7 @@
 
 #### Q53. To create a new resource, what HTTP response code should you receive?
 
-- [ ] `200`
+- [ ] `405`
 - [x] `201`
 - [ ] `204`
 - [ ] `202`
@@ -493,16 +493,7 @@
 - [ ] A,D,G,H
 - [ ] A,C,E,G
 
-#### Q65. To create a new resource, what HTTP response code should you receive?
-
-- [ ] `405`
-- [x] `201`
-- [ ] `200`
-- [ ] `204`
-
-[Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
-
-#### Q66. API traffic that enters and leaves your organization is normally called **\_**?
+#### Q65. API traffic that enters and leaves your organization is normally called **\_**?
 
 - [ ] `east-west traffic`
 - [ ] `inbound traffic`
@@ -510,3 +501,65 @@
 - [ ] `external traffic`
 
 [North-South vs East-West Traffic](https://www.snapt.net/glossary/north-south-vs-east-west-traffic)
+
+#### Q66. Which OAuth grant type is appropriate for mobile apps?
+
+- [x] Authorization Code with PKCE
+- [ ] Client Credentials
+- [ ] Device
+- [ ] Resource Owner Password
+
+[OAuth 2.0 for Native and Mobile Apps](https://developer.okta.com/blog/2018/12/13/oauth-2-for-native-and-mobile-apps)
+
+#### Q67. Which datetime format is the easiest or most predictable to parse and process?
+
+- [ ] `YY-M-D hh:mm:ss+TZ`
+- [ ] `YY-M-D h:mm:ss`
+- [x] `YYYY-MM-DDThh:mm:ssZ`
+- [ ] `YYYY-M-D hh:mm:ss`
+
+[The 5 laws of API dates and times](https://apiux.com/2013/03/20/5-laws-api-dates-and-times/)
+
+#### Q68. Which header is _not_ used in cache management?
+
+- [x] Rate-Limit
+- [ ] Expires
+- [ ] Etag
+- [ ] Cache-Control
+
+[Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+[Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires)
+[Etag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
+[Rate limiting your RESTful API](https://medium.com/@guillaume.viguierjust/rate-limiting-your-restful-api-3148f8e77248)
+
+#### Q69. A client application uses a filter or a search in your API correctly but there are zero results. What is the best response code?
+
+- [ ] 204 No Content
+- [ ] 400 Bad Request
+- [x] 200 OK
+- [ ] 404 Not Found
+
+[Response Status Codes](https://www.rfc-editor.org/rfc/rfc7231#section-6)
+
+#### Q70. Which HTTP verb is normally used to retrieve or create a resource in an API?
+
+- [ ] `RETRIEVE`
+- [ ] `FORM`
+- [x] `GET`
+- [ ] `READ`
+
+#### Q71. To create a new resource, what HTTP response code should you receive?
+
+- [ ] `200`
+- [ ] `405`
+- [x] `201`
+- [ ] `204`
+
+[HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
+#### Q72. You are developing a RESTful API for a new project on GitHub. Security is a top priority, and you want to ensure that only authorized users can access specific endpoints. Which of the following mechanisms should you use to achieve this goal?
+
+- [ ] API rate limiting
+- [x] OAuth 2.0
+- [ ] Basic Authentication
+- [ ] HTTP Basic Auth
